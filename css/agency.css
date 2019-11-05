@@ -36,6 +36,12 @@ h6 {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+div.skills{
+  text-align: left;
+  white-space: pre;
+  color: #6c757d;
+}
+
 section {
   padding: 100px 0;
 }
@@ -417,9 +423,6 @@ header.masthead .intro-text .intro-heading {
   content: ' ';
 }
 
-.timeline > li:after {
-
-}
 
 .timeline > li .timeline-panel {
   position: relative;

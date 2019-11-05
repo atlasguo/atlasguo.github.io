@@ -1,3 +1,5 @@
 # atlaskwok.github.io
 
-Atlas's Web Portfolio
+Web Portfolio of Chenxiao (Atlas) Guo
+
+Revised in November 2019
