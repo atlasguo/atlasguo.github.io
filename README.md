@@ -1,5 +1,5 @@
-# atlaskwok.github.io
+# atlasguo.github.io
 
-Web Portfolio of Chenxiao (Atlas) Guo
+"CartoGuophy", Web Portfolio of Chenxiao (Atlas) Guo
 
-Revised in November 2019
+Revised in November 2020
