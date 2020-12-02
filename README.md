@@ -2,4 +2,4 @@
 
 "CartoGuophy", Web Portfolio of Chenxiao (Atlas) Guo
 
-Revised in November 2020
+Revised in December 2020
