@@ -4,16 +4,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="CARTOGUOPHY - Web Portfolio of Chenxiao (Atlas) Guo">
+        <meta name="author" content="Chenxiao (Atlas) Guo">
         <title>CartoGuophy</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="libs/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom fonts for this template -->
-        <link href="libs/all.min.css" rel="stylesheet" type="text/css">
-
+        <link href="css/all.min.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
             type='text/css'>
@@ -23,17 +22,27 @@
         <!-- Custom styles for this template -->
         <link href="css/agency.css" rel="stylesheet">
         <link rel="shortcut icon" href="assets/icon.png">
-
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
             integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     </head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7N1ZQRZ0PH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7N1ZQRZ0PH');
+    </script>
 
     <body id="page-top">
 
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">"CARTOGUOPHY"</a>
+                <img src="assets/icon.png" alt="" height="22px" style="margin-right:10px" >
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">"CARTOGUOPHY"</a> 
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                     data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -43,13 +52,13 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#resume">My Resume</a>
+                            <a class="nav-link js-scroll-trigger" href="#resume">Resume</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#portfolio">Atlas of Me</a>
+                            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#about">Atlas as Me</a>
+                            <a class="nav-link js-scroll-trigger" href="#vision">Vision</a>
                         </li>
                     </ul>
                 </div>
@@ -57,12 +66,17 @@
         </nav>
 
         <!-- Header -->
-        <header class="masthead">
+        <header class="masthead" style="background-image: url('../assets/mad_bg.jpg')">
             <div class="container">
-                <div class="intro-text">
+                <div class="intro-text" style="margin:-50px">
+                    
                     <div class="intro-heading text-uppercase">Chenxiao (Atlas) Guo</div>
-                    <div class="intro-lead-in">Ph.D. Student in Cartography / GIS at UW-Madison</div>
-                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#resume">View More</a>
+                    <div class="intro-lead-in">Ph.D. Student in Cartography / GIS at UW-Madison</div>                                        
+                    <img src="assets/sci_hall_dark_glow.png" style="margin-top:-70px" alt="" height="350px">
+                    <br>                   
+                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#portfolio" style="margin:-50px" >See My Maps</a>
+                    
+                    
                 </div>
             </div>
         </header>
@@ -72,11 +86,31 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading text-uppercase">My Resume</h2>
-                        <h3 class="section-subheading text-muted">Updated in Feb 2022</h3>
+                        <h2 class="section-heading text-uppercase">Resume</h2>
+                        <h3 class="section-subheading text-muted">I GO BY ATLAS.</h3>
                         <br>
-                        <h4>Experiences</h4>
-                        <p class="text-muted">Working | Research | Teaching | Education </p>
+
+                        <div class="team-member">
+                            <img class="rounded-circle img-fluid" src="assets/logo_scdm.png" alt="logo of scdm lab">
+                            <img class="mx-auto round-corner-large" src="assets/profile_sh.png" alt="profile image">
+                            <img class="rounded-circle img-fluid" src="assets/logo_uwcartlab.png" alt="logo of uw cart lab">
+                            <br><br />
+                            <p class="text-muted">I am Chenxiao (Atlas) Guo 郭晨曉, a Ph.D. student in Geography (cartography / GIS) with doctorial
+                                minor in Computer Science at the University of Wisconsin-Madison.
+                                I am a graduate student member of
+                                <a href="https://scdm.geography.wisc.edu/" target="_blank">Spatial
+                                    Computing and Data Mining (SCDM) Lab</a> and
+                                <a href="https://geography.wisc.edu/cartography/" target="_blank">UW
+                                    Cartography Lab (CartLab)</a>. 
+                                    <br><br>My research direction includes spatiotemporal
+                                analytics, cartographic visualization, social media data mining, and natural disaster
+                                management, devoted to bridging geospatial data science, cartography and social good.
+                                <br>
+                            </p>
+                        </div>
+
+                        <h4>EXPERIENCE</h4>
+                        <p class="text-muted">Internship | Research | Teaching | Education </p>
                         <br>
                         <ul class="timeline">
 
@@ -87,20 +121,25 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4>UNDP Global Centre</h4>
-                                        <h4 class="subheading">Jul 2021 - Dec 2021, Remote</h4>
+                                        <h4 class="subheading">Sep 2021 - Dec 2021<br>(Remote)</h4>
                                     </div>
                                     <div class="timeline-body">
                                         <p class="text-muted">
                                             — GIS Development Intern at <br>
-                                            <a href="https://www.undp.org/" target="_blank">United Nations Development Programme (UNDP)</a> 
-                                            <a href="https://sgtechcentre.undp.org/" target="_blank">Global Centre for Tech, Innovation & Sustainable Development</a>
-                                        <br> — Major Project: Small Island Developing States (SIDS) Dashboard Development
+                                            <a href="https://www.undp.org/" target="_blank">United Nations Development
+                                                Programme (UNDP)</a>,
+                                            <a href="https://sgtechcentre.undp.org/" target="_blank">Global Centre</a>
+                                            <br> — Major Project: <a href="https://sids.data.undp.org/geospatial-data/"
+                                                target="_blank">
+                                                Small Island Developing States (SIDS) Geospatial
+                                                Dashboard</a>
+
                                         </p>
                                     </div>
                                 </div>
                             </li>
 
-                            <br>
+
 
                             <li class="timeline-inverted">
                                 <div class="timeline-image">
@@ -109,15 +148,16 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4>The Institute for Local Self-Reliance</h4>
-                                        <h4 class="subheading">Feb 2021 - May 2021, Remote</h4>
+                                        <h4 class="subheading">Feb 2021 - May 2021<br>(Remote)</h4>
                                     </div>
                                     <div class="timeline-body">
                                         <p class="text-muted">
-                                            — GIS and Data Visualization Intern at 
-                                            <a href="https://muninetworks.org/" target="_blank">Community Broadband Network</a><br/>                                            
-                                            Initiative, <a href="https://ilsr.org/" target="_blank">Institute for
+                                            — GIS and Data Visualization Intern at
+                                            <a href="https://muninetworks.org/" target="_blank">Community Broadband
+                                                Network</a>,<br>
+                                            <a href="https://ilsr.org/" target="_blank">Institute for
                                                 Local Self-Reliance</a><br />
-                                            — Multiple projects of cartographic visualization
+                                            — Multiple projects of cartographic visualization (static maps)
 
                                         </p>
                                     </div>
@@ -133,7 +173,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4>UW-Madison GIS Professional Programs</h4>
-                                        <h4 class="subheading">Summer & Winter 2020, Madison, WI</h4>
+                                        <h4 class="subheading">Summer & Winter 2020,<br>(Madison, WI)</h4>
                                     </div>
                                     <div class="timeline-body">
                                         <p class="text-muted">
@@ -149,15 +189,15 @@
                             </li>
 
                             <br>
-                            
+
                             <li class="timeline-inverted">
                                 <div class="timeline-image">
-                                    <img class="rounded-circle img-fluid" src="assets/logo_scihall.png" alt="">
+                                    <img class="rounded-circle img-fluid" src="assets/uw_geog_club.png" alt="">
                                 </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4>University of Wisconsin-Madison</h4>
-                                        <h4 class="subheading">Sep 2017 - Present, Madison, WI</h4>
+                                        <h4 class="subheading">Sep 2017 - Present<br>(Madison, WI)</h4>
                                     </div>
                                     <div class="timeline-body">
                                         <p class="text-muted">
@@ -166,15 +206,19 @@
                                             — Doctoral Minor in <a href="https://www.cs.wisc.edu/"
                                                 target="_blank">Computer Science</a><br>
                                             — <a href="https://scdm.geography.wisc.edu/" target="_blank">Spatial
-                                                Computing and Data Mining Lab</a><br>
+                                                Computing and Data Mining (SCDM) Lab</a><br>
                                             — <a href="https://geography.wisc.edu/cartography/" target="_blank">UW
-                                                Cartography Lab</a><br>
+                                                Cartography Lab (CartLab)</a><br>
                                             — Lecturing <a href="https://geography.wisc.edu/courses/"
-                                                target="_blank">Course</a>: Cartography (Summer 2021 and 2022)<br/>
+                                                target="_blank">Course</a>: Cartography<br />
                                             — TA <a href="https://geography.wisc.edu/courses/"
-                                                target="_blank">Courses</a>: GIS, Geo-computing, GIS Applications, Cartography, Intro GIScience <br />
-                                            — Advisor: <a href="https://www.geography.wisc.edu/profile.php?p=111"
-                                                target="_blank">Prof. Qunying Huang</a><br>
+                                                target="_blank">Courses</a>: Cartography, Interactive Cart &
+                                            Geovisualization, Geocomputing, GIS, GIS Applications,
+                                            Intro GIScience <br />
+                                            — Advisor: <a href="https://geography.wisc.edu/staff/huang-qunying/"
+                                                target="_blank">Qunying Huang</a> and <a
+                                                href="https://geography.wisc.edu/staff/roth-robert/" target="_blank">Rob
+                                                Roth</a><br>
                                             — Current GPA: 3.7/4.0
                                         </p>
                                     </div>
@@ -190,11 +234,11 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4>UGA Carl Vinson<br>Institute of Government</h4>
-                                        <h4 class="subheading">Jan 2016 - Aug 2017, Athens, GA</h4>
+                                        <h4 class="subheading">Jan 2016 - Aug 2017<br>(Athens, GA)</h4>
                                     </div>
                                     <div class="timeline-body">
                                         <p class="text-muted">
-                                            — Graduate Research Assistant at App Development Group,
+                                            — Graduate Research Assistant,<br>App Development Group,
                                             <a href="https://cviog.uga.edu/information-technology/"
                                                 target="_blank">Information Technology Outreach Services
                                                 (ITOS)</a>,
@@ -218,7 +262,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4>University of Georgia</h4>
-                                        <h4 class="subheading">Aug 2015 - Dec 2017, Athens, GA</h4>
+                                        <h4 class="subheading">Aug 2015 - Dec 2017<br>(Athens, GA)</h4>
                                     </div>
                                     <div class="timeline-body">
                                         <p class="text-muted">
@@ -235,7 +279,7 @@
                                             &nbsp&nbsp&nbsp&nbsp Modeling and GIS<br />
                                             — Advisor: <a
                                                 href="https://geography.uga.edu/directory/people/xiaobai-angela-yao"
-                                                target="_blank">Prof. Xiaobai (Angela) Yao</a><br />
+                                                target="_blank">Xiaobai (Angela) Yao</a><br />
                                             — GPA: 3.7/4.0
                                         </p>
                                     </div>
@@ -249,15 +293,16 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4>SYSU Center of Integrated Geographic Information Analysis</h4>
-                                        <h4 class="subheading">Sep 2011 - Jun 2015, Guangzhou, China</h4>
+                                        <h4 class="subheading">Jan 2014 - Jun 2015<br>(Guangzhou, China)</h4>
                                     </div>
                                     <div class="timeline-body">
                                         <p class="text-muted">
-                                            — Undergraduate Research Assistant
-                                            in Multiple Projects Collaborating with
-                                            Center for Historical Geography (<a href="http://history.sysu.edu.cn/" target="_blank">Department of
+                                            — Undergraduate Research Assistant,<br>
+                                            — Multiple Projects Collaborating with
+                                            Center for Historical Geography (<a href="https://history.sysu.edu.cn/en"
+                                                target="_blank">Department of
                                                 History</a>), Big Data Communication Lab
-                                            (<a href="http://scd.sysu.edu.cn/" target="_blank">School of Communication
+                                            (<a href="https://sjc.sysu.edu.cn/" target="_blank">School of Communication
                                                 and Design</a>)
 
                                         </p>
@@ -272,18 +317,18 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h4>Sun Yat-Sen University</h4>
-                                        <h4 class="subheading">Sep 2011 - Jun 2015, Guangzhou, China</h4>
+                                        <h4 class="subheading">Sep 2011 - Jun 2015<br>(Guangzhou, China)</h4>
                                     </div>
                                     <div class="timeline-body">
                                         <p class="text-muted">
-                                            — B.S. in Geographic Information Systems, Department of RS and GIS Engineering,
-                                            <a href="http://gp.sysu.edu.cn/en"
-                                                target="_blank">School of Geography and Planning</a><br>
-                                            — Excellent Student Scholarship (2012, 2013, 2014) <br>
-                                            — Excellent Graduate (2015)<br>
-                                            — Advisor: <a
-                                            href="https://homepages.uc.edu/~liuln/"
-                                            target="_blank">Prof. Lin Liu</a><br />
+                                            — B.S. in Geographic Information Sciences, Department of RS and GIS
+                                            Engineering,
+                                            <a href="http://gp.sysu.edu.cn/en" target="_blank">School of Geography and
+                                                Planning</a><br>
+                                            — Excellent Student Scholarship<br> (2012, 2013, 2014) <br>
+                                            — Excellent Graduate Award (2015)<br>
+                                            — Advisor: <a href="https://homepages.uc.edu/~liuln/" target="_blank">
+                                                Lin Liu</a><br />
                                             — GPA: 3.8/4.0
                                         </p>
                                     </div>
@@ -292,19 +337,61 @@
 
                             <br><br><br><br>
 
-                        </ul>        
-                        
-                        <br>
+                        </ul>
 
-                        <h4>SKILLS</h4>
-                        <div class="skills">
-                            <b>• Geospatial:</b> ArcGIS (Desktop, Pro, Server, Engine) | QGIS | TransCAD | GeoDa | Envi | Erdas | GE Engine
-                            <b>• Cartography:</b> ArcGIS (Pro, Online, Dashboard, StoryMaps) | Mapbox | Leaflet | D3 | Blender | Kepler.gl
-                            <b>• Design:</b> Illustrator | Photoshop | CorelDraw | Inkscape | AutoCAD | Flash | After Effect | Dreamweaver
-                            <b>• Development:</b> JavaScript | HTML | CSS | ASP.NET MVC | Android | PostgreSQL | SQL Server | MongoDB | AWS
-                            <b>• Analysis:</b> Python | R | Java | C# | MATLAB | SPSS | Gephi | Tableau | Visual Basic | C++ | Pascal
+                        <br><br>
+
+                        <div class="col-lg-12 text-center">
+
+                            <h4>AWARD</h4>
+                            <div class="skills">
+                                • Map Selected for Publication, <a
+                                    href="https://www.amazon.com/Esri-Map-Book-39/dp/1589487796">Esri Map Book, Volume
+                                    39</a> (2024)<br>
+                                • 1st Place / Winner in Cartographic Design (tied), <a
+                                href="https://nacis.org/awards/2023-smpc-design-winner-1/">NACIS 2023 Student Map and Poster
+                                Competition</a> (2023)<br>
+                                • 1st Place / Most Innovative Map; Cartography Special Interest Group Excellence Award,
+                                <a href="https://www.esri.com/en-us/about/events/uc/plenary/awards/map-gallery-results">Esri UC</a> (2023)<br>
+                                • Map Selected for Image Inclusion, <a href="https://mediaspace.esri.com/media/t/1_spw6yypu/306500242">Jack Dangermond’s Plenary Session</a> in Esri User
+                                Conference (2023)<br>
+                                • 1st Place / Winner, Arthur Robinson Static Print Map Award in <a href="https://cartogis.org/docs/map_competition/map_design_competition2022.pdf">50th CaGIS Map Design
+                                Competition</a> (2023)<br>
+                                • 3rd Place in Student Category, <a href="https://www.gisci.org/About-Us/Map-Contest/Previous-Contest-Winners">
+                                GIS Certification Institute (GISCI) Map Contest</a>
+                                (2023)<br>
+                                • Map on Exhibition, <a href="https://icc2023.org/index.php/international-map-exhibition/">International Cartographic Exhibition</a> of International Cartographic
+                                Conference (2023)<br>
+                                • 2rd Place / Honorable Mention, UW-Madison <a href="https://designlab.wisc.edu/scenic-formosa-island/">14th Annual Digital Salon</a> (2023)<br>
+                                • Map Admitted, UW-Madison <a href="https://designlab.wisc.edu/visualizing-historical-hurricanes-in-contiguous-united-states/">14th Annual Digital Salon</a> (2023) and <a href="https://designlab.wisc.edu/home-metro-map-by-atlas-guo/">12th Annual Digital Salon</a> (2021)<br>
+                                • Map (Dashboard) reached over 80K views, reported on <a href="https://www.channel3000.com/news/coronavirus/improve-their-awareness-of-danger-uw-madison-ph-d-student-creates-covid-19-data-dashboard/article_b4f365c8-ab06-5646-812a-42b0808d3131.html">local news</a> multiple times (2022)<br>
+                                • 1st Place / Best Student Map, <a href="https://www.wlia.org/news/a-virtual-2021-map-contest-with-real-awards">Wisconsin Land Information Association (WLIA) Map Contest</a> (2021)<br>
+                                • Honorable Mention, David Woodward Digital Map Award in <a href="https://cartogis.org/docs/map_competition/map_design_competition2020.pdf">48th CaGIS Map Design Competition</a> (2021)<br>
+                                • Map Ranked Top 2% out of 600+ submissions, <a href="https://mapgallery.esri.com/submission-detail/609d7f6395ac006b2090869f">Esri User Conference Map Gallery</a> (2020)<br>      
+                                • 1st Prize in Web/Mobile Group, <a href="https://contest.geoscene.cn/">Esri Chinese College Student GIS Development Contest</a> (<a href="https://www.sysu.edu.cn/news/info/2161/626351.htm">campus news</a>) (2014)<br>
+                                <br>
+                                <br>
+                            </div>
+
+                            <h4>SKILL</h4>
+
+                            <div class="skills">
+
+                                <b>• Cartography: </b>ArcGIS (Pro, Online, Dashboards, StoryMaps) | MapBox | Leaflet |
+                                D3 | Kepler.gl<br>
+                                <b>• Design: </b> Illustrator | Photoshop | Blender | Flash | CorelDraw | After Effect |
+                                AutoCAD<br>
+                                <b>• GIS/RS: </b> ArcGIS (Pro, Server, Engine) | QGIS | TransCAD | GeoDa | Envi | ERDAS
+                                | GE Engine<br>
+                                <b>• Development: </b> JavaScript | HTML | CSS | ASP.NET MVC | Android (Java) | C# |
+                                Visual Basic<br>
+                                <b>• Analysis:</b> Python | R | Java | Gephi | PostgreSQL | SQL Server | MongoDB | AWS |
+                                SPSS | MATLAB<br>
+                                <br>
+                                <br>
+                            </div>
+
                         </div>
-
                         <div class="container">
                             <embed src="assets\Resume_AtlasGuo.pdf" type="application/pdf" width="85%" height="1125px"
                                 frameBorder="20" scrolling="auto" \>
@@ -323,8 +410,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading text-uppercase">Atlas of Me</h2>
-                        <h3 class="section-subheading text-muted">As an "Atlas", I keep enriching myself.</h3>
+                        <h2 class="section-heading text-uppercase">Portfolio</h2>
+                        <h3 class="section-subheading text-muted">ENJOY THIS ATLAS OF ATLAS (ME).</h3>
                     </div>
                 </div>
 
@@ -336,9 +423,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/1_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/1_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>Harry Potter Themed Web Map</h4>
                             <p class="text-muted">Customized Mapbox map with H.P. related sites in the U.K.</p>
                         </div>
@@ -351,9 +438,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/2_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/2_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>Trajectories in Rescaled Symbols</h4>
                             <p class="text-muted">Innovative twitter-based visualization of 2017 Hurricane Harvey</p>
                         </div>
@@ -366,9 +453,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/3_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/3_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>Madison and Vicinity</h4>
                             <p class="text-muted">Map quilt challenge during "Graphic Design in Cartography" classroom
                                 (contributing one piece)</p>
@@ -384,9 +471,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/4_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/4_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>"Not Gone with the Wind" Story Map</h4>
                             <p class="text-muted">Introducing 2017 Hurricane Harvey using Esri StoryMaps narrative</p>
                         </div>
@@ -399,9 +486,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/5_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/5_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>Proportion of U.S. Houses and Governors</h4>
                             <p class="text-muted">A news map for Madison's largest Chinese media platform</p>
                         </div>
@@ -414,9 +501,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/6_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/6_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>Twitter's Gender Representativeness</h4>
                             <p class="text-muted">UCGIS Poster for evaluating the gender representativeness of twitter
                             </p>
@@ -432,9 +519,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/7_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/7_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>"When Badger Meets Bulldog"</h4>
                             <p class="text-muted">My past and future road trip routes between UW-Madison and UGA</p>
                         </div>
@@ -447,9 +534,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/8_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/8_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>Twitter Sentiments Towards COVID-19</h4>
                             <p class="text-muted">Value-by-alpha map of sentiments with twitter representativeness level
                             </p>
@@ -463,9 +550,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/9_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/9_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>"Home Metro Map"</h4>
                             <p class="text-muted">Hilarious graphic design of transit map in memory of 2020 quarantine
                                 days within an apartment unit</p>
@@ -481,9 +568,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/10_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/10_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>Madison and Wisconsin COVID-19 Pandemic Dashboards</h4>
                             <p class="text-muted">WLIA Contest Best Student Map</p>
                         </div>
@@ -496,9 +583,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/11_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/11_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>Twitter Trajectories During Covid-19</h4>
                             <p class="text-muted">Ongoing exploration of 5 million trajectories regarding covid-19</p>
                         </div>
@@ -511,9 +598,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/12_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/12_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>Pumpkin World Map</h4>
                             <p class="text-muted">Drawing projected map onto ellipsoid (pumpkin), as a compromise
                                 between 3D globe and flat surface's distortion</p>
@@ -530,9 +617,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/13_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/13_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>Visitor Map of Athens-Clarke County</h4>
                             <p class="text-muted">Typography and icon challenge with terrain representation</p>
                         </div>
@@ -545,9 +632,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/14_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/14_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>News Map for Member Countries in RCEP</h4>
                             <p class="text-muted">Another instant news map (country boundaries according to PRC)</p>
                         </div>
@@ -560,9 +647,9 @@
                                     <i class="fas fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/map/15_small.png" alt="">
+                            <img class="img-fluid round-corner" src="map/15_small.png" alt="">
                         </a>
-                        <div class="portfolio-caption">
+                        <div class="portfolio-caption round-corner">
                             <h4>Ancient Chinese Style Map Design</h4>
                             <p class="text-muted">Customized map with ancient Chinese fonts and styles using Mapbox </p>
                         </div>
@@ -571,41 +658,48 @@
 
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <p class="text-muted"><br />Cartography is a charming journey. <br /> I am always on the way.
+                        <p class="text-muted"><br />As an "Atlas", I keep enriching myself.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- About -->
-        <section id="about">
+        <section id="vision">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading text-uppercase">Atlas as Me</h2>
-                        <h3 class="section-subheading text-muted">My name is Chenxiao Guo. I go by Atlas.</h3>
+                        <h2 class="section-heading text-uppercase">Vision</h2>
+                        <h3 class="section-subheading text-muted">GIVE US THIS DAY OUR DAILY MAPS.</h3>
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/profile.png" alt="">
-                            <br><br />
-                            <p class="text-muted">I am a Ph.D. student in Geography (cartography / GIS) with minor in
-                                Computer Science, Spatial Computing and Data Mining Lab, UW-Madison. With general
-                                interests in GIScience and cartography, my research direction includes spatiotemporal
-                                analytics, cartographic visualization, social media text mining, and natural disaster
-                                management, devoted to bridging geospatial data science, cartography and social good.
-                            </p>
+                            <img class="round-corner-large img-fluid" src="assets/zibo_graphic.png" alt="">
+                            <img class="round-corner-large img-fluid" src="assets/profile_map.png" alt="profile image">
+                            <img class="round-corner-large img-fluid" src="assets/wi_seal.png" alt="">
+                           
+                            <br><br>
+
+                            <p class="text-muted">Cartography is a charming journey. I am always on the way.</p>
+
                             <p class="text-muted">After acquiring my doctoral degree, I am willing to work in
-                                geospatial-cartographic companies or organizations, trying to combine the essential value of
-                                spatial science, cartographic visualization, and emerging techniques in computer
-                                science, statistics, and artificial intelligence to provide more comprehensive and
-                                intelligent geographic information services and cartographic narratives.
+                                cartographic/geospatial companies or organizations, applying the essential
+                                value of cartographic visualization, geospatial science, and emerging techniques in
+                                computer
+                                science and artificial intelligence to design more innovative cartographic
+                                visualizations, and
+                                provide more comprehensive and intelligent location-based services.
                             </p>
-                            <p class="text-muted">I come from Zibo, a historical city in eastern China. In the recent
-                                decades, I used to live in Jinan, Zhuhai, Taipei, Guangzhou, Athens (GA), Madison,
-                                Middleton (WI), and currently in Athens (GA). As a geography person (an "Atlas"), I keep learning
-                                from not only our books, but also the nature and our society. I believe technology
-                                should provide insights in understanding geographic world and serving the society.
+                            <p class="text-muted">I come from Zibo 淄博, a historical and industrial city in eastern China
+                                (see my award-winning <a href="https://nacis.org/awards/2023-smpc-design-winner-1/"
+                                    target="_blank">Zibo Map of Culture and Tourism</a>).
+                                I used to live in Jinan, Zhuhai, Taipei, Guangzhou, Athens (GA), Madison/Middleton, Athens (GA) again, and currently back in Madison. As a geography person
+                                (an "Atlas"), I keep
+                                learning from not only classroom and books, but also the nature and our society. I
+                                believe that technology
+                                should provide more insights in understanding the geographic environment, and serving the
+                                society. I will play my role via maps.
                             </p>
-                            <p class="text-muted">I love explorations and really enjoy my hobbies:
+
+                            <p class="text-muted">Besides the academic and professional advances, I also love exploring the world via my hobbies:
                             </p>
                         </div>
                     </div>
@@ -619,8 +713,9 @@
                             <i class="fas fa-map fa-stack-1x fa-inverse"></i>
                         </span>
                         <h5 class="service-heading">Map Collection</h5>
-                        <p class="text-muted">Collecting interesting maps has always been my hobby since childhood. So
-                            far I have got a great collection of hundreds of maps, globes and atlases.</p>
+                        <p class="text-muted">Collecting interesting maps has always been my hobby since childhood. I
+                            have got a great collection of hundreds of maps, globes and atlases, of various themes,
+                            types and textures. </p>
                     </div>
                     <div class="col-md-3">
                         <span class="fa-stack fa-4x">
@@ -628,30 +723,32 @@
                             <i class="fas fa-paint-brush fa-stack-1x fa-inverse"></i>
                         </span>
                         <h5 class="service-heading">Calligraphy</h5>
-                        <p class="text-muted">I love both Chinese and English calligraphy, especially Zhuanke
-                            (seal-engraving), which is carving stone seals with ancient Chinese characters (seal
-                            script).</p>
-                    </div>
-                    <div class="col-md-3">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-camera-retro fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h5 class="service-heading">Photography</h5>
-                        <p class="text-muted">Traveling is geographers' common hobby. It is of great fun to use my lens
-                            to play with the light and composition, enjoying the beauty of our dynamic globe.</p>
+                        <p class="text-muted">I love both Chinese and English calligraphy / penmanship, especially
+                            Zhuanke 篆刻 (seal engraving), which is carving stone seals (stamps) with ancient Chinese
+                            characters in seal script 篆書.</p>
                     </div>
                     <div class="col-md-3">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-music fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h5 class="service-heading">Musical Instrument</h5>
-                        <p class="text-muted">I love Chinese and Irish/Celtic traditional music. I was the tin/low
-                            whistle and Gugin player in the ensemble of Asian Musical Instrument Community. </p>
+                        <h5 class="service-heading">Music</h5>
+                        <p class="text-muted">I'm crazy about traditional Irish music, and I actively play
+                            the tin/low whistles in local Irish Sessions. I also played the Gugin 古琴 and whistles in Asian
+                            Musical Instrument Community Ensemble.  </p>
                     </div>
+                    <div class="col-md-3">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-star fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h5 class="service-heading">and more...</h5>
+                        <p class="text-muted">
+                            My hobbly list continues with photography, watercolor painting, cycling, hiking, stamping,
+                            wax-sealing, traveling, reading... It is of great fun to keep exploring:<br><b>"Go into all the world"</b></p>
+                    </div>
+
                 </div>
-            </div>
         </section>
         <!-- Footer -->
         <footer class="footer">
@@ -700,9 +797,11 @@
 
                 </div>
                 <br>
-                <p class="text-muted">Copyright © 2021 Atlas Guo. All rights reserved.</p>
-
-                <p></p>
+                <p class="text-muted">Copyright © 2024 Atlas Guo. All rights reserved.</p>
+                
+                <img src="assets/atlas_seal.png" alt="" height="50px">
+               
+                
             </div>
         </footer>
 
@@ -734,8 +833,8 @@
                                             target="_blank">Click</a> to view the Mapbox interactive map.
                                     </p>
 
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/1_big.png" alt="">
-                                    <a href="assets/map/1_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/1_big.png" alt="">
+                                    <a href="map/1_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -781,8 +880,8 @@
                                             target="_blank">by destination</a>).
                                     </p>
 
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/2_big.png" alt="">
-                                    <a href="assets/map/2_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/2_big.png" alt="">
+                                    <a href="map/2_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -824,8 +923,8 @@
                                         Perspectives.
                                     </p>
 
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/3_big.png" alt="">
-                                    <a href="assets/map/3_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/3_big.png" alt="">
+                                    <a href="map/3_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -869,8 +968,8 @@
                                             target="_blank">Click</a> to view the Esri StoryMaps.
                                     </p>
 
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/4_big.png" alt="">
-                                    <a href="assets/map/4_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/4_big.png" alt="">
+                                    <a href="map/4_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -910,8 +1009,8 @@
                                         content from the WeChat account: Madison_news).
                                     </p>
 
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/5_big.png" alt="">
-                                    <a href="assets/map/5_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/5_big.png" alt="">
+                                    <a href="map/5_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -957,8 +1056,8 @@
                                         2020.
                                     </p>
 
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/6_big.png" alt="">
-                                    <a href="assets/map/6_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/6_big.png" alt="">
+                                    <a href="map/6_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -998,8 +1097,8 @@
                                             target="_blank">Click</a> to check the routes on Google Map.
                                     </p>
 
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/7_big.png" alt="">
-                                    <a href="assets/map/7_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/7_big.png" alt="">
+                                    <a href="map/7_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -1044,8 +1143,8 @@
                                             target="_blank">Click</a> to learn more about value-by-alpha map.
                                     </p>
 
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/8_big.png" alt="">
-                                    <a href="assets/map/8_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/8_big.png" alt="">
+                                    <a href="map/8_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -1091,8 +1190,8 @@
                                             Member Map Gallery</a>.
                                     </p>
 
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/9_big.png" alt="">
-                                    <a href="assets/map/9_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/9_big.png" alt="">
+                                    <a href="map/9_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -1200,8 +1299,8 @@
                                             target="_blank">Wisconsin</a> Pandemic Dashboard.
                                     </p>
 
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/10_big.png" alt="">
-                                    <a href="assets/map/10_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/10_big.png" alt="">
+                                    <a href="map/10_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -1250,8 +1349,8 @@
                                             target="_blank">Click</a> to watch the presentation on YouTube.
                                     </p>
 
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/11_big.png" alt="">
-                                    <a href="assets/map/11_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/11_big.png" alt="">
+                                    <a href="map/11_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -1290,8 +1389,8 @@
                                         Cartography Lab artists.
                                     </p>
 
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/12_big.png" alt="">
-                                    <a href="assets/map/12_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/12_big.png" alt="">
+                                    <a href="map/12_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -1329,8 +1428,8 @@
                                             target="_blank">Click</a> to explore more about Athens and University of
                                         Georgia.</p>
 
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/13_big.png" alt="">
-                                    <a href="assets/map/13_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/13_big.png" alt="">
+                                    <a href="map/13_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -1374,8 +1473,8 @@
                                             target="_blank">Wikipedia Page</a> to learn more about RCEP.
                                     </p>
 
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/14_big.png" alt="">
-                                    <a href="assets/map/14_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/14_big.png" alt="">
+                                    <a href="map/14_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -1414,8 +1513,8 @@
                                         <a href="https://api.mapbox.com/styles/v1/atlaskwok/ckhn1ci7p0fao19mwmzv742dw.html?fresh=true&title=view&access_token=pk.eyJ1IjoiYXRsYXNrd29rIiwiYSI6ImNqbzAzZGo4ejAwNnczd3BnZjY0cmdlMnAifQ.-1JEsHM_MmQMXonEUsnzgw
                                              " target="_blank">Click</a> to view the Mapbox interactive map.
                                     </p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/map/15_big.png" alt="">
-                                    <a href="assets/map/15_big.png" target="_blank">View Full Image</a>
+                                    <img class="img-fluid d-block mx-auto" src="map/15_big.png" alt="">
+                                    <a href="map/15_big.png" target="_blank">View Full Image</a>
                                     <p></p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times"></i> Back</button>
@@ -1436,6 +1535,7 @@
         <script src="libs/jqBootstrapValidation.min.js"></script>
         <!-- Custom scripts for this template -->
         <script src="js/agency.js"></script>
+
     </body>
 
 </html>
