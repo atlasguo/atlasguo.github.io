@@ -1,5 +1,7 @@
-# atlasguo.github.io
+https://atlasguo.github.io/
 
 "CartoGuophy", Web Portfolio of Chenxiao (Atlas) Guo
 
-Updated in May 2021
+Copyright © 2024 Atlas Guo. All rights reserved.
+
+Updated in Feb 2024
