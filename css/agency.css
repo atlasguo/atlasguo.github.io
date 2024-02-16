@@ -420,6 +420,14 @@ header.masthead .intro-text .intro-heading {
 	background-color: #212529;
 }
 
+.portfolio-category {
+	color: #0099cc;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	font-style: oblique;
+}
+
+
 .timeline {
 	position: relative;
 	padding: 0;
