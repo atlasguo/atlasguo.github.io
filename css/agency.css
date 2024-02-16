@@ -280,11 +280,13 @@ header.masthead .intro-text .intro-heading {
 	-webkit-transition: all ease 0.5s;
 	transition: all ease 0.5s;
 	opacity: 0;
-	background: rgba(0, 153, 204, 0.8);
+	background: rgba(0, 153, 204, 0.7);
+	border-radius: 10px;
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
 	opacity: 1;
+
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
