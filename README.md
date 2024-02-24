@@ -1,6 +1,6 @@
 # "CartoGuophy"
 
-https://atlasguo.github.io/
+https://cartoguophy.com/
 
 Web Portfolio of Chenxiao (Atlas) Guo
 
