@@ -2,8 +2,6 @@
 
 https://cartoguophy.com/
 
-Web Portfolio of Chenxiao (Atlas) Guo
+Web Portfolio of Atlas (Chenxiao) Guo
 
 Copyright © 2024 Atlas Guo. All rights reserved.
-
-Updated in Feb 2024
