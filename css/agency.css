@@ -3,7 +3,6 @@
  * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
-
 body {
 	overflow-x: hidden;
 	font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -239,15 +238,15 @@ header.masthead .intro-text .intro-heading {
 	}
 
 	header.masthead .intro-text .intro-lead-in {
-		font-size: 30px;
+		font-size: 27px;
 		font-style: italic;
-		line-height: 40px;
-		margin-bottom: 85px;
+		line-height: 25px;
+		margin-bottom: 80px;
 		font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 	}
 
 	header.masthead .intro-text .intro-heading {
-		font-size: 60px;
+		font-size: 50px;
 		font-weight: 700;
 		line-height: 75px;
 		margin-bottom: 20px;
@@ -286,7 +285,6 @@ header.masthead .intro-text .intro-heading {
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
 	opacity: 1;
-
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
@@ -427,7 +425,6 @@ header.masthead .intro-text .intro-heading {
 	font-style: oblique;
 }
 
-
 .timeline {
 	position: relative;
 	padding: 0;
@@ -456,7 +453,6 @@ header.masthead .intro-text .intro-heading {
 	display: table;
 	content: ' ';
 }
-
 
 .timeline>li .timeline-panel {
 	position: relative;
@@ -648,13 +644,10 @@ header.masthead .intro-text .intro-heading {
 	text-align: left;
 }
 
-
-
 footer {
 	padding: 25px 0;
 	text-align: center;
 	background-color: #212529;
-
 }
 
 footer span.copyright {
