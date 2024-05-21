@@ -23,7 +23,7 @@ a:hover {
 }
 
 .text-primary {
-	color: #bfc998 !important;
+	color: #b8bd75 !important;
 }
 
 h1,
@@ -79,6 +79,19 @@ section h3.section-subheading {
 @media (max-width: 768px) {
 	.hide-on-phone {
 		display: none;
+	}
+
+	.timeline:before {
+		display: none;
+	}
+
+	.timeline {
+		margin-top: -50px;
+		margin-left: -50px;
+	}
+
+	.timeline-inverted {
+		margin-left: -50px;
 	}
 
 	.line-break::after {
@@ -571,8 +584,7 @@ header.masthead .intro-text .intro-heading {
 	}
 
 	.timeline>li {
-		min-height: 100px;
-		margin-bottom: 100px;
+		min-height: 220px;
 	}
 
 	.timeline>li .timeline-panel {
@@ -604,7 +616,7 @@ header.masthead .intro-text .intro-heading {
 
 @media (min-width: 992px) {
 	.timeline>li {
-		min-height: 150px;
+		min-height: 160px;
 	}
 
 	.timeline>li .timeline-panel {
@@ -630,7 +642,7 @@ header.masthead .intro-text .intro-heading {
 
 @media (min-width: 1200px) {
 	.timeline>li {
-		min-height: 170px;
+		min-height: 160px;
 	}
 
 	.timeline>li .timeline-panel {
