@@ -1,6 +1,6 @@
 # "CartoGuophy"
 
-https://cartoguophy.com/
+https://CartoGuophy.com/
 
 Web Portfolio of Atlas (Chenxiao) Guo
 
