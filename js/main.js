@@ -9,5 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.onload = function () {
+	var widgetElement = document.getElementById('mapmyvisitors-widget');
+	if (widgetElement) {
+		widgetElement.style.display = 'none';
+	}
 	console.log("Everything is loaded.")
 };
