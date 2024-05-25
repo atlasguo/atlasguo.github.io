@@ -13,15 +13,16 @@ window.onload = function () {
 
 	$(document).ready(function () {
 
-		$('.jvectormap-marker').css('display', 'none');
-		$('#mapmyvisitors-widget').removeAttr('href').css({
-			'cursor': 'default'
-		});
-		//$('#mapmyvisitors-widget').css('display', 'none');
-		$('iframe').removeAttr('href').css({
-			'cursor': 'default'
-		});
-		//$('iframe').hide();
+		//$('.jvectormap-marker').css('display', 'none');
+		// $('#mapmyvisitors-widget').removeAttr('href').css({
+		// 	'cursor': 'default'
+		// });
+		$('#mapmyvisitors-widget').hide();
+
+		// $('iframe').removeAttr('href').css({
+		// 	'cursor': 'default'
+		// });
+		$('iframe').hide();
 	});
 
 	console.log("Everything is loaded.")
