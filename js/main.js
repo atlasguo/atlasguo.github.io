@@ -9,19 +9,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.onload = function () {
-	var widgetElement = document.getElementsByClassName('jvectormap-marker');
-	if (widgetElement.length > 0) {
-		widgetElement[0].setAttribute('r', '0');
-	}
 
-	var iframe = document.querySelector('iframe');
-	console.log(iframe);
-	if (iframe) {
-		iframe.style.display = 'none';
-		//iframe.id = 'myIframe'; // Assign an ID
-		// Or assign a class
-		// iframe.classList.add('myIframeClass');
-	}
+
+	$(document).ready(function () {
+
+		$('.jvectormap-marker').css('display', 'none');
+		$('#mapmyvisitors-widget').removeAttr('href').css({
+			'cursor': 'default'
+		});
+		//$('#mapmyvisitors-widget').css('display', 'none');
+		$('iframe').removeAttr('href').css({
+			'cursor': 'default'
+		});
+		//$('iframe').hide();
+	});
 
 	console.log("Everything is loaded.")
 };
+
