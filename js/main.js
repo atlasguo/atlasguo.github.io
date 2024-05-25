@@ -6,12 +6,18 @@ document.addEventListener("DOMContentLoaded", function () {
 			document.getElementById("portfolio-detail").innerHTML = data;
 			//console.log("Portfolio html file is loaded.")
 		});
+
+	fetch("html/page.html")
+		.then(response => response.text())
+		.then(data => {
+			document.getElementById("page-detail").innerHTML = data;
+			//console.log("Portfolio html file is loaded.")
+		});
 });
 
 window.onload = function () {
 
 	$(document).ready(function () {
-
 		// $('.jvectormap-marker').css('display', 'none');
 		// $('#mapmyvisitors-widget').removeAttr('href').css({
 		// 	'cursor': 'default'
@@ -25,17 +31,14 @@ window.onload = function () {
 
 		var elementsWithId = document.querySelectorAll('[id]');
 		var ids = [];
-
 		elementsWithId.forEach(function (element) {
-			if (element.id.substring(0, 10) == "portfolio_") {
+			if ((element.id.substring(0, 10) == "portfolio_") || (element.id.substring(0, 9) == "category_") || (element.id.substring(0, 5) == "page_")) {
 				ids.push('#' + element.id);
 			}
 		});
-
 		var ids = ids.filter(function (id) {
-			return id !== "#portfolio_TEMPLATE";
+			return !id.includes("TEMPLATE");
 		});
-
 		var hash = window.location.hash;
 		if (ids.includes(hash)) {
 			$(hash).modal('show');
