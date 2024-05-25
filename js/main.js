@@ -10,10 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.onload = function () {
 
-
 	$(document).ready(function () {
-
-
 
 		$('.jvectormap-marker').css('display', 'none');
 		$('#mapmyvisitors-widget').removeAttr('href').css({
