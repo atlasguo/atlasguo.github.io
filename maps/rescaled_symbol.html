@@ -9,7 +9,7 @@
 		<title>CartoGuophy</title>
 
 		<!-- Bootstrap -->
-		<link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link href="..//libs/bootstrap/bootstrap.min.css" rel="stylesheet">
 
 		<!-- Font -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -19,13 +19,13 @@
 			type='text/css'>
 
 		<!-- Fontawesome -->
-		<link href="libs/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
-		<link href="libs/fontawesome/css/brands.min.css" rel="stylesheet" />
-		<link href="libs/fontawesome/css/solid.min.css" rel="stylesheet" />
+		<link href="..//libs/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+		<link href="..//libs/fontawesome/css/brands.min.css" rel="stylesheet" />
+		<link href="..//libs/fontawesome/css/solid.min.css" rel="stylesheet" />
 
 		<!-- Custom styles -->
-		<link href="css/style.css" rel="stylesheet">
-		<link rel="shortcut icon" href="assets/icon.png">
+		<link href="..//css/style.css" rel="stylesheet">
+		<link rel="shortcut icon" href="..//assets/icon.png">
 	</head>
 
 	<!-- Google tag (gtag.js) -->
@@ -43,8 +43,8 @@
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 			<div class="container">
-				<img src="assets/icon.png" alt="" height="22px" style="margin-right:10px">
-				<a class="navbar-brand js-scroll-trigger" href="#page-top">"CARTOGUOPHY"</a>
+				<img src="..//assets/icon.png" alt="" height="22px" style="margin-right:10px">
+				<a class="navbar-brand js-scroll-trigger" href="../index.html">"CARTOGUOPHY"</a>
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 					data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
 					aria-label="Toggle navigation">
@@ -54,13 +54,13 @@
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav text-uppercase ml-auto">
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="resume.html">Resume</a>
+							<a class="nav-link js-scroll-trigger" href="../resume.html">Resume</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="portfolio.html">Portfolio</a>
+							<a class="nav-link js-scroll-trigger" href="../portfolio.html">Portfolio</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="vision.html">Vision</a>
+							<a class="nav-link js-scroll-trigger" href="../vision.html">Vision</a>
 						</li>
 					</ul>
 				</div>
@@ -68,30 +68,62 @@
 		</nav>
 
 		<!-- Header -->
-		<header class="masthead" style="background-image: url('../assets/mad_bg.jpg')">
-			<div class="container">
-				<div class="intro-text">
+		<header class="masthead" style="height:125px;">
+		</header>
 
-					<div class="intro-heading text-uppercase">Atlas (Chenxiao) Guo</div>
-					<img src="assets/atlas_seal.png" alt="Seal of Atlas" height="45px"
-						style="margin-top:-10px; margin-bottom:20px">
-					<div class="intro-lead-in">Ph.D. Student in Cartography / GIS <span class="line-break"></span>at
-						UW-Madison<br><br>Award-Winning
-						Map Maker</div>
-					<a href="https://geography.wisc.edu/staff/atlas-guo/" target="_blank"><img src="assets/sci_hall.png"
-							style="margin-top:-70px" alt="" height="300px"></a>
+		<div class="portfolio-modal">
+			<div class="modal-content">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 mx-auto">
+							<div class="modal-body">
+								<!-- Project Details Go Here -->
+								<h2 class="text-uppercase">Rescaled Symbol Design for Trajectories</h2>
+								<h5 class="text-muted">Innovative twitter-based visualization of 2017 Hurricane Harvey
+								</h5>
+								<br>
+								<img class="img-fluid d-block mx-auto" src="rescaled_symbol_full.png" alt="">
+								<a href="rescaled_symbol_full.png" target="_blank">View Full Image</a>
+								<br><br>
+								<p>This is an innovative map series I created for my research, in exploring the
+									spatiotemporal pattern of twitter-based trajectories during 2017 Hurricane
+									Harvey. Specifically, the trajectories are moved to the centroids of
+									aggregated
+									units in proportion to their distance, according to their origins or
+									destinations. By keeping the same direction and same amount but rescaling
+									the
+									distance, the overall pattern of each state’s trajectories is clearly
+									displayed
+									in one map.
+									<br><br>
+									<a href="https://aag.secure-abstracts.com/AAG%20Annual%20Meeting%202019/abstracts-gallery/21455"
+										target="_blank">Click</a> to view the presentation abstract at AAG 2019.
+									<br><br>
+									The interactive version in Mapbox is available (<a
+										href="https://api.mapbox.com/styles/v1/atlaskwok/cjpste2tx41sk2qo4xyft3vm8.html?fresh=true&title=view&access_token=pk.eyJ1IjoiYXRsYXNrd29rIiwiYSI6ImNqbzAzZGo4ejAwNnczd3BnZjY0cmdlMnAifQ.-1JEsHM_MmQMXonEUsnzgw"
+										target="_blank">by origin</a> and <a
+										href="https://api.mapbox.com/styles/v1/atlaskwok/cjpsriswm7ox92rqoiiqmoyt8.html?fresh=true&title=view&access_token=pk.eyJ1IjoiYXRsYXNrd29rIiwiYSI6ImNqbzAzZGo4ejAwNnczd3BnZjY0cmdlMnAifQ.-1JEsHM_MmQMXonEUsnzgw"
+										target="_blank">by destination</a>). An integrated webpage of the
+									Hurricane Harvey is also available <a
+										href="https://cartoguophy.com/hurricane-story/" target="_blank">here</a>,
+									including an <a href="../web/rescaled_symbol.html" target="_blank">interactive
+										comparison map</a> (below).
 
-					<br>
-					<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="portfolio.html"
-						style="margin:-50px">View My Maps</a>
+								</p>
+								<img class="img-fluid d-block mx-auto" src="rescaled_symbol_comparison.png" alt=""><a
+									href="rescaled_symbol_comparison.png" target="_blank">View Full
+									Image</a>
+								<br>
 
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</header>
+		</div>
 
 		<!-- Footer -->
 		<footer class="footer">
-
 			<div class="container">
 				<div class="row">
 					<div class="col-md-2">
@@ -149,7 +181,7 @@
 				<p class="text-muted" style="margin-top:0px">Copyright © 2024 Atlas Guo. <span
 						class="line-break"></span>All rights reserved.
 				</p>
-				<img src="assets/atlas_seal.png" alt="Seal of Atlas" height="45px" style="margin-top:10px">
+				<img src="..//assets/atlas_seal.png" alt="Seal of Atlas" height="45px" style="margin-top:10px">
 				<br><br>
 				<div style="display:none">
 					<script type="text/javascript"
@@ -164,13 +196,13 @@
 		</footer>
 
 		<!-- Bootstrap -->
-		<script src="libs/bootstrap/jquery.min.js"></script>
-		<script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
-		<script src="libs/bootstrap/jquery.easing.min.js"></script>
-		<script src="libs/bootstrap/jqBootstrapValidation.min.js"></script>
+		<script src="..//libs/bootstrap/jquery.min.js"></script>
+		<script src="..//libs/bootstrap/bootstrap.bundle.min.js"></script>
+		<script src="..//libs/bootstrap/jquery.easing.min.js"></script>
+		<script src="..//libs/bootstrap/jqBootstrapValidation.min.js"></script>
 
 		<!-- Custom scripts for this template -->
-		<script src="js/main.js"></script>
+		<script src="..//js/main.js"></script>
 	</body>
 
 </html>

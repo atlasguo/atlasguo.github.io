@@ -1,50 +1,51 @@
-document.addEventListener("DOMContentLoaded", function () {
-	// Fetch and load external HTML content
-	fetch("html/portfolio.html")
-		.then(response => response.text())
-		.then(data => {
-			document.getElementById("portfolio-detail").innerHTML = data;
-			//console.log("Portfolio html file is loaded.")
-		});
+(function ($) {
+	"use strict"; // Start of use strict
 
-	fetch("html/page.html")
-		.then(response => response.text())
-		.then(data => {
-			document.getElementById("page-detail").innerHTML = data;
-			//console.log("Portfolio html file is loaded.")
-		});
-});
-
-window.onload = function () {
-
-	$(document).ready(function () {
-		// $('.jvectormap-marker').css('display', 'none');
-		// $('#mapmyvisitors-widget').removeAttr('href').css({
-		// 	'cursor': 'default'
-		// });
-		// //$('#mapmyvisitors-widget').hide();
-
-		// $('iframe').removeAttr('href').css({
-		// 	'cursor': 'default'
-		// });
-		// //$('iframe').hide();
-
-		var elementsWithId = document.querySelectorAll('[id]');
-		var ids = [];
-		elementsWithId.forEach(function (element) {
-			if ((element.id.substring(0, 10) == "portfolio_") || (element.id.substring(0, 9) == "category_") || (element.id.substring(0, 5) == "page_")) {
-				ids.push('#' + element.id);
+	//Smooth scrolling using jQuery easing
+	$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if (target.length) {
+				$('html, body').animate({
+					scrollTop: (target.offset().top - 40)
+				}, 400, "easeInOutExpo");
+				return false;
 			}
-		});
-		var ids = ids.filter(function (id) {
-			return !id.includes("TEMPLATE");
-		});
-		var hash = window.location.hash;
-		if (ids.includes(hash)) {
-			$(hash).modal('show');
 		}
 	});
 
-	console.log("Everything is loaded.")
-};
+	// Closes responsive menu when a scroll trigger link is clicked
+	$('.js-scroll-trigger').click(function () {
+		$('.navbar-collapse').collapse('hide');
+	});
+
+	// Activate scrollspy to add active class to navbar items on scroll
+	$('body').scrollspy({
+		target: '#mainNav',
+		offset: 100
+	});
+
+	// Collapse Navbar
+	var navbarCollapse = function () {
+		if ($("#mainNav").offset().top > 10) {
+			$("#mainNav").addClass("navbar-shrink");
+		} else {
+			$("#mainNav").removeClass("navbar-shrink");
+		}
+	};
+	// Collapse now if page is not at top
+	navbarCollapse();
+	// Collapse the navbar when page is scrolled
+	$(window).scroll(navbarCollapse);
+
+	// Hide navbar when modals trigger
+	$('.portfolio-modal').on('show.bs.modal', function (e) {
+		$('.navbar').addClass('d-none');
+	})
+	$('.portfolio-modal').on('hidden.bs.modal', function (e) {
+		$('.navbar').removeClass('d-none');
+	})
+
+})(jQuery); // End of use strict
 

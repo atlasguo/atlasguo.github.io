@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+		<meta name="description" content="CARTOGUOPHY - Web Portfolio of Atlas Guo">
+		<meta name="author" content="Atlas (Chenxiao) Guo">
+		<title>CartoGuophy</title>
+
+		<!-- Bootstrap -->
+		<link href="..//libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+			type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet'
+			type='text/css'>
+
+		<!-- Fontawesome -->
+		<link href="..//libs/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+		<link href="..//libs/fontawesome/css/brands.min.css" rel="stylesheet" />
+		<link href="..//libs/fontawesome/css/solid.min.css" rel="stylesheet" />
+
+		<!-- Custom styles -->
+		<link href="..//css/style.css" rel="stylesheet">
+		<link rel="shortcut icon" href="..//assets/icon.png">
+	</head>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7N1ZQRZ0PH"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-7N1ZQRZ0PH');
+	</script>
+
+	<body id="page-top">
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+			<div class="container">
+				<img src="..//assets/icon.png" alt="" height="22px" style="margin-right:10px">
+				<a class="navbar-brand js-scroll-trigger" href="../index.html">"CARTOGUOPHY"</a>
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+					data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+					aria-label="Toggle navigation">
+
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav text-uppercase ml-auto">
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="../resume.html">Resume</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="../portfolio.html">Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="../vision.html">Vision</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Header -->
+		<header class="masthead" style="height:125px;">
+		</header>
+
+		<div class="portfolio-modal">
+			<div class="modal-content">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 mx-auto">
+							<div class="modal-body">
+								<!-- Project Details Go Here -->
+								<h2 class="text-uppercase">United States of
+									Natural Disasters</h2>
+								<h5 class="text-muted">Runner-Up in Thematic Map and Keynotes Choice in WLIA 2024;<br>A
+									comprehensive and creative multivariate visualization</h5>
+								<br>
+								<img class="img-fluid d-block mx-auto" src="us_natural_disaster_full.png" alt="">
+								<a href="us_natural_disaster_full.png" target="_blank">View Full Image</a>
+								<br><br>
+								<p>This map presents an innovative and comprehensive visualization of U.S. natural
+									disasters of various types, allowing the map readers to acquire information from
+									both overview and spatial-semantic specific perspectives.
+									<br><br>
+									The major eye-catching element in this map would be the multivariate symbol design.
+									To evenly divide the space with rooms for multiple visual vehicles, the hexagon unit
+									is chosen, which also balances the functionality and aesthetics. The general idea is
+									to split each hexagon unit into 6 parts (or 7, including the central one),
+									associated with different color hue all around the color wheel. Due to the natural
+									of different colors, the lightness (HSL) or value (HSV) are carefully controlled to
+									minimize the other potential variations as visual variable.
+									<br><br>
+									<img class="img-fluid d-block mx-auto" src="us_natural_disaster_legend1.png" alt="">
+									There is arguably barely perfect solution to arrange 6 or 7 natural disaster types
+									in the order of color wheel spectrum, but efforts are still made to maximize the
+									potential cognitive association. For example, red color for wildfire, yellow for
+									drought, blue for hurricane; while flood appears at the bottom, earthquake comes
+									from the core, etc.
+									<br><br>
+									The design inspiration actually comes from the old printing effect, such as the dots
+									in “halftone”. In CMYK printing, especially those in worse quality, we can still see
+									the colorful dots when close enough. But if we take a step back, the dots work
+									organically to display an image. Therefore, I originally evenly filled 7 round
+									shapes in each hexagon without any overlapping. It turned out though individual
+									values are clear to get, the overall visual effect tends to be grayed out too much.
+									I kept exploring from this side (no overlapping), all the way to the opposite side
+									(entire overlapping of 7 round shapes) which leads to a much clear overall pattern
+									but no way to retrieve individual variables. After many tests in printed version, I
+									got the current configuration with partial overlapping, keeping a good balance
+									between a clear overall pattern and capability of individual variable retrieval.
+									<br><br>
+									With major designs highly relying on color-hue (even the entire color wheel), this
+									map is probably not targeting at communities with color blindness. Even if there
+									seems not to be a perfect solution for that, all relevant feedback is highly
+									welcomed.
+									<br><br>
+									<img class="img-fluid d-block mx-auto" src="us_natural_disaster_legend2.png" alt="">
+									Besides the color (hue), the opacity of each sub-symbol also variates from full to
+									half, representing the record number from FEMA disaster declarations of relevant
+									disaster type. To better understand the social effect of the natural disasters, the
+									population density is illustrated in different shade levels of hexagon edges.
+									Additionally, the univariate maps are also provided on the left side for further
+									exploration.
+									<br><br>
+									The statistical units in 1000 sq mile hexagon are generated under North America
+									Albers equivalent projection, targeting at presenting both the contiguous part and
+									two outside states. Some computing strategies are applied during the data processing
+									procedure of disaster related variables and the population density. Though the data
+									processing and analytics are much less important than the efforts on symbol design,
+									everything is seriously treated as expected.
+									<br><br>
+									Major data source: FEMA disaster declaration summaries, NOAA storm event database,
+									USGS historic earthquakes, NOAA NIDIS Drought.GOV, Esri ArcGIS Online and Living
+									Atlas.
+								</p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-8">
+						<ul class="list-inline social-buttons">
+
+							<li class="list-inline-item">
+								<a href="mailto:atlas.guo@wisc.edu" target="_blank">
+									<i class="fa fa-envelope"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://github.com/atlasguo" target="_blank">
+									<i class="fab fa-github"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://x.com/cartoguophy" target="_blank">
+									<i class="fab fa-x-twitter"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://www.linkedin.com/in/atlasguo" target="_blank">
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+							</li>
+							<span class="line-break"></span>
+							<li class="list-inline-item">
+								<a href="https://www.facebook.com/guo.atlas" target="_blank">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://www.instagram.com/atlasguo/" target="_blank">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://www.youtube.com/channel/UCXy9x6kvG_qn66JcPJfCSFA" target="_blank">
+									<i class="fab fa-youtube"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://space.bilibili.com/1404682551" target="_blank">
+									<i class="fab fa-bilibili"></i>
+								</a>
+							</li>
+							<p></p>
+						</ul>
+					</div>
+					<div class="col-md-2">
+					</div>
+				</div>
+				<p class="text-muted" style="margin-top:0px">Copyright © 2024 Atlas Guo. <span
+						class="line-break"></span>All rights reserved.
+				</p>
+				<img src="..//assets/atlas_seal.png" alt="Seal of Atlas" height="45px" style="margin-top:10px">
+				<br><br>
+				<div style="display:none">
+					<script type="text/javascript"
+						src="//rf.revolvermaps.com/0/0/3.js?i=5s1xl9ki8ik&amp;b=0&amp;s=40&amp;m=0&amp;cl=333333&amp;co=000000&amp;cd=cfcfcf&amp;v0=100&amp;v1=0&amp;r=0"
+						async="async"></script>
+					<script type='text/javascript' id='mapmyvisitors'
+						src='https://mapmyvisitors.com/map.js?cl=829b3f&w=150&t=n&d=ukSsjGdcShOQmlteFQf1g39TecSrYk58qZKTwcbeU54&co=212529&cmo=3d3d3d&cmn=bababa&ct=ffffff'>
+						</script>
+				</div>
+			</div>
+			</div>
+		</footer>
+
+		<!-- Bootstrap -->
+		<script src="..//libs/bootstrap/jquery.min.js"></script>
+		<script src="..//libs/bootstrap/bootstrap.bundle.min.js"></script>
+		<script src="..//libs/bootstrap/jquery.easing.min.js"></script>
+		<script src="..//libs/bootstrap/jqBootstrapValidation.min.js"></script>
+
+		<!-- Custom scripts for this template -->
+		<script src="..//js/main.js"></script>
+	</body>
+
+</html>
