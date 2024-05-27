@@ -133,15 +133,15 @@ section h3.section-subheading {
 
 .btn-primary {
 	background-color: #829b3f;
-	border-color: #829b3f;
+	border-color: #607725;
+	border-width: 5px;
 }
 
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover {
-	background-color: #829b3f !important;
-	border-color: #829b3f !important;
-	color: white;
+	background-color: #607725;
+	border-color: #435516;
 }
 
 .btn-primary:active,
@@ -722,15 +722,15 @@ footer ul.quicklinks {
 
 ul.social-buttons {
 	margin-bottom: 0;
-	line-height: 60px;
+	line-height: 50px;
 }
 
 ul.social-buttons li a {
-	font-size: 20px;
-	line-height: 50px;
+	font-size: 18px;
+	line-height: 40px;
 	display: block;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
 	color: white;
