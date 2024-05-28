@@ -128,13 +128,17 @@ section h3.section-subheading {
 
 .btn-xl {
 	font-size: 15px;
-	padding: 15px 30px;
+	padding: 15px 25px;
 }
 
 .btn-primary {
 	background-color: #829b3f;
 	border-color: #607725;
-	border-width: 5px;
+	border-width: 3px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .btn-primary:active,
