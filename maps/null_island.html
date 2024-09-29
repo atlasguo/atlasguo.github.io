@@ -1,237 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-	<meta name="description" content="CARTOGUOPHY - Web Portfolio of Atlas Guo">
-	<meta name="author" content="Atlas (Chenxiao) Guo">
-	<title>CartoGuophy</title>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+		<meta name="description" content="CARTOGUOPHY - Web Portfolio of Atlas Guo">
+		<meta name="author" content="Atlas (Chenxiao) Guo">
+		<title>CartoGuophy</title>
 
-	<!-- Bootstrap -->
-	<link href="..//libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<!-- Bootstrap -->
+		<link href="..//libs/bootstrap/bootstrap.min.css" rel="stylesheet">
 
-	<!-- Font -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
-		type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+		<!-- Font -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+			type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet'
+			type='text/css'>
 
-	<!-- Fontawesome -->
-	<link href="..//libs/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
-	<link href="..//libs/fontawesome/css/brands.min.css" rel="stylesheet" />
-	<link href="..//libs/fontawesome/css/solid.min.css" rel="stylesheet" />
+		<!-- Fontawesome -->
+		<link href="..//libs/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+		<link href="..//libs/fontawesome/css/brands.min.css" rel="stylesheet" />
+		<link href="..//libs/fontawesome/css/solid.min.css" rel="stylesheet" />
 
-	<!-- Custom styles -->
-	<link href="..//css/style.css" rel="stylesheet">
-	<link rel="shortcut icon" href="..//assets/icon.png">
-</head>
+		<!-- Custom styles -->
+		<link href="..//css/style.css" rel="stylesheet">
+		<link rel="shortcut icon" href="..//assets/icon.png">
+	</head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7N1ZQRZ0PH"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag() { dataLayer.push(arguments); }
-	gtag('js', new Date());
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7N1ZQRZ0PH"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-	gtag('config', 'G-7N1ZQRZ0PH');
-</script>
+		gtag('config', 'G-7N1ZQRZ0PH');
+	</script>
 
-<body id="page-top">
+	<body id="page-top">
 
-	<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-		<div class="container">
-			<img src="..//assets/icon.png" alt="" height="22px" style="margin-right:10px">
-			<a class="navbar-brand js-scroll-trigger" href="../index.html">"CARTOGUOPHY"</a>
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-				aria-label="Toggle navigation">
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+			<div class="container">
+				<img src="..//assets/icon.png" alt="" height="22px" style="margin-right:10px">
+				<a class="navbar-brand js-scroll-trigger" href="../index.html">"CARTOGUOPHY"</a>
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+					data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+					aria-label="Toggle navigation">
 
-				<i class="fas fa-bars"></i>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav text-uppercase ml-auto">
-					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="../resume.html">Resume</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="../portfolio.html">Portfolio</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="../vision.html">Vision</a>
-					</li>
-				</ul>
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav text-uppercase ml-auto">
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="../resume.html">Resume</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="../portfolio.html">Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="../vision.html">Vision</a>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</div>
-	</nav>
+		</nav>
 
-	<!-- Header -->
-	<header class="masthead" style="height:125px;">
-	</header>
+		<!-- Header -->
+		<header class="masthead" style="height:125px;">
+		</header>
 
-	<div class="portfolio-modal">
-		<div class="modal-content">
+		<!-- Portfolio -->
+		<section id="portfolio" class="bg-light">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-8 mx-auto">
-						<div class="modal-body">
-							<!-- Project Details Go Here -->
-							<h2 class="text-uppercase">"NULL ISLAND"</h2>
-							<h5 class="text-muted">Room of Requirement with unpublished / draft maps</h5>
-							<br>
-							<img class="img-fluid d-block mx-auto" src="cartoguophy.png" alt="">
-							<br>
+					<div class="col-lg-12 text-center">
+						<h2 class="section-heading text-uppercase">Room of Requirement</h2>
+						<h3 class="section-subheading text-muted text-uppercase">New maps to be added into portfolio
+							page.
+						</h3>
+					</div>
+				</div>
 
-							<p>A Mini Gallery of LEGO Topographic Maps</p>
-							<img class="img-fluid d-block mx-auto" src="lego_map_gallery_full.jpg" alt="">
-							<a href="lego_map_gallery_full.jpg" target="_blank">View Full Image</a>
-							<br><br><br>
+				<div id="portfolio-grid" class="row">
 
-							<p>North America in LEGO Style</p>
-							<img class="img-fluid d-block mx-auto" src="lego_north_america_photo.jpg" alt="">
-							<a href="lego_north_america_photo.jpg" target="_blank">View Full Image</a>
-							<br><br><br>
+					<div class="portfolio-item col-lg-12" style="margin-top:20px; margin-bottom:-20px">
+					</div>
 
-							<p>Physical Geography of Arizona in LEGO Style</p>
-							<img class="img-fluid d-block mx-auto" src="lego_arizona_full.png" alt="">
-							<a href="lego_arizona_full.png" target="_blank">View Full Image</a>
-							<br><br><br>
+					<div class="col-lg-12 text-center portfolio-item portfolio-category">
+						<h5>—— Marauder's Map ——</h5>
+					</div>
 
-							<p>Physical Geography of New Zealand in LEGO Style</p>
-							<img class="img-fluid d-block mx-auto" src="lego_new_zealand_full.png" alt="">
-							<a href="lego_new_zealand_full.png" target="_blank">View Full Image</a>
-							<br><br><br>
+					<!-- Modal: israel_palestine -->
+					<div class="col-md-4 col-sm-6 portfolio-item tag_en tag_global tag_news tag_terrain tag_proj">
+						<a class="portfolio-link" target="_blank" href="israel_palestine.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="israel_palestine_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>Land Flowing with<br>Milk and Honey </h4>
+							<p class="text-muted">A non-political and<br>non-religious map<br>calling for peace in<br>
+								Israel and Palestine</p>
+						</div>
+					</div>
 
-							<p>Georgia (LEGO Style Graphic)</p>
-							<img class="img-fluid d-block mx-auto" src="lego_georgia_graphic.png" alt="">
-							<a href="lego_georgia_graphic.png" target="_blank">View Full Image</a>
-							<br><br><br>
+					<!-- Modal: shawano_railroad -->
+					<div class="col-md-4 col-sm-6 portfolio-item tag_en tag_wi tag_hist tag_cartlab">
+						<a class="portfolio-link" target="_blank" href="shawano_railroad.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="shawano_railroad_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>Historic Railroads in Menominee and Shawano Counties, WI</h4>
+							<p class="text-muted">CartLab client project<br>with Shawano County<br>Friends of Mountain
+								Bay
+								Trail
+							</p>
+						</div>
+					</div>
 
-							<p>LEGO QR Code of CartoGuophy</p>
-							<img class="img-fluid d-block mx-auto" src="lego_qr_code.jpg" alt="">
-							<a href="lego_qr_code.jpg" target="_blank">View Full Image</a>
-							<br><br><br>
+					<!-- Modal: nri -->
+					<div class="col-md-4 col-sm-6 portfolio-item tag_en tag_us tag_disaster tag_research tag_stylized">
+						<a class="portfolio-link" target="_blank" href="nri.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="nri_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>Blooming Risks:<br>Natural Hazards in<br>the United States</h4>
+							<p class="text-muted">Hexagon-based visualization<br>of FEMA National Risk Index<br>(18
+								types of natural hazards)
+							</p>
+						</div>
+					</div>
 
-							<p>Land Flowing with Milk and Honey (Israel & Palestine Map)</p>
-							<img class="img-fluid d-block mx-auto" src="israel_palestine_full.jpg" alt="">
-							<a href="israel_palestine_full.jpg" target="_blank">View Full Image</a>
-							<br><br><br>
+					<!-- Modal: lego_north_america -->
+					<div class="col-md-4 col-sm-6 portfolio-item tag_craft tag_us tag_edu tag_terrain tag_stylized">
+						<a class="portfolio-link" target="_blank" href="lego_north_america.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="lego_north_america_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>LEGO Map of<br>North America</h4>
+							<p class="text-muted">3D topographic/bathymetric<br>map of North America<br>on 48*48
+								LEGO
+								baseplate<br>(Display
+								on NACIS 2024)
+							</p>
+						</div>
+					</div>
 
-							<p>Basemap of the Israel & Palestine Map)</p>
-							<img class="img-fluid d-block mx-auto" src="israel_palestine_basemap.jpg" alt="">
-							<a href="israel_palestine_basemap.jpg" target="_blank">View Full Image</a>
-							<br><br><br>
+					<!-- Modal: lego_arizona -->
+					<div
+						class="col-md-4 col-sm-6 portfolio-item tag_award tag_en tag_craft tag_edu tag_terrain tag_stylized">
+						<a class="portfolio-link" target="_blank" href="lego_arizona.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="lego_arizona_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>Physical Geography<br>of Arizona<br>in LEGO Style</h4>
+							<p class="text-muted">3D rendered graphics with labels;<br>
+								winner of college student project,<br>AGIC Symposium Maps Contest
+							</p>
+						</div>
+					</div>
 
-							<p>Unlock Madison by Bike</p>
-							<img class="img-fluid d-block mx-auto" src="bike_madison_full.png" alt="">
-							<a href="bike_madison_full.png" target="_blank">View Full Image</a>
-							<br><br><br>
+					<!-- Modal: lego_new_zealand -->
+					<div
+						class="col-md-4 col-sm-6 portfolio-item tag_bilingual tag_craft tag_global tag_edu tag_terrain tag_stylized">
+						<a class="portfolio-link" target="_blank" href="lego_new_zealand.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="lego_new_zealand_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>Physical Geography<br>of New Zealand<br>in LEGO Style</h4>
+							<p class="text-muted">Displayed on Map Exhibition of<br>GeoCart'2024, New Zealand's<br>
+								National Cartographic Conference
+							</p>
+						</div>
+					</div>
 
-							<p>Solar Print Bandana of Wisconsin Map (Process)</p>
-							<img class="img-fluid d-block mx-auto" src="bandana_process.jpg" alt="">
-							<a href="bandana_process.jpg" target="_blank">View Full Image</a>
-							<br><br><br>
+					<!-- Modal: lego_map_gallery -->
+					<div
+						class="col-md-4 col-sm-6 portfolio-item tag_en tag_craft tag_series tag_global tag_us tag_ga tag_wi tag_edu tag_terrain tag_stylized">
+						<a class="portfolio-link" target="_blank" href="lego_map_gallery.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="lego_map_gallery_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>A Mini Gallery<br>of LEGO Style<br>Topographic Maps</h4>
+							<p class="text-muted">Assorted LEGO Style maps<br>with various design styles<br>(Display on
+								NACIS 2024)
+							</p>
+						</div>
+					</div>
 
-							<p>Solar Print Bandana of Wisconsin Map (Finish)</p>
-							<img class="img-fluid d-block mx-auto" src="bandana_finish.jpg" alt="">
-							<a href="bandana_finish.jpg" target="_blank">View Full Image</a>
-							<br><br><br>
+					<!-- Modal: lego_georgia -->
+					<div
+						class="col-md-4 col-sm-6 portfolio-item tag_en tag_craft tag_ga tag_edu tag_terrain tag_stylized">
+						<a class="portfolio-link" target="_blank" href="lego_georgia.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="lego_georgia_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>LEGO Style<br>Topographic<br>Map of Georgia</h4>
+							<p class="text-muted">Minimalism topographic<br>map of Georgia with labels<br>(one dot
+								represents 8*8 sq mi)
+							</p>
+						</div>
+					</div>
 
-							<p>Multimodal Social Media Data Learning and Visualization for Hurricanes (Research
-								Poster for CaGIS + UCGIS Symposium 2024)</p>
-							<img class="img-fluid d-block mx-auto" src="multimodal_full.png" alt="">
-							<a href="multimodal_full.png" target="_blank">View Full Image</a>
-							<br><br><br>
+					<!-- Modal: bike_madison -->
+					<div
+						class="col-md-4 col-sm-6 portfolio-item tag_en tag_madison tag_univ tag_personal tag_traj tag_proj">
+						<a class="portfolio-link" target="_blank" href="bike_madison.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="bike_madison_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>Unlock Madison<br>by Bike</h4>
+							<p class="text-muted">Mapping my yearly<br>cycling/scooting tracks<br>in Madison and
+								vicinity<br>(Sep 2023 - Aug 2024)
+							</p>
+						</div>
+					</div>
 
+					<!-- Modal: bandana -->
+					<div class="col-md-4 col-sm-6 portfolio-item tag_craft tag_wi">
+						<a class="portfolio-link" target="_blank" href="bandana.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="bandana_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>Wisconsin Map<br>on Solar Printed<br>Cotton Bandana</h4>
+							<p class="text-muted">Made with local flowers<br>and fronds during a<br>bike-and-craft
+								activity
+							</p>
+						</div>
+					</div>
+
+					<!-- Modal: multimodal -->
+					<div class="col-md-4 col-sm-6 portfolio-item tag_en tag_us tag_disaster tag_research">
+						<a class="portfolio-link" target="_blank" href="multimodal.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="multimodal_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>Multimodal Social<br>Media Data Learning<br>and Visualization<br>for Hurricanes</h4>
+							<p class="text-muted">Research poster presented on<br>CaGIS + UCGIS Symposium 2024
+							</p>
+						</div>
+					</div>
+
+					<!-- Modal: empty -->
+					<div class="col-md-4 col-sm-6 portfolio-item">
+						<a class="portfolio-link" target="_blank" href="null_island.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="empty_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>Add<br>Title<br>Here</h4>
+							<p class="text-muted">Add More<br>Information<br>Here...
+							</p>
+						</div>
+					</div>
+
+					<!-- Modal: news_global -->
+					<div
+						class="col-md-4 col-sm-6 portfolio-item tag_cn tag_global tag_china tag_disaster tag_hist tag_news">
+						<a class="portfolio-link" target="_blank" href="news_global.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="news_turkey_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>Map Series of<br>Global News</h4>
+							<p class="text-muted">Serving MADNEWS articles;<br>Mapping area includes<br>Turkey,
+								Israel/Palestine,<br> Ukraine, China, Egypt, etc.
+							</p>
+						</div>
+					</div>
+
+					<!-- Modal: news_domestic -->
+					<div class="col-md-4 col-sm-6 portfolio-item tag_cn tag_us tag_wi tag_disaster tag_news">
+						<a class="portfolio-link" target="_blank" href="news_domestic.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="news_tx_wildfire_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>Map Series of<br>Domestic News</h4>
+							<p class="text-muted">Serving MADNEWS articles;<br>Mapping area includes<br>United States,
+								Texas,<br>Oklahoma, Wisconsin, etc.
+							</p>
+						</div>
+					</div>
+
+					<!-- Modal: news_local -->
+					<div
+						class="col-md-4 col-sm-6 portfolio-item tag_bilingual tag_series tag_madison tag_covid tag_univ tag_news tag_proj">
+						<a class="portfolio-link" target="_blank" href="news_local.html">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid round-corner" src="news_wi_protest_thumbnail.png" alt="">
+						</a>
+						<div class="portfolio-caption round-corner">
+							<h4>Map Series of<br>Local News<br>(Madison Area)</h4>
+							<p class="text-muted">Serving MADNEWS articles;<br>Topic includes covid, assult,<br>
+								event, political protest, etc.
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+		<div class="portfolio-modal">
+			<div class="modal-content">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 mx-auto">
+							<div class="modal-body">
+								<!-- Project Details Go Here -->
+								<h2 class="text-uppercase">"NULL ISLAND"</h2>
+								<h5 class="text-muted">Room of Requirement with unpublished / draft maps</h5>
+								<br>
+								<img class="img-fluid d-block mx-auto" src="cartoguophy.png" alt="">
+								<br>
+
+								<p>A Mini Gallery of LEGO Topographic Maps</p>
+								<img class="img-fluid d-block mx-auto" src="lego_map_gallery_full.jpg" alt="">
+								<a href="lego_map_gallery_full.jpg" target="_blank">View Full Image</a>
+								<br><br><br>
+
+								<p>North America in LEGO Style</p>
+								<img class="img-fluid d-block mx-auto" src="lego_north_america_photo.jpg" alt="">
+								<a href="lego_north_america_photo.jpg" target="_blank">View Full Image</a>
+								<br><br><br>
+
+								<p>Physical Geography of Arizona in LEGO Style</p>
+								<img class="img-fluid d-block mx-auto" src="lego_arizona_full.png" alt="">
+								<a href="lego_arizona_full.png" target="_blank">View Full Image</a>
+								<br><br><br>
+
+								<p>Physical Geography of New Zealand in LEGO Style</p>
+								<img class="img-fluid d-block mx-auto" src="lego_new_zealand_full.png" alt="">
+								<a href="lego_new_zealand_full.png" target="_blank">View Full Image</a>
+								<br><br><br>
+
+								<p>Georgia (LEGO Style Graphic)</p>
+								<img class="img-fluid d-block mx-auto" src="lego_georgia_graphic.png" alt="">
+								<a href="lego_georgia_graphic.png" target="_blank">View Full Image</a>
+								<br><br><br>
+
+								<p>LEGO QR Code of CartoGuophy</p>
+								<img class="img-fluid d-block mx-auto" src="lego_qr_code.jpg" alt="">
+								<a href="lego_qr_code.jpg" target="_blank">View Full Image</a>
+								<br><br><br>
+
+								<p>Land Flowing with Milk and Honey (Israel & Palestine Map)</p>
+								<img class="img-fluid d-block mx-auto" src="israel_palestine_full.jpg" alt="">
+								<a href="israel_palestine_full.jpg" target="_blank">View Full Image</a>
+								<br><br><br>
+
+								<p>Basemap of the Israel & Palestine Map)</p>
+								<img class="img-fluid d-block mx-auto" src="israel_palestine_basemap.jpg" alt="">
+								<a href="israel_palestine_basemap.jpg" target="_blank">View Full Image</a>
+								<br><br><br>
+
+								<p>Unlock Madison by Bike</p>
+								<img class="img-fluid d-block mx-auto" src="bike_madison_full.png" alt="">
+								<a href="bike_madison_full.png" target="_blank">View Full Image</a>
+								<br><br><br>
+
+								<p>Solar Print Bandana of Wisconsin Map (Process)</p>
+								<img class="img-fluid d-block mx-auto" src="bandana_process.jpg" alt="">
+								<a href="bandana_process.jpg" target="_blank">View Full Image</a>
+								<br><br><br>
+
+								<p>Solar Print Bandana of Wisconsin Map (Finish)</p>
+								<img class="img-fluid d-block mx-auto" src="bandana_finish.jpg" alt="">
+								<a href="bandana_finish.jpg" target="_blank">View Full Image</a>
+								<br><br><br>
+
+								<p>Multimodal Social Media Data Learning and Visualization for Hurricanes (Research
+									Poster for CaGIS + UCGIS Symposium 2024)</p>
+								<img class="img-fluid d-block mx-auto" src="multimodal_full.png" alt="">
+								<a href="multimodal_full.png" target="_blank">View Full Image</a>
+								<br><br><br>
+
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<!-- Footer -->
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-2">
-				</div>
-				<div class="col-md-8">
-					<ul class="list-inline social-buttons">
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-8">
+						<ul class="list-inline social-buttons">
 
-						<li class="list-inline-item">
-							<a href="mailto:atlas.guo@wisc.edu" target="_blank">
-								<i class="fa fa-envelope"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://github.com/atlasguo" target="_blank">
-								<i class="fab fa-github"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://x.com/cartoguophy" target="_blank">
-								<i class="fab fa-x-twitter"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://www.linkedin.com/in/atlasguo" target="_blank">
-								<i class="fab fa-linkedin-in"></i>
-							</a>
-						</li>
-						<span class="line-break"></span>
-						<li class="list-inline-item">
-							<a href="https://www.facebook.com/guo.atlas" target="_blank">
-								<i class="fab fa-facebook-f"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://www.instagram.com/cartoguophy/" target="_blank">
-								<i class="fab fa-instagram"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://www.youtube.com/channel/UCXy9x6kvG_qn66JcPJfCSFA" target="_blank">
-								<i class="fab fa-youtube"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://space.bilibili.com/1404682551" target="_blank">
-								<i class="fab fa-bilibili"></i>
-							</a>
-						</li>
-						<p></p>
-					</ul>
+							<li class="list-inline-item">
+								<a href="mailto:atlas.guo@wisc.edu" target="_blank">
+									<i class="fa fa-envelope"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://github.com/atlasguo" target="_blank">
+									<i class="fab fa-github"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://x.com/cartoguophy" target="_blank">
+									<i class="fab fa-x-twitter"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://www.linkedin.com/in/atlasguo" target="_blank">
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+							</li>
+							<span class="line-break"></span>
+							<li class="list-inline-item">
+								<a href="https://www.facebook.com/guo.atlas" target="_blank">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://www.instagram.com/cartoguophy/" target="_blank">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://www.youtube.com/channel/UCXy9x6kvG_qn66JcPJfCSFA" target="_blank">
+									<i class="fab fa-youtube"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://space.bilibili.com/1404682551" target="_blank">
+									<i class="fab fa-bilibili"></i>
+								</a>
+							</li>
+							<p></p>
+						</ul>
+					</div>
+					<div class="col-md-2">
+					</div>
 				</div>
-				<div class="col-md-2">
+				<p class="text-muted" style="margin-top:0px">Copyright © 2024 Atlas Guo. <span
+						class="line-break"></span>All
+					rights reserved.
+				</p>
+				<img src="..//assets/atlas_seal.png" alt="Seal of Atlas" height="45px" style="margin-top:10px">
+				<br><br>
+				<div style="display:none">
+					<script type="text/javascript"
+						src="//rf.revolvermaps.com/0/0/3.js?i=5s1xl9ki8ik&amp;b=0&amp;s=40&amp;m=0&amp;cl=333333&amp;co=000000&amp;cd=cfcfcf&amp;v0=100&amp;v1=0&amp;r=0"
+						async="async"></script>
+					<script type='text/javascript' id='mapmyvisitors'
+						src='https://mapmyvisitors.com/map.js?cl=829b3f&w=150&t=n&d=ukSsjGdcShOQmlteFQf1g39TecSrYk58qZKTwcbeU54&co=212529&cmo=3d3d3d&cmn=bababa&ct=ffffff'>
+						</script>
 				</div>
 			</div>
-			<p class="text-muted" style="margin-top:0px">Copyright © 2024 Atlas Guo. <span class="line-break"></span>All
-				rights reserved.
-			</p>
-			<img src="..//assets/atlas_seal.png" alt="Seal of Atlas" height="45px" style="margin-top:10px">
-			<br><br>
-			<div style="display:none">
-				<script type="text/javascript"
-					src="//rf.revolvermaps.com/0/0/3.js?i=5s1xl9ki8ik&amp;b=0&amp;s=40&amp;m=0&amp;cl=333333&amp;co=000000&amp;cd=cfcfcf&amp;v0=100&amp;v1=0&amp;r=0"
-					async="async"></script>
-				<script type='text/javascript' id='mapmyvisitors'
-					src='https://mapmyvisitors.com/map.js?cl=829b3f&w=150&t=n&d=ukSsjGdcShOQmlteFQf1g39TecSrYk58qZKTwcbeU54&co=212529&cmo=3d3d3d&cmn=bababa&ct=ffffff'>
-					</script>
 			</div>
-		</div>
-		</div>
-	</footer>
+		</footer>
 
-	<!-- Bootstrap -->
-	<script src="..//libs/bootstrap/jquery.min.js"></script>
-	<script src="..//libs/bootstrap/bootstrap.bundle.min.js"></script>
-	<script src="..//libs/bootstrap/jquery.easing.min.js"></script>
-	<script src="..//libs/bootstrap/jqBootstrapValidation.min.js"></script>
+		<!-- Bootstrap -->
+		<script src="..//libs/bootstrap/jquery.min.js"></script>
+		<script src="..//libs/bootstrap/bootstrap.bundle.min.js"></script>
+		<script src="..//libs/bootstrap/jquery.easing.min.js"></script>
+		<script src="..//libs/bootstrap/jqBootstrapValidation.min.js"></script>
 
-	<!-- Custom scripts for this template -->
-	<script src="..//js/main.js"></script>
-</body>
+		<!-- Custom scripts for this template -->
+		<script src="..//js/main.js"></script>
+	</body>
 
 </html>

@@ -113,6 +113,10 @@ section h3.section-subheading {
 	}
 }
 
+.modal-content {
+	border-radius: 0rem;
+}
+
 .round-corner {
 	border-radius: 10px;
 }
