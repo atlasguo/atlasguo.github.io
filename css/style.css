@@ -752,3 +752,25 @@ ul.social-buttons li a:focus,
 ul.social-buttons li a:hover {
 	background-color: #829b3f;
 }
+
+#backToTop {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 5px 15px;
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #829b3f;
+	color: white;
+	opacity: 0.7;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	z-index: 1000;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: opacity 0.3s ease;
+}
+
+#backToTop:hover {
+	opacity: 0.9;
+}
