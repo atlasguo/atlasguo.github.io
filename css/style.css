@@ -792,3 +792,7 @@ ul.social-buttons li a:hover {
 #backToTop:hover {
 	opacity: 0.9;
 }
+
+.page-margin {
+	margin: 20px;
+}
