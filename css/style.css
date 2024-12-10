@@ -12,10 +12,12 @@ body {
 p {
 	line-height: 1.3;
 	font-size: 1.2em;
+	color: #121212;
 }
 
 a {
 	color: #97a800;
+	font-weight: 500;
 }
 
 a:hover {
@@ -43,6 +45,15 @@ h4 {
 
 h5 {
 	font-size: 1.1em;
+	font-weight: 500;
+	font-style: italic;
+	font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+h5.category {
+	font-style: normal;
+	font-weight: 700;
+	font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 .subsection {
@@ -313,12 +324,16 @@ header.masthead .intro-text .intro-heading {
 .service-heading {
 	margin: 15px 0;
 	text-transform: none;
+	font-weight: 700;
+	font-style: normal;
+	color: #3d3d3d;
+	font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 #portfolio .portfolio-item {
 	text-align: center;
 	right: 0;
-	margin: 0 0 15px;
+	margin: 0 0 10px;
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -392,7 +407,7 @@ header.masthead .intro-text .intro-heading {
 
 @media (min-width: 767px) {
 	#portfolio .portfolio-item {
-		margin: 0 0 30px;
+		margin: 0 0 10px;
 	}
 }
 
@@ -481,7 +496,7 @@ header.masthead .intro-text .intro-heading {
 .portfolio-category {
 	color: #829b3f;
 	font-style: oblique;
-	padding-top: 50px;
+	padding-top: 30px;
 }
 
 .timeline {
@@ -763,7 +778,7 @@ ul.social-buttons li a:hover {
 	padding: 5px 15px;
 	font-size: 18px;
 	font-weight: 700;
-	background-color: #829b3f;
+	background-color: #97a800;
 	color: white;
 	opacity: 0.7;
 	border: none;
