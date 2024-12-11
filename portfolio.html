@@ -79,51 +79,54 @@
 						<h2 class="section-heading text-uppercase">Portfolio</h2>
 						<h3 class="section-subheading text-muted">GIVE US THIS DAY OUR DAILY MAP.</h3>
 						<div class="skills col-lg-12 text-center">
-							<img class="img-fluid round-corner" style="display:none; width:70%; margin-bottom:25px; "
+							<img class="img-fluid round-corner" style="display:none; width:60%; margin-bottom:25px; "
 								src="assets/portfolio_hexagon.jpg" alt="">
-							<div id="filters" class="filters">
 
-								<a href="#" data-filter="*" class="active"><b>ALL (categories)</b></a><b> • </b>
+							<br>
+							<h6>Click to filter by:</h6>
+							<div id="filters" class="filters">
+								<a href="#" data-filter="*" class="active"><b>ALL (RESET FILTER)</b></a><b> • </b>
 								<a href='#' data-filter='.tag_award'><b>Award-Winning</b></a>
 								</b><br>
-								<b>By Region:</b><span class="line-break"></span>
+								<b>Region:</b><span class="line-break"></span>
 								<a href='#' data-filter='.tag_global'>Global</a> |
 								<a href='#' data-filter='.tag_china'>China</a> |
 								<a href='#' data-filter='.tag_us'>U.S.</a> |
 								<a href='#' data-filter='.tag_ga'>GA</a> |
 								<a href='#' data-filter='.tag_wi'>WI</a> |
 								<a href='#' data-filter='.tag_madison'>Madison</a><br>
-								<b>By Topic:</b><span class="line-break"></span>
+								<b>Topic:</b><span class="line-break"></span>
 								<a href='#' data-filter='.tag_disaster'>Disaster</a> |
 								<a href='#' data-filter='.tag_hurr'>Hurricane</a> |
 								<a href='#' data-filter='.tag_covid'>Covid</a> |
 								<a href='#' data-filter='.tag_univ'>University</a> |
 								<a href='#' data-filter='.tag_hist'>History</a><br>
-								<b>By Purpose:</b><span class="line-break"></span>
+								<b>Purpose:</b><span class="line-break"></span>
 								<a href='#' data-filter='.tag_research'>Research</a> |
 								<a href='#' data-filter='.tag_course'>Course</a> |
 								<a href='#' data-filter='.tag_news'>News</a> |
 								<a href='#' data-filter='.tag_edu'>Education</a> |
 								<a href='#' data-filter='.tag_personal'>Personal</a><br>
-								<b>By Design:</b><span class="line-break"></span>
+								<b>Design:</b><span class="line-break"></span>
 								<a href='#' data-filter='.tag_lego'>LEGO</a> |
 								<a href='#' data-filter='.tag_terrain'>Terrain</a> |
 								<a href='#' data-filter='.tag_traj'>Trajectory</a> |
 								<a href='#' data-filter='.tag_stylized'>Stylized</a> |
 								<a href='#' data-filter='.tag_proj'>Special Projection</a><br>
-								<b>By Collaboration:</b><span class="line-break"></span>
+								<b>Collaboration:</b><span class="line-break"></span>
 								<a href='#' data-filter='.tag_cartlab'>UW Cartography Lab</a> |
 								<a href='#' data-filter='.tag_team'>Teamwork</a><br>
-								<b>By Language:</b><span class="line-break"></span>
+								<b>Language:</b><span class="line-break"></span>
 								<a href='#' data-filter='.tag_en'>English</a> |
 								<a href='#' data-filter='.tag_cn'>Chinese</a> |
 								<a href='#' data-filter='.tag_bilingual'>Bilingual</a><br>
-								<b>By Format:</b><span class="line-break"></span>
+								<b>Format:</b><span class="line-break"></span>
 								<a href='#' data-filter='.tag_web'>Web</a> |
 								<a href='#' data-filter='.tag_tangible'>Tangible</a> |
 								<a href='#' data-filter='.tag_series'>Series</a><br>
 							</div>
 							<br>
+
 						</div>
 
 					</div>
@@ -131,11 +134,31 @@
 
 				<div id="portfolio-grid" class="row">
 
-					<div class="portfolio-item col-lg-12" style="margin-top:20px; margin-bottom:-20px">
+					<div class="portfolio-item skills">
+						<h6>Click to see category of:</h6>
+						<div class="filters col-10 offset-1 col-md-6 offset-md-3">
+							<a href='#category-reference'>Reference</a> •
+							<a href='#category-thematic'>Thematic</a> •
+							<a href='#category-research'>Research</a> •
+							<a href='#category-hurricane'>Hurricane</a> •
+							<a href='#category-lego'>LEGO</a> •
+							<a href='#category-news'>News</a> •
+							<a href='#category-historical'>Historical</a> •
+							<a href='#category-web-app'>Web App</a> •
+							<a href='#category-web-map'>Web Map</a> •
+							<a href='#category-covid'>Covid</a> •
+							<a href='#category-cartlab'>CartLab</a> •
+							<a href='#category-series'>Series</a> •
+							<a href='#category-local'>Local</a> •
+							<a href='#category-personal'>Personal</a> •
+							<a href='#category-fun'>Fun</a> •
+							<a href='#category-artistic'>Artistic</a> •
+							<a href='#category-craft'>Craft</a>
+						</div>
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— Reference Map ——</h5>
+						<h5 class="category" id="category-reference">—— Reference Map ——</h5>
 					</div>
 
 					<!-- Modal: israel_palestine -->
@@ -193,7 +216,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— Thematic Map ——</h5>
+						<h5 class="category" id="category-thematic">—— Thematic Map ——</h5>
 					</div>
 
 					<!-- Modal: us_blooming_risk -->
@@ -254,7 +277,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— Research Map ——</h5>
+						<h5 class="category" id="category-research">—— Research Map ——</h5>
 					</div>
 
 					<!-- Modal: multimodal -->
@@ -313,7 +336,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— Hurricane Map ——</h5>
+						<h5 class="category" id="category-hurricane">—— Hurricane Map ——</h5>
 					</div>
 
 					<!-- Modal: active_hurricane_tracker -->
@@ -375,7 +398,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— LEGO Style Map ——</h5>
+						<h5 class="category" id="category-lego">—— LEGO Style Map ——</h5>
 					</div>
 
 					<!-- Modal: lego_north_america -->
@@ -391,7 +414,7 @@
 						</a>
 						<div class="portfolio-caption round-corner">
 							<h4>LEGO Map of<br>North America</h4>
-							<p class="text-muted">3D topographic/bathymetric<br>map of North America<br>on 48*48
+							<p class="text-muted">3D topographic/bathymetric <br>map of North America<br>on 48*48
 								LEGO
 								baseplate<br>(in NACIS 2024 Map Gallery)
 							</p>
@@ -493,7 +516,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— News Map ——</h5>
+						<h5 class="category" id="category-news">—— News Map ——</h5>
 					</div>
 
 					<!-- Modal: news_global -->
@@ -554,7 +577,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— Historical Map ——</h5>
+						<h5 class="category" id="category-historical">—— Historical Map ——</h5>
 					</div>
 
 					<!-- Modal: shawano_railroad -->
@@ -616,7 +639,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— Web Application ——</h5>
+						<h5 class="category" id="category-web-app">—— Web Application ——</h5>
 					</div>
 
 					<!-- Modal: undp_sids -->
@@ -632,9 +655,7 @@
 						<div class="portfolio-caption round-corner">
 							<h4>UNDP SIDS<br>Geospatial<br>Dashboard</h4>
 							<p class="text-muted">Participated Mapbox-based<br>web map development<br>during
-								internship
-								at
-								UNDP
+								internship at UNDP
 							</p>
 						</div>
 					</div>
@@ -678,7 +699,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— Web Map ——</h5>
+						<h5 class="category" id="category-web-map">—— Web Map ——</h5>
 					</div>
 
 					<!-- Modal: ancient_chinese -->
@@ -736,7 +757,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— Covid Map ——</h5>
+						<h5 class="category" id="category-covid">—— Covid Map ——</h5>
 					</div>
 
 					<!-- Modal: twitter_sentiment_covid -->
@@ -796,7 +817,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— CartLab Design Challenge (1-Day) ——</h5>
+						<h5 class="category" id="category-cartlab">—— CartLab Design Challenge (1-Day) ——</h5>
 					</div>
 
 					<!-- Modal: dc_us_hist_lynching -->
@@ -857,7 +878,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— Map Series ——</h5>
+						<h5 class="category" id="category-series">—— Map Series ——</h5>
 					</div>
 
 					<!-- Modal: lego_map_gallery -->
@@ -918,7 +939,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— Local Map ——</h5>
+						<h5 class="category" id="category-local">—— Local Map ——</h5>
 					</div>
 
 					<!-- Modal: bike_madison -->
@@ -981,7 +1002,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— Personal Map ——</h5>
+						<h5 class="category" id="category-personal">—— Personal Map ——</h5>
 					</div>
 
 					<!-- Modal: grandfather_memorial -->
@@ -1040,7 +1061,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— Fun Map ——</h5>
+						<h5 class="category" id="category-fun">—— Fun Map ——</h5>
 					</div>
 
 					<!-- Modal: eclipse_2024 -->
@@ -1101,7 +1122,7 @@
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— Artistic Map ——</h5>
+						<h5 class="category" id="category-artistic">—— Artistic Map ——</h5>
 					</div>
 
 					<!-- Modal: ai_maps -->
@@ -1154,14 +1175,14 @@
 						</a>
 						<div class="portfolio-caption round-corner">
 							<h4>Map-making in<br>Seal-Carving<br>Calligraphy</h4>
-							<p class="text-muted">Engraving maps on sealstone<br>material as image stamps:<br>China,
+							<p class="text-muted">Engraving maps on seal stone<br>material as image stamps:<br>China,
 								Wisconsin, and Zibo
 							</p>
 						</div>
 					</div>
 
 					<div class="col-lg-12 text-center portfolio-item portfolio-category">
-						<h5 class="category">—— Craft Map ——</h5>
+						<h5 class="category" id="category-craft">—— Craft Map ——</h5>
 					</div>
 
 					<!-- Modal: tshirt -->
@@ -1301,7 +1322,10 @@
 				</div>
 			</div>
 			</div>
-		</footer> <!-- Back To Top Button --> <button id="backToTop" style="display: none;">↑</button>
+		</footer>
+
+		<!-- Back To Top Button -->
+		<button id="backToTop" style="display: none;"><i class="fas fa-arrow-up"></i></button>
 
 		<!-- Bootstrap -->
 		<script src="libs/bootstrap/jquery.min.js"></script>
