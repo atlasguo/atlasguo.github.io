@@ -13,5 +13,13 @@
 		"hillshades",
 		"mapmyvisitors",
 		"NACIS"
-	]
+	],
+	"cSpell.customDictionaries": {
+		"custom-dictionary-workspace": {
+			"name": "custom-dictionary-workspace",
+			"path": "${workspaceFolder:atlasguo.github.io}/.cspell/custom-dictionary-workspace.txt",
+			"addWords": true,
+			"scope": "workspace"
+		}
+	}
 }
