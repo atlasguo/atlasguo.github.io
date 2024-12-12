@@ -798,6 +798,13 @@ ul.social-buttons li a:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	line-height: 1;
+	text-align: center;
+}
+
+#backToTop i {
+	display: inline-block;
+	line-height: 1;
 }
 
 #backToTop:hover {
