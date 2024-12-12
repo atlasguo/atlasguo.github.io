@@ -229,6 +229,7 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
+	text-align: right;
 	font-size: 100%;
 	font-weight: 400;
 	padding: 0.5em 0.8em;
