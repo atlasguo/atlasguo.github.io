@@ -800,15 +800,29 @@ ul.social-buttons li a:hover {
 	align-items: center;
 	line-height: 1;
 	text-align: center;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 #backToTop i {
 	display: inline-block;
 	line-height: 1;
+	margin: 0;
+	text-align: center;
+	vertical-align: middle;
 }
 
 #backToTop:hover {
 	opacity: 0.9;
+}
+
+.fas {
+	width: 1em;
+	height: 1em;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .page-side-padding {
