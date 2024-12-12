@@ -689,7 +689,7 @@ header.masthead .intro-text .intro-heading {
 	}
 
 	.timeline>li .timeline-panel {
-		padding: 0 20px 20px 100px;
+		padding: 0 20px 20px 10px;
 	}
 
 	.timeline>li .timeline-image {
@@ -703,7 +703,7 @@ header.masthead .intro-text .intro-heading {
 	}
 
 	.timeline>li.timeline-inverted>.timeline-panel {
-		padding: 0 100px 20px 20px;
+		padding: 0 10px 20px 20px;
 	}
 }
 
