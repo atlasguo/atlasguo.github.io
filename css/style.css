@@ -817,15 +817,6 @@ ul.social-buttons li a:hover {
 	opacity: 0.9;
 }
 
-.fas {
-	width: 1em;
-	height: 1em;
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .page-side-padding {
 	padding-left: 20px;
 	padding-right: 20px;
