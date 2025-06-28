@@ -1,310 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
+		<meta name="description" content="CARTOGUOPHY - Web Portfolio of Atlas Guo" />
+		<meta name="author" content="Atlas (Chenxiao) Guo" />
+		<meta property="og:image" content="https://cartoguophy.com/assets/cartoguophy_og.jpg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="675" />
+		<title>CartoGuophy</title>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-	<meta name="description" content="CARTOGUOPHY - Web Portfolio of Atlas Guo">
-	<meta name="author" content="Atlas (Chenxiao) Guo">
-	<meta property="og:image" content="https://cartoguophy.com/assets/cartoguophy_og.jpg">
-	<meta property="og:image:width" content="1200">
-	<meta property="og:image:height" content="675">
-	<title>CartoGuophy</title>
+		<!-- Bootstrap -->
+		<link href="..//libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
 
-	<!-- Bootstrap -->
-	<link href="..//libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<!-- Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet" />
 
-	<!-- Font -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-		rel="stylesheet">
+		<!-- Fontawesome -->
+		<link href="..//libs/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+		<link href="..//libs/fontawesome/css/brands.min.css" rel="stylesheet" />
+		<link href="..//libs/fontawesome/css/solid.min.css" rel="stylesheet" />
 
-	<!-- Fontawesome -->
-	<link href="..//libs/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
-	<link href="..//libs/fontawesome/css/brands.min.css" rel="stylesheet" />
-	<link href="..//libs/fontawesome/css/solid.min.css" rel="stylesheet" />
+		<!-- Custom styles -->
+		<link href="..//css/style.css" rel="stylesheet" />
+		<link rel="shortcut icon" href="..//assets/icon.png" />
+	</head>
 
-	<!-- Custom styles -->
-	<link href="..//css/style.css" rel="stylesheet">
-	<link rel="shortcut icon" href="..//assets/icon.png">
-</head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7N1ZQRZ0PH"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7N1ZQRZ0PH"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag() { dataLayer.push(arguments); }
-	gtag('js', new Date());
+		gtag("config", "G-7N1ZQRZ0PH");
+	</script>
 
-	gtag('config', 'G-7N1ZQRZ0PH');
-</script>
-
-<body id="page-top">
-
-	<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-		<div class="container">
-			<img src="..//assets/icon.png" alt="" height="22px" style="margin-right:10px">
-			<a class="navbar-brand js-scroll-trigger" href="../index.html">"CARTOGUOPHY"</a>
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-				aria-label="Toggle navigation">
-
-				<i class="fas fa-bars"></i>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav text-uppercase ml-auto">
-					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="../resume.html">Resume</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="../portfolio.html">Portfolio</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="../vision.html">Vision</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="../contact.html">Contact</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<!-- Header -->
-	<header class="masthead">
-	</header>
-
-	<div class="portfolio-modal">
-		<div class="modal-content">
+	<body id="page-top">
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 mx-auto">
-						<div class="modal-body">
-							<!-- Project Details Go Here -->
-							<h2 class="text-uppercase">Visualizing Historical Hurricanes in Contiguous U.S.</h2>
-							<h5 class="text-muted">Best Print Map in 2022 CaGIS Map Competition</h5>
-							<br>
-							<img class="img-fluid d-block mx-auto" src="historical_hurricanes_screen.jpg" alt="">
-							<a href="historical_hurricanes_screen.jpg" target="_blank">Download Compressed
-								Image</a><br>
-							<a href="historical_hurricanes_full.jpg" target="_blank">Download Full-Size Image</a>
-							<br><br>
-							<p>This map product is a combination of three geovisualizations about historical
-								hurricanes in contiguous U.S. from different perspectives.
-								<br><br>
-								1. The Panoramic “Hexagon” Map (bottom):
-								With orthographic “World From Space” projection, this map lines up the major
-								Atlantic coastal area of the U.S. horizontally. Based on 10-square-kilometer hexagon
-								unit, the choropleth (color) shows the total number of storms, and the piled bar
-								chart (length) shows the storm frequencies in recent 10, 20, 50, 100, and 171 (all
-								accessible history) years, correspondingly. Urban area is colored in light gray, and
-								necessary labels for major coastal cities are displayed.
-								<br><br>
-								2. The “Concentric Ring” Map (top-left):
-								With same universal unit as the bottom map (10-sq-km hexagon), this map uses
-								concentric rings to compare the number of the storm events every decade in recent 50
-								years: i.e. the center (core) indicates oldest decade (1970s) and edge ring
-								indicates the most recent one (2010s). The darker the ring color is, the more storms
-								this hexagon statistical unit has witnessed.
-								<br><br>
-								3. The “Historic Hurricane Tracks” Map (top-right):
-								With all the hurricane tracks’ intensity displayed in different color-width
-								combination, the storm category (Saffir-Simpson Hurricane Wind) is intuitively
-								visualized at corresponding location. Storms in recent 20 years have full opacity,
-								and various transparency is applied according to its year, imitating the fading out
-								history. As for the label typography, black text indicates storms in recent 20
-								years, aligned on the right side of coast; grayer text indicates storms earlier,
-								aligned on the left side of coast; and additionally, bold text illustrates major
-								hurricanes (category-3 and above). The storm’s year is added to the bracket after
-								the name, while some historic storms even do not have a name.
-								<br><br>
-								Additionally, auxiliary elements (graticule, state boundary, ocean basemap) and
-								graphic designs (tri-partition layout, gradient effect, drop shadow, universal
-								condensed “Acumin” font) are deployed for visual legibility and cartographic
-								aesthetics.
-								<br><br>
-								The major data source is the International Best Track Archive for Climate
-								Stewardship (IBTrACS) during 1851 to 2021, providing the location and intensity for
-								global tropical cyclones. Additional data sources include U.S. Census Bureau, ArcGIS
-								Online, and Esri’s World Ocean Basemap and Light Gray Basemap.
-							</p>
-							<br>
-							<p>This map is the winner of Arthur Robinson Static Print Map Award in <a
-									href="https://cartogis.org/docs/map_competition/map_design_competition2022.pdf"
-									target="_blank">50th CaGIS Map Design Competition</a>.
-							</p>
-							<img class="img-fluid d-block mx-auto" src="historical_hurricanes_cagis.jpg" alt="">
-							<p>It was also personally
-								selected by Jack
-								Dangermond, President of Esri, to be included in the <a
-									href="https://mediaspace.esri.com/media/t/1_spw6yypu/306500242"
-									target="_blank">Plenary Session</a> (about 17:22) of
-								2023 Esri User Conference.</p>
-							<img class="img-fluid d-block mx-auto" src="historical_hurricanes_esri_uc_1.png" alt="">
-							<img class="img-fluid d-block mx-auto" src="historical_hurricanes_esri_uc_2.png" alt="">
-							<img class="img-fluid d-block mx-auto" src="historical_hurricanes_esri_planery.png" alt="">
+				<img src="..//assets/icon.png" alt="" height="22px" style="margin-right: 10px" />
+				<a class="navbar-brand js-scroll-trigger" href="../index.html">"CARTOGUOPHY"</a>
+				<button
+					class="navbar-toggler navbar-toggler-right"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarResponsive"
+					aria-controls="navbarResponsive"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav text-uppercase ml-auto">
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="../resume.html">Resume</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="../portfolio.html">Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="../vision.html">Vision</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="../contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-							<p>This map was selected by the <a href="https://www.highlandsfl.gov/"
-									target="_blank">Highlands County (FL)</a> Board of
-								County Commissioners, to be featured in the traveling "Map Expo" for public
-								educational purpose. The exhibition was firstly on display in the government
-								building for GIS Day, and then moved to 3 public libraries till mid December.</p>
+		<!-- Header -->
+		<header class="masthead"></header>
 
-							<iframe
-								src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FHighlandsfl.gov%2Fposts%2Fpfbid02kQSUrtsWxH9UXgESVSa4uDJPMo18YjF5D1zgeJ6RR6p3PsFXQzNB213JVcisbSAzl&show_text=true&width=500"
-								width="500" height="760" style="border:none;overflow:hidden" scrolling="no"
-								frameborder="0" allowfullscreen="true"
-								allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-							<br><br>
-							<p>
-								Dates & Locations of "2024 Map Expo":<br>
+		<div class="portfolio-modal">
+			<div class="modal-content">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 mx-auto">
+							<div class="modal-body">
+								<!-- Project Details Go Here -->
+								<h2 class="text-uppercase">Visualizing Historical Hurricanes in Contiguous U.S.</h2>
+								<h5 class="text-muted">Best Print Map in 2022 CaGIS Map Competition</h5>
+								<br />
+								<img class="img-fluid d-block mx-auto" src="historical_hurricanes_screen.jpg" alt="" />
+								<a href="historical_hurricanes_screen.jpg" target="_blank">Download Compressed Image</a>
+								<br />
+								<a href="historical_hurricanes_full.jpg" target="_blank">Download Full-Size Image</a>
+								<br />
+								<br />
+								<p>
+									This map product is a combination of three geovisualizations about historical
+									hurricanes in contiguous U.S. from different perspectives.
+									<br />
+									<br />
+									1. The Panoramic “Hexagon” Map (bottom): With orthographic “World From Space”
+									projection, this map lines up the major Atlantic coastal area of the U.S.
+									horizontally. Based on 10-square-kilometer hexagon unit, the choropleth (color)
+									shows the total number of storms, and the piled bar chart (length) shows the storm
+									frequencies in recent 10, 20, 50, 100, and 171 (all accessible history) years,
+									correspondingly. Urban area is colored in light gray, and necessary labels for major
+									coastal cities are displayed.
+									<br />
+									<br />
+									2. The “Concentric Ring” Map (top-left): With same universal unit as the bottom map
+									(10-sq-km hexagon), this map uses concentric rings to compare the number of the
+									storm events every decade in recent 50 years: i.e. the center (core) indicates
+									oldest decade (1970s) and edge ring indicates the most recent one (2010s). The
+									darker the ring color is, the more storms this hexagon statistical unit has
+									witnessed.
+									<br />
+									<br />
+									3. The “Historic Hurricane Tracks” Map (top-right): With all the hurricane tracks’
+									intensity displayed in different color-width combination, the storm category
+									(Saffir-Simpson Hurricane Wind) is intuitively visualized at corresponding location.
+									Storms in recent 20 years have full opacity, and various transparency is applied
+									according to its year, imitating the fading out history. As for the label
+									typography, black text indicates storms in recent 20 years, aligned on the right
+									side of coast; grayer text indicates storms earlier, aligned on the left side of
+									coast; and additionally, bold text illustrates major hurricanes (category-3 and
+									above). The storm’s year is added to the bracket after the name, while some historic
+									storms even do not have a name.
+									<br />
+									<br />
+									Additionally, auxiliary elements (graticule, state boundary, ocean basemap) and
+									graphic designs (tri-partition layout, gradient effect, drop shadow, universal
+									condensed “Acumin” font) are deployed for visual legibility and cartographic
+									aesthetics.
+									<br />
+									<br />
+									The major data source is the International Best Track Archive for Climate
+									Stewardship (IBTrACS) during 1851 to 2021, providing the location and intensity for
+									global tropical cyclones. Additional data sources include U.S. Census Bureau, ArcGIS
+									Online, and Esri’s World Ocean Basemap and Light Gray Basemap.
+								</p>
+								<br />
+								<p>
+									This map is the winner of Arthur Robinson Static Print Map Award in
+									<a
+										href="https://cartogis.org/docs/map_competition/map_design_competition2022.pdf"
+										target="_blank">
+										50th CaGIS Map Design Competition
+									</a>
+									.
+								</p>
+								<img class="img-fluid d-block mx-auto" src="historical_hurricanes_cagis.jpg" alt="" />
+								<p>
+									It was also personally selected by Jack Dangermond, President of Esri, to be
+									included in the
+									<a href="https://mediaspace.esri.com/media/t/1_spw6yypu/306500242" target="_blank">
+										Plenary Session
+									</a>
+									(about 17:22) of 2023 Esri User Conference.
+								</p>
+								<img
+									class="img-fluid d-block mx-auto"
+									src="historical_hurricanes_esri_uc_1.png"
+									alt="" />
+								<img
+									class="img-fluid d-block mx-auto"
+									src="historical_hurricanes_esri_uc_2.png"
+									alt="" />
+								<img
+									class="img-fluid d-block mx-auto"
+									src="historical_hurricanes_esri_planery.png"
+									alt="" />
 
-								1. Government Center lobby, Nov. 18-22, 2024<br>(600 S. Commerce Ave., Sebring)<br>
-								2. Avon Park Public Library, Nov. 25-27, 2024<br>(100 N. Museum Ave., Avon Park)<br>
-								3. Sebring Public Library, Dec. 2-8, 2024<br>(319 W. Center Ave., Sebring)<br>
-								4. Lake Placid Memorial Library, Dec. 10-15, 2024<br>(205 W. Interlake Blvd., Lake
-								Placid)
-							</p>
-							<img class="img-fluid d-block mx-auto" src="historical_hurricanes_map_expo_1.jpg" alt="">
-							<img class="img-fluid d-block mx-auto" src="historical_hurricanes_map_expo_2.jpg" alt="">
-							<img class="img-fluid d-block mx-auto" src="historical_hurricanes_map_expo_3.jpg" alt="">
-							<img class="img-fluid d-block mx-auto" src="historical_hurricanes_map_expo_4.jpg" alt="">
+								<p>
+									This map was selected by the
+									<a href="https://www.highlandsfl.gov/" target="_blank">Highlands County (FL)</a>
+									Board of County Commissioners, to be featured in the traveling "Map Expo" for public
+									educational purpose. The exhibition was firstly on display in the government
+									building for GIS Day, and then moved to 3 public libraries till mid December.
+								</p>
 
-							<p>This map is also selected to be published on the next volume (Vol.40) of Esri Map
-								Book, in 2025.
-							</p>
-							<img class="img-fluid d-block mx-auto" src="historical_hurricane_tracks_landfall.jpg"
-								alt="">
-							<p>As Hurricane Helene intensifies in late September of 2024, discussions about the
-								disaster preparedness of
-								Florida and Georgia are growing. It reminds me of the map I created two years ago
-								about historical hurricanes, so I expanded the
-								hurricane trajectory section with updated data, including Hurricane Ian (2022) and
-								Idalia (2023). Hope people in the affected areas could learn from the past
-								experiences to better handle the upcoming challenges. Pray for everyone's safety.
-							</p>
-							<p>On Nov 30, 2024, the National Hurricane Center (NHS)
-								announces the official end of 2024 Atlantic Hurricane Season on Nov 30, with a
-								record-breaking ramp up following a peak-season lull. As the finale, I updated this
-								map with 18 new tracks of storms, and 5 more labels of
-								landed hurricanes: Beryl (Juy), Debby (Aug), Francine (Sep), Helene (Sep), and
-								Milton (Oct), in 2024.</p>
-							<img class="img-fluid d-block mx-auto" src="historical_hurricane_tracks_screen.jpg" alt="">
-							<a href="historical_hurricane_tracks_screen.jpg" target="_blank">Download Compressed
-								Image</a><br>
-							<a href="historical_hurricane_tracks_full.jpg" target="_blank">Download Full-Size
-								Image</a>
+								<iframe
+									src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FHighlandsfl.gov%2Fposts%2Fpfbid02kQSUrtsWxH9UXgESVSa4uDJPMo18YjF5D1zgeJ6RR6p3PsFXQzNB213JVcisbSAzl&show_text=true&width=500"
+									width="500"
+									height="760"
+									style="border: none; overflow: hidden"
+									scrolling="no"
+									frameborder="0"
+									allowfullscreen="true"
+									allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+								<br />
+								<br />
+								<p>
+									Dates & Locations of "2024 Map Expo":
+									<br />
+
+									1. Government Center lobby, Nov. 18-22, 2024
+									<br />
+									(600 S. Commerce Ave., Sebring)
+									<br />
+									2. Avon Park Public Library, Nov. 25-27, 2024
+									<br />
+									(100 N. Museum Ave., Avon Park)
+									<br />
+									3. Sebring Public Library, Dec. 2-8, 2024
+									<br />
+									(319 W. Center Ave., Sebring)
+									<br />
+									4. Lake Placid Memorial Library, Dec. 10-15, 2024
+									<br />
+									(205 W. Interlake Blvd., Lake Placid)
+								</p>
+								<img
+									class="img-fluid d-block mx-auto"
+									src="historical_hurricanes_map_expo_1.jpg"
+									alt="" />
+								<img
+									class="img-fluid d-block mx-auto"
+									src="historical_hurricanes_map_expo_2.jpg"
+									alt="" />
+								<img
+									class="img-fluid d-block mx-auto"
+									src="historical_hurricanes_map_expo_3.jpg"
+									alt="" />
+								<img
+									class="img-fluid d-block mx-auto"
+									src="historical_hurricanes_map_expo_4.jpg"
+									alt="" />
+
+								<p>
+									This map is also selected to be published on the next volume (Vol.40) of Esri Map
+									Book, in 2025.
+								</p>
+								<img
+									class="img-fluid d-block mx-auto"
+									src="historical_hurricane_tracks_landfall.jpg"
+									alt="" />
+								<p>
+									As Hurricane Helene intensifies in late September of 2024, discussions about the
+									disaster preparedness of Florida and Georgia are growing. It reminds me of the map I
+									created two years ago about historical hurricanes, so I expanded the hurricane
+									trajectory section with updated data, including Hurricane Ian (2022) and Idalia
+									(2023). Hope people in the affected areas could learn from the past experiences to
+									better handle the upcoming challenges. Pray for everyone's safety.
+								</p>
+								<p>
+									On Nov 30, 2024, the National Hurricane Center (NHS) announces the official end of
+									2024 Atlantic Hurricane Season on Nov 30, with a record-breaking ramp up following a
+									peak-season lull. As the finale, I updated this map with 18 new tracks of storms,
+									and 5 more labels of landed hurricanes: Beryl (Juy), Debby (Aug), Francine (Sep),
+									Helene (Sep), and Milton (Oct), in 2024.
+								</p>
+								<img
+									class="img-fluid d-block mx-auto"
+									src="historical_hurricane_tracks_screen.jpg"
+									alt="" />
+								<a href="historical_hurricane_tracks_screen.jpg" target="_blank">
+									Download Compressed Image
+								</a>
+								<br />
+								<a href="historical_hurricane_tracks_full.jpg" target="_blank">
+									Download Full-Size Image
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="image-container bg-light text-center" style="padding:50px">
-		<h4>Feedback Appreciated!</h4>
-		<div class="text-muted"><i>Your comments will be sent to my mailbox privately.</i></div><br>
+		<div class="image-container bg-light text-center" style="padding: 50px">
+			<h4>Feedback Appreciated!</h4>
+			<div class="text-muted"><i>Your comments will be sent to my mailbox privately.</i></div>
+			<br />
 
-		<form action="https://formspree.io/f/mgeggzyk" method="POST">
-			<div class="form-group">
-				<div class="form-row">
-					<div class="col">
-						<input type="name" name="name" class="form-control" placeholder="Name" required>
+			<form action="https://formspree.io/f/mgeggzyk" method="POST">
+				<div class="form-group">
+					<div class="form-row">
+						<div class="col">
+							<input type="name" name="name" class="form-control" placeholder="Name" required />
+						</div>
+						<div class="col">
+							<input type="email" name="email" class="form-control" placeholder="Email" required />
+						</div>
 					</div>
-					<div class="col">
-						<input type="email" name="email" class="form-control" placeholder="Email" required>
+				</div>
+				<div class="form-group">
+					<textarea
+						placeholder="Message"
+						class="form-control"
+						name="message"
+						rows="4"
+						required
+						onfocus="document.querySelector('input[name=fileName]').value = window.location.href.split('/').pop();"></textarea>
+				</div>
+				<div class="form-group">
+					<input style="display: none" type="fileName" name="fileName" class="form-control" />
+				</div>
+				<button type="submit" class="btn btn-xl btn-dark btn-block">SEND</button>
+			</form>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-8">
+						<ul class="list-inline social-buttons">
+							<li class="list-inline-item">
+								<a href="mailto:cartoguophy@gmail.com" target="_blank">
+									<i class="fa fa-envelope"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://www.linkedin.com/in/atlasguo" target="_blank">
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://x.com/cartoguophy" target="_blank">
+									<i class="fab fa-x-twitter"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://bsky.app/profile/cartoguophy.bsky.social" target="_blank">
+									<i class="fab fa-bluesky"></i>
+								</a>
+							</li>
+							<span class="line-break"></span>
+							<li class="list-inline-item">
+								<a href="https://www.instagram.com/cartoguophy/" target="_blank">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://www.facebook.com/guo.atlas" target="_blank">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+							</li>
+
+							<p></p>
+						</ul>
 					</div>
-
+					<div class="col-md-2"></div>
+				</div>
+				<p class="text-muted" style="margin-top: 0px">
+					Copyright © 2025 Atlas Guo.
+					<span class="line-break"></span>
+					All rights reserved.
+				</p>
+				<img src="..//assets/atlas_seal.png" alt="Seal of Atlas" height="45px" style="margin-top: 10px" />
+				<br />
+				<br />
+				<div style="display: none">
+					<script
+						type="text/javascript"
+						id="clustrmaps"
+						src="//clustrmaps.com/map_v2.js?d=Mcf9aHSkjA1rZDHRyrFo0Sy2HoxSqpV6CSoaQdvRIfQ&cl=ffffff&w=a"></script>
+					<script
+						type="text/javascript"
+						id="mapmyvisitors"
+						src="https://mapmyvisitors.com/map.js?cl=829b3f&w=150&t=n&d=ukSsjGdcShOQmlteFQf1g39TecSrYk58qZKTwcbeU54&co=212529&cmo=3d3d3d&cmn=bababa&ct=ffffff"></script>
 				</div>
 			</div>
-			<div class="form-group">
-				<textarea placeholder="Message" class="form-control" name="message" rows="4" required
-					onfocus="document.querySelector('input[name=fileName]').value = window.location.href.split('/').pop();"></textarea>
-			</div>
-			<div class="form-group">
-				<input style="display: none;" type="fileName" name="fileName" class="form-control">
-			</div>
-			<button type="submit" class="btn btn-xl btn-dark btn-block">SEND</button>
-		</form>
-	</div>
+		</footer>
 
-	<!-- Footer -->
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-2">
-				</div>
-				<div class="col-md-8">
-					<ul class="list-inline social-buttons">
-						<li class="list-inline-item">
-							<a href="mailto:cartoguophy@gmail.com" target="_blank">
-								<i class="fa fa-envelope"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://www.linkedin.com/in/atlasguo" target="_blank">
-								<i class="fab fa-linkedin-in"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://x.com/cartoguophy" target="_blank">
-								<i class="fab fa-x-twitter"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://bsky.app/profile/cartoguophy.bsky.social" target="_blank">
-								<i class="fab fa-bluesky"></i>
-							</a>
-						</li>
-						<span class="line-break"></span>
-						<li class="list-inline-item">
-							<a href="https://www.instagram.com/cartoguophy/" target="_blank">
-								<i class="fab fa-instagram"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://www.facebook.com/guo.atlas" target="_blank">
-								<i class="fab fa-facebook-f"></i>
-							</a>
-						</li>
+		<!-- Back To Top Button -->
+		<button id="backToTop" style="display: none"><i class="fas fa-arrow-up"></i></button>
 
-						<p></p>
-					</ul>
-				</div>
-				<div class="col-md-2">
-				</div>
-			</div>
-			<p class="text-muted" style="margin-top:0px">Copyright © 2025 Atlas Guo. <span class="line-break"></span>All
-				rights reserved.
-			</p>
-			<img src="..//assets/atlas_seal.png" alt="Seal of Atlas" height="45px" style="margin-top:10px">
-			<br><br>
-			<div style="display:none">
-				<script type="text/javascript" id="clustrmaps"
-					src="//clustrmaps.com/map_v2.js?d=Mcf9aHSkjA1rZDHRyrFo0Sy2HoxSqpV6CSoaQdvRIfQ&cl=ffffff&w=a"></script>
-				<script type='text/javascript' id='mapmyvisitors'
-					src='https://mapmyvisitors.com/map.js?cl=829b3f&w=150&t=n&d=ukSsjGdcShOQmlteFQf1g39TecSrYk58qZKTwcbeU54&co=212529&cmo=3d3d3d&cmn=bababa&ct=ffffff'>
-					</script>
-			</div>
-		</div>
-		</div>
-	</footer>
+		<!-- Bootstrap -->
+		<script src="..//libs/bootstrap/jquery.min.js"></script>
+		<script src="..//libs/bootstrap/bootstrap.bundle.min.js"></script>
+		<script src="..//libs/bootstrap/jquery.easing.min.js"></script>
+		<script src="..//libs/bootstrap/jqBootstrapValidation.min.js"></script>
 
-	<!-- Back To Top Button -->
-	<button id="backToTop" style="display: none;"><i class="fas fa-arrow-up"></i></button>
-
-	<!-- Bootstrap -->
-	<script src="..//libs/bootstrap/jquery.min.js"></script>
-	<script src="..//libs/bootstrap/bootstrap.bundle.min.js"></script>
-	<script src="..//libs/bootstrap/jquery.easing.min.js"></script>
-	<script src="..//libs/bootstrap/jqBootstrapValidation.min.js"></script>
-
-	<!-- Custom scripts for this template -->
-	<script src="..//js/main.js"></script>
-
-</body>
-
+		<!-- Custom scripts for this template -->
+		<script src="..//js/main.js"></script>
+	</body>
 </html>
