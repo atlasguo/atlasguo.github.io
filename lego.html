@@ -12,7 +12,7 @@
   <title>CartoGuophy | LEGO</title>
 
   <!-- Bootstrap -->
-  <link href=".//libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
+  <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,13 +22,13 @@
     rel="stylesheet" />
 
   <!-- Fontawesome -->
-  <link href=".//libs/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
-  <link href=".//libs/fontawesome/css/brands.min.css" rel="stylesheet" />
-  <link href=".//libs/fontawesome/css/solid.min.css" rel="stylesheet" />
+  <link href="libs/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+  <link href="libs/fontawesome/css/brands.min.css" rel="stylesheet" />
+  <link href="libs/fontawesome/css/solid.min.css" rel="stylesheet" />
 
   <!-- Custom styles -->
-  <link href=".//css/style.css" rel="stylesheet" />
-  <link rel="shortcut icon" href=".//assets/icon.png" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="assets/icon.png" />
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -47,8 +47,8 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <img src=".//assets/icon.png" alt="" height="22px" style="margin-right: 10px" />
-      <a class="navbar-brand js-scroll-trigger" href="./index.html">"CARTOGUOPHY"</a>
+      <img src="assets/icon.png" alt="" height="22px" style="margin-right: 10px" />
+      <a class="navbar-brand js-scroll-trigger" href="index.html">"CARTOGUOPHY"</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -57,16 +57,19 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="./resume.html">Resume</a>
+            <a class="nav-link js-scroll-trigger" href="resume.html">Resume</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="./portfolio.html">Portfolio</a>
+            <a class="nav-link js-scroll-trigger" href="portfolio.html">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="./vision.html">Vision</a>
+            <a class="nav-link js-scroll-trigger" href="#page-top">LEGO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="./connect.html">Connect</a>
+            <a class="nav-link js-scroll-trigger" href="vision.html">Vision</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="connect.html">Connect</a>
           </li>
         </ul>
       </div>
@@ -76,47 +79,45 @@
   <!-- Header -->
   <header class="masthead"></header>
 
-  <div class="portfolio-modal">
-    <div class="modal-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="modal-body">
-              <!-- Project Details Go Here -->
-              <h2 class="text-uppercase">LEGO Mapping</h2>
-              <h5 class="text-muted">A special collection of my LEGO-style maps</h5>
-              <br>
-              <p>
-                Below is a special collection of my recent explorations in LEGO / LEGO-style mapping. Before 2024, I
-                didn’t
-                even consider myself a LEGO fan. But by chance, I ended up starting my very
-                first LEGO mapping project—for no reason other than curiosity. And then, this collection keeps going...
-              </p>
-            </div>
+  <!-- LEGO -->
+  <section class="bg-light" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">LEGO Mapping</h2>
+          <h3 class="section-subheading text-muted">LET THERE BE BRICKS.</h3>
+          <div class="team-member">
+            <p class="text-muted">
+              This page presents a collection of my LEGO-style mapping projects. They began as small experiments driven
+              by curiosity. Before 2024, I had never considered LEGO a serious cartographic medium. I was interested in
+              whether familiar building blocks could represent landscapes and geographic phenomena in an engaging way.
+            </p>
+            <p class="text-muted">
+              Over time, the projects developed in two main directions. Many focus on topographic maps, using LEGO forms
+              to suggest topography and bathymetry. Others are thematic maps that explore political, urban,
+              transportation, or symbolic
+              topics. The works appear as physical built models or digitally rendered images, depending on scale,
+              intent, and context.
+            </p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <section class="bg-light" id="portfolio">
-    <div class="container">
       <div class="row">
         <!-- Modal: lego_north_america -->
         <div
           class="col-md-4 col-sm-6 portfolio-item tag_lego tag_tangible tag_us tag_edu tag_terrain tag_stylized tag_award">
-          <a class="portfolio-link" href="./maps/lego_north_america.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_north_america.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
             <img alt="" class="img-fluid round-corner portfolio-background"
-              src="./maps/lego_north_america_thumbnail.png" />
+              src="maps/lego_north_america_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_north_america.html" target="_blank">
+              <a href="maps/lego_north_america.html" target="_blank">
                 LEGO Map of
                 <br>
                 North America
@@ -137,18 +138,17 @@
         <!-- Modal: lego_new_zealand -->
         <div
           class="col-md-4 col-sm-6 portfolio-item tag_bilingual tag_lego tag_tangible tag_global tag_edu tag_terrain tag_stylized">
-          <a class="portfolio-link" href="./maps/lego_new_zealand.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_new_zealand.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background"
-              src="./maps/lego_new_zealand_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/lego_new_zealand_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_new_zealand.html" target="_blank">
+              <a href="maps/lego_new_zealand.html" target="_blank">
                 Physical Geography
                 <br>
                 of New Zealand
@@ -168,17 +168,17 @@
 
         <!-- Modal: lego_arizona -->
         <div class="col-md-4 col-sm-6 portfolio-item tag_award tag_lego tag_en tag_edu tag_terrain tag_lego">
-          <a class="portfolio-link" href="./maps/lego_arizona.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_arizona.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background" src="./maps/lego_arizona_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/lego_arizona_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_arizona.html" target="_blank">
+              <a href="maps/lego_arizona.html" target="_blank">
                 Physical Geography
                 <br>
                 of Arizona
@@ -198,18 +198,17 @@
 
         <!-- Modal: lego_california -->
         <div class="col-md-4 col-sm-6 portfolio-item tag_lego tag_us tag_edu tag_terrain tag_stylized">
-          <a class="portfolio-link" href="./maps/lego_california.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_california.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background"
-              src="./maps/lego_california_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/lego_california_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_california.html" target="_blank">
+              <a href="maps/lego_california.html" target="_blank">
                 LEGO Style
                 <br>
                 Topographic Map
@@ -229,17 +228,17 @@
 
         <!-- Modal: lego_apple -->
         <div class="col-md-4 col-sm-6 portfolio-item tag_lego tag_us tag_edu tag_terrain tag_stylized">
-          <a class="portfolio-link" href="./maps/lego_apple.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_apple.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background" src="./maps/lego_apple_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/lego_apple_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_apple.html" target="_blank">
+              <a href="maps/lego_apple.html" target="_blank">
                 Apple-Themed
                 <br>
                 Topographic Map
@@ -260,18 +259,17 @@
 
         <!-- Modal: lego_apple_maps -->
         <div class="col-md-4 col-sm-6 portfolio-item tag_lego tag_us tag_stylized">
-          <a class="portfolio-link" href="./maps/lego_apple_maps.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_apple_maps.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background"
-              src="./maps/lego_apple_maps_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/lego_apple_maps_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_apple_maps.html" target="_blank">
+              <a href="maps/lego_apple_maps.html" target="_blank">
                 LEGO Apple
                 <br>
                 Maps Icon
@@ -291,17 +289,17 @@
 
         <!-- Modal: lego_tennessee -->
         <div class="col-md-4 col-sm-6 portfolio-item tag_lego tag_us tag_edu tag_terrain tag_stylized">
-          <a class="portfolio-link" href="./maps/lego_tennessee.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_tennessee.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background" src="./maps/lego_tennessee_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/lego_tennessee_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_tennessee.html" target="_blank">
+              <a href="maps/lego_tennessee.html" target="_blank">
                 LEGO Topographic
                 <br>
                 Map of Tennessee
@@ -321,17 +319,17 @@
 
         <!-- Modal: lego_georgia -->
         <div class="col-md-4 col-sm-6 portfolio-item tag_en tag_ga tag_edu tag_terrain tag_lego">
-          <a class="portfolio-link" href="./maps/lego_georgia.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_georgia.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background" src="./maps/lego_georgia_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/lego_georgia_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_georgia.html" target="_blank">
+              <a href="maps/lego_georgia.html" target="_blank">
                 LEGO Style
                 <br>
                 Topographic
@@ -351,17 +349,17 @@
 
         <!-- Modal: lego_colorado -->
         <div class="col-md-4 col-sm-6 portfolio-item tag_award tag_en tag_edu tag_terrain tag_lego">
-          <a class="portfolio-link" href="./maps/lego_colorado.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_colorado.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background" src="./maps/lego_colorado_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/lego_colorado_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_colorado.html" target="_blank">
+              <a href="maps/lego_colorado.html" target="_blank">
                 LEGO Map of
                 <br>
                 Colorado
@@ -381,17 +379,17 @@
 
         <!-- Modal: lego_wisconsin -->
         <div class="col-md-4 col-sm-6 portfolio-item tag_award tag_en tag_tangible tag_wi tag_edu tag_terrain tag_lego">
-          <a class="portfolio-link" href="./maps/lego_wisconsin.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_wisconsin.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background" src="./maps/lego_wisconsin_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/lego_wisconsin_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_wisconsin.html" target="_blank">
+              <a href="maps/lego_wisconsin.html" target="_blank">
                 LEGO Map of
                 <br>
                 Wisconsin
@@ -411,17 +409,17 @@
 
         <!-- Modal: election_2024 -->
         <div class="col-md-4 col-sm-6 portfolio-item tag_us tag_news tag_lego tag_proj tag_tangible">
-          <a class="portfolio-link" href="./maps/election_2024.html" target="_blank">
+          <a class="portfolio-link" href="maps/election_2024.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background" src="./maps/election_2024_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/election_2024_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/election_2024.html" target="_blank">
+              <a href="maps/election_2024.html" target="_blank">
                 LEGO Cartogram
                 <br>
                 of U.S. Presidential
@@ -441,17 +439,17 @@
 
         <!-- Modal: lego_ukraine -->
         <div class="col-md-4 col-sm-6 portfolio-item tag_global tag_news tag_lego tag_tangible">
-          <a class="portfolio-link" href="./maps/lego_ukraine.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_ukraine.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background" src="./maps/lego_ukraine_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/lego_ukraine_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_ukraine.html" target="_blank">
+              <a href="maps/lego_ukraine.html" target="_blank">
                 LEGO Map of
                 <br>
                 Ukraine in Conflict
@@ -471,18 +469,18 @@
 
         <!-- Modal: lego_madison_flag -->
         <div class="col-md-4 col-sm-6 portfolio-item tag_madison tag_edu tag_lego tag_tangible">
-          <a class="portfolio-link" href="./maps/lego_madison_flag.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_madison_flag.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
             <img alt="" class="img-fluid round-corner portfolio-background"
-              src="./maps/lego_madison_flag_thumbnail.png" />
+              src="maps/lego_madison_flag_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_madison_flag.html" target="_blank">
+              <a href="maps/lego_madison_flag.html" target="_blank">
                 3D LEGO Map of
                 <br>
                 Madison City Flag
@@ -502,18 +500,17 @@
 
         <!-- Modal: lego_hemispheres -->
         <div class="col-md-4 col-sm-6 portfolio-item tag_global tag_edu tag_lego tag_terrain tag_proj tag_tangible">
-          <a class="portfolio-link" href="./maps/lego_hemispheres.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_hemispheres.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background"
-              src="./maps/lego_hemispheres_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/lego_hemispheres_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_hemispheres.html" target="_blank">
+              <a href="maps/lego_hemispheres.html" target="_blank">
                 LEGO Hemisphere
                 <br>
                 World Map
@@ -533,17 +530,17 @@
 
         <!-- Modal: lego_room -->
         <div class="col-md-4 col-sm-6 portfolio-item tag_personal tag_lego tag_tangible">
-          <a class="portfolio-link" href="./maps/lego_room.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_room.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background" src="./maps/lego_room_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/lego_room_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_room.html" target="_blank">
+              <a href="maps/lego_room.html" target="_blank">
                 LEGO Micromapping
                 <br>
                 of Room Layout
@@ -563,17 +560,17 @@
 
         <!-- Modal: lego_quilt -->
         <div class="col-md-4 col-sm-6 portfolio-item tag_lego tag_us tag_en tag_terrain tag_team">
-          <a class="portfolio-link" href="./maps/lego_quilt.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_quilt.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background" src="./maps/lego_quilt_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/lego_quilt_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_quilt.html" target="_blank">
+              <a href="maps/lego_quilt.html" target="_blank">
                 Lego Style
                 <br>
                 Map Quilt
@@ -594,18 +591,17 @@
         <!-- Modal: lego_map_gallery -->
         <div
           class="col-md-4 col-sm-6 portfolio-item tag_en tag_lego tag_tangible tag_series tag_global tag_us tag_ga tag_wi tag_edu tag_terrain tag_stylized tag_award">
-          <a class="portfolio-link" href="./maps/lego_map_gallery.html" target="_blank">
+          <a class="portfolio-link" href="maps/lego_map_gallery.html" target="_blank">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img alt="" class="img-fluid round-corner portfolio-background"
-              src="./maps/lego_map_gallery_thumbnail.png" />
+            <img alt="" class="img-fluid round-corner portfolio-background" src="maps/lego_map_gallery_thumbnail.png" />
           </a>
           <div class="portfolio-caption round-corner">
             <h4>
-              <a href="./maps/lego_map_gallery.html" target="_blank">
+              <a href="maps/lego_map_gallery.html" target="_blank">
                 A Mini Gallery
                 <br>
                 of LEGO Style
@@ -626,31 +622,28 @@
     </div>
   </section>
 
-  <div class="portfolio-modal">
-    <div class="modal-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="modal-body">
-              <!-- Project Details Go Here -->
-
-              <p>
-                Thanks for following along, and I hope you’ve enjoyed this little journey through my LEGO topographic
-                and thematic
-                maps!
-                <br>
-
-                <br>
-                Though I’m still early in this journey, I’m excited to keep exploring this mapping practice, and I’d
-                love to hear your thoughts! Let’s see where this LEGO mapping journey goes
-                next together.
-              </p>
-            </div>
+  <!-- Closing Notes -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="team-member">
+            <p class="text-muted">
+              While the LEGO style appears playful, most of the maps are informed by real geographic data and
+              cartographic thinking, even when exact spatial accuracy is not the primary goal. This balance makes the
+              work suitable for potential uses such as children's education, public science communication, tourism
+              promotion, and exhibition display.
+            </p>
+            <p class="text-muted">
+              This collection is ongoing, and the ideas behind it continue to evolve. I hope these maps encourage
+              viewers to look closer and reconsider how geographic information can be communicated through simple and
+              familiar forms.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <div class="image-container bg-light text-center" style="padding: 50px">
     <h4>Feedback Appreciated!</h4>
@@ -730,7 +723,7 @@
         <span class="line-break"></span>
         All rights reserved.
       </p>
-      <img src=".//assets/atlas_seal.png" alt="Seal of Atlas" height="45px" style="margin-top: 10px" />
+      <img src="assets/atlas_seal.png" alt="Seal of Atlas" height="45px" style="margin-top: 10px" />
       <br>
       <br>
       <div style="display: none">
@@ -748,13 +741,13 @@
   </button>
 
   <!-- Bootstrap -->
-  <script src=".//libs/bootstrap/jquery.min.js"></script>
-  <script src=".//libs/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src=".//libs/bootstrap/jquery.easing.min.js"></script>
-  <script src=".//libs/bootstrap/jqBootstrapValidation.min.js"></script>
+  <script src="libs/bootstrap/jquery.min.js"></script>
+  <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="libs/bootstrap/jquery.easing.min.js"></script>
+  <script src="libs/bootstrap/jqBootstrapValidation.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src=".//js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
