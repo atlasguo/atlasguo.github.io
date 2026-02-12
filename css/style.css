@@ -1,3 +1,10 @@
+.is-hidden {
+	display: none !important;
+}
+.lego-note-small {
+	font-size: 0.85em;
+	line-height: 1.2;
+}
 /*!
  * Start Bootstrap - Agency v5.0.2 (https://startbootstrap.com/template-overviews/agency)
  * Copyright 2013-2018 Start Bootstrap
@@ -58,6 +65,58 @@ h5.category {
 
 .filters {
 	font-size: 0.9em;
+}
+
+.is-hidden {
+	display: none !important;
+}
+
+.portfolio-search {
+	margin: 10px auto 14px;
+	position: relative;
+	max-width: 520px;
+}
+
+.portfolio-search input {
+	width: 100%;
+	padding: 8px 38px 8px 14px;
+	border-radius: 999px;
+	border: 1px solid #9aa07f;
+	background: #f7f8f2;
+	color: #354023;
+	font-size: 0.95em;
+}
+
+.portfolio-search input:focus {
+	outline: none;
+	border-color: #829b3f;
+	box-shadow: 0 0 0 0.2rem rgba(130, 155, 63, 0.35);
+}
+
+.portfolio-search .search-clear {
+	position: absolute;
+	top: 50%;
+	right: 12px;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: none;
+	background: #d7dcc0;
+	color: #354023;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	padding: 0;
+	cursor: pointer;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.15s ease;
+}
+
+.portfolio-search.has-value .search-clear {
+	opacity: 1;
+	pointer-events: auto;
 }
 
 .subsection {

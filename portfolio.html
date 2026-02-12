@@ -82,15 +82,23 @@
 				<div class="col-lg-12 text-center">
 					<h2 class="section-heading text-uppercase">Portfolio</h2>
 					<h3 class="section-subheading text-muted">GIVE US THIS DAY OUR DAILY MAP.</h3>
-					<p class="text-muted" style="margin-bottom: 20px;"><i><img src="maps/logo_lego.png" alt="LEGO icon"
-								style="height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom:3px" />Looking
-							for LEGO
-							maps? <br>Most of them have been moved to<br><a href="lego.html"
-								style="color: inherit; text-decoration: underline;">the LEGO-dedicated
-								page</a>.</i></p>
 					<div class="skills col-lg-12 text-center">
+						<div class="portfolio-search" id="portfolio-search-wrap">
+							<input aria-label="Search portfolio maps" id="portfolio-search"
+								placeholder="Search for maps..." type="text" />
+							<button aria-label="Clear search" class="search-clear" id="portfolio-search-clear"
+								type="button">X</button>
+						</div>
 						<br>
-						<h6>Click to filter by:</h6>
+						<p class="text-muted lego-note-small" id="lego-note" style="margin-bottom: 20px;"><i><img
+									src="maps/logo_lego.png" alt="LEGO icon"
+									style="font-size: 10px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom:3px" />Looking
+								for LEGO
+								maps? <br>Most of them have been moved to<br><a href="lego.html"
+									style="color: inherit; text-decoration: underline;">the LEGO-dedicated
+									page</a>.</i></p>
+						<br>
+						<h6 id="filters-label">Click to filter by:</h6>
 						<div class="filters" id="filters">
 							<a class="active" data-filter="*" href="#"><b>ALL (RESET FILTER)</b></a><b> • </b>
 							<a data-filter=".tag_award" href="#"><b>Award-Winning</b></a>

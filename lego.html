@@ -86,7 +86,14 @@
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">LEGO Mapping</h2>
           <h3 class="section-subheading text-muted">LET THERE BE MAPS.</h3>
-          <div class="team-member">
+          <div class="skills col-lg-12 text-center">
+            <div class="portfolio-search">
+              <input aria-label="Search lego maps" id="lego-search" placeholder="Search for maps..." type="text" />
+              <button aria-label="Clear search" class="search-clear" id="lego-search-clear" type="button">X</button>
+            </div>
+          </div>
+          <br>
+          <div class="team-member" id="lego-intro">
             <p class="text-muted">
               This page presents a collection of my LEGO-style mapping projects. They began as small experiments driven
               by curiosity. Before 2024, I had never considered LEGO a serious cartographic medium. I was interested in
@@ -1102,7 +1109,7 @@
               <div class="modal-body">
                 <!-- Project Details Go Here -->
 
-                <p>
+                <p id="lego-outro">
                   Thanks for following along, and I hope you’ve enjoyed this little journey through my LEGO topographic
                   and thematic
                   maps!
@@ -1223,6 +1230,7 @@
 
     <!-- Custom scripts for this template -->
     <script src=".//js/main.js"></script>
+    <script src=".//js/lego.js"></script>
 </body>
 
 </html>
