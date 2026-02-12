@@ -40,7 +40,7 @@
 
       $searchWrap.toggleClass('has-value', hasSearch);
       $intro.toggleClass('is-hidden', hasSearch);
-      $outro.toggleClass('is-hidden', hasSearch);
+      $outro.removeClass('is-hidden');
 
       $items.each(function () {
         var $item = $(this);
