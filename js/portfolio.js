@@ -9,7 +9,6 @@
 			isFitWidth: true,
 			layoutMode: 'fitRows'
 		});
-		var hideLegoNoteByFilter = false;
 
 		var matchesSearch = function (itemElem) {
 			if (!searchQuery) {
@@ -17,7 +16,8 @@
 			}
 
 			var $caption = $(itemElem).find('.portfolio-caption');
-			if (!$caption.length) {
+			var isLegoNoteRow = $(itemElem).is('.lego-note-row') || $(itemElem).find('#lego-note').length > 0;
+			if (!$caption.length && !isLegoNoteRow) {
 				return false;
 			}
 
@@ -59,8 +59,6 @@
 			applyFilters();
 			$('#filters a').removeClass('active');
 			$(this).addClass('active');
-			hideLegoNoteByFilter = true;
-			$('#lego-note').addClass('is-hidden');
 		});
 
 		var $searchInput = $('#portfolio-search');
@@ -72,7 +70,6 @@
 			var hasSearch = searchQuery.length > 0;
 			$searchWrap.toggleClass('has-value', hasSearch);
 			$('#filters, #filters-label').toggleClass('is-hidden', hasSearch);
-			$('#lego-note').toggleClass('is-hidden', hasSearch || hideLegoNoteByFilter);
 			applyFilters();
 		});
 
