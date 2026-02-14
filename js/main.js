@@ -28,7 +28,13 @@
 
 	// Collapse Navbar
 	var navbarCollapse = function () {
-		if ($("#mainNav").offset().top > 10) {
+		var isSmallScreen = window.matchMedia('(max-width: 991.98px)').matches;
+		if (isSmallScreen) {
+			$("#mainNav").removeClass("navbar-shrink");
+			return;
+		}
+
+		if ($(window).scrollTop() > 10) {
 			$("#mainNav").addClass("navbar-shrink");
 		} else {
 			$("#mainNav").removeClass("navbar-shrink");
@@ -36,8 +42,8 @@
 	};
 	// Collapse now if page is not at top
 	navbarCollapse();
-	// Collapse the navbar when page is scrolled
-	$(window).scroll(navbarCollapse);
+	// Update navbar state on scroll and resize
+	$(window).on('scroll resize', navbarCollapse);
 
 	// Hide navbar when modals trigger
 	$('.portfolio-modal').on('show.bs.modal', function (e) {
