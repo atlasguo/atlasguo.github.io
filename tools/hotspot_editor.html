@@ -1,0 +1,700 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Hotspot Editor</title>
+  <link rel="stylesheet" href="hotspot_editor.css">
+</head>
+
+<body>
+  <div class="app">
+    <aside class="panel">
+      <h1>Image Hotspot Editor</h1>
+      <p class="hint">Click The Image To Add Polygon Vertices.</p>
+      <p class="hint">`Enter`: Finish Polygon. `Backspace`: Undo Point. Pan: Middle/Right Drag Or `Alt` + Left Drag.</p>
+
+      <div class="row">
+        <label>Source
+          <select id="sourcePreset"></select>
+        </label>
+        <label>Total
+          <div id="totalOutput" class="display-value">0</div>
+        </label>
+      </div>
+
+      <div class="row">
+        <label>Map File Name
+          <input id="slugInput" value="" placeholder="historical_hurricanes">
+        </label>
+        <label>&nbsp;</label>
+      </div>
+
+      <div class="group-title">Edit</div>
+      <div class="button-grid">
+        <button id="saveDraft">Finish Current Polygon</button>
+        <button class="secondary" id="undoPoint">Undo Point</button>
+      </div>
+      <div class="button-grid">
+        <button class="secondary" id="clearDraft">Clear Draft</button>
+        <button class="danger" id="deleteSelected">Delete Selected</button>
+      </div>
+
+      <ul class="list" id="hotspotList"></ul>
+
+      <div class="group-title">Output</div>
+      <div class="button-grid">
+        <button id="saveJsonFile">Save JSON</button>
+        <button class="secondary" id="copyJson">Copy JSON</button>
+      </div>
+
+      <label>JSON
+        <textarea id="jsonOutput" class="mono" rows="12"></textarea>
+      </label>
+    </aside>
+
+    <main class="map-wrap">
+      <div class="stage" id="stage">
+        <div class="canvas" id="canvas">
+          <img id="bgImage" src="../assets/portfolio_hexagon_2024.jpg" alt="Portfolio image">
+          <svg id="overlay" viewBox="0 0 3840 2160" preserveAspectRatio="none" aria-label="hotspot editor"></svg>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const SVG_NS = "http://www.w3.org/2000/svg";
+      const stage = document.getElementById("stage");
+      const mapWrap = document.querySelector(".map-wrap");
+      const canvas = document.getElementById("canvas");
+      const overlay = document.getElementById("overlay");
+      const bgImage = document.getElementById("bgImage");
+
+      const sourcePresetInput = document.getElementById("sourcePreset");
+      const slugInput = document.getElementById("slugInput");
+      const totalOutput = document.getElementById("totalOutput");
+      const jsonOutput = document.getElementById("jsonOutput");
+      const hotspotList = document.getElementById("hotspotList");
+      const saveDraftButton = document.getElementById("saveDraft");
+      const undoPointButton = document.getElementById("undoPoint");
+      const clearDraftButton = document.getElementById("clearDraft");
+      const deleteSelectedButton = document.getElementById("deleteSelected");
+      const saveJsonFileButton = document.getElementById("saveJsonFile");
+      const copyJsonButton = document.getElementById("copyJson");
+      const SOURCE_PREFIX = "portfolio_hexagon_";
+      const SOURCE_YEAR_START = 2018;
+      const SOURCE_YEAR_END = 2032;
+      const SOURCE_IMAGE_EXTS = ["jpg", "jpeg", "png", "webp"];
+      const IMAGE_WIDTH = 3840;
+      const IMAGE_HEIGHT = 2160;
+
+      const state = {
+        hotspots: [],
+        draftPoints: [],
+        selectedIndex: -1,
+        sourcePairs: [],
+        fileHandlesByKey: {},
+        pan: {
+          active: false,
+          moved: false,
+          lastX: 0,
+          lastY: 0
+        },
+        viewport: {
+          scale: 1,
+          x: 0,
+          y: 0
+        }
+      };
+
+      function applyViewportTransform() {
+        const view = state.viewport;
+        canvas.style.transform = `translate(${view.x}px, ${view.y}px) scale(${view.scale})`;
+      }
+
+      function toSvgPoint(event) {
+        const stageRect = stage.getBoundingClientRect();
+        const stageW = stage.clientWidth;
+        const stageH = stage.clientHeight;
+        if (!stageW || !stageH) {
+          return null;
+        }
+        const sx = event.clientX - stageRect.left;
+        const sy = event.clientY - stageRect.top;
+        const view = state.viewport;
+        const baseX = (sx - view.x) / view.scale;
+        const baseY = (sy - view.y) / view.scale;
+        const imageX = (baseX / stageW) * IMAGE_WIDTH;
+        const imageY = (baseY / stageH) * IMAGE_HEIGHT;
+        return [Math.round(imageX), Math.round(imageY)];
+      }
+
+      function isInsideImagePoint(point) {
+        return point[0] >= 0 && point[0] <= IMAGE_WIDTH && point[1] >= 0 && point[1] <= IMAGE_HEIGHT;
+      }
+
+      function isBoundaryPoint(point) {
+        const x = point[0];
+        const y = point[1];
+        return x === 0 || x === IMAGE_WIDTH || y === 0 || y === IMAGE_HEIGHT;
+      }
+
+      function clampPointToImage(point) {
+        const x = Math.max(0, Math.min(IMAGE_WIDTH, point[0]));
+        const y = Math.max(0, Math.min(IMAGE_HEIGHT, point[1]));
+        return [Math.round(x), Math.round(y)];
+      }
+
+      function intersectSegmentWithImageBoundary(fromPoint, toPoint) {
+        const x1 = fromPoint[0];
+        const y1 = fromPoint[1];
+        const x2 = toPoint[0];
+        const y2 = toPoint[1];
+        const dx = x2 - x1;
+        const dy = y2 - y1;
+        const eps = 1e-9;
+        const hits = [];
+
+        function pushHit(t, x, y) {
+          if (t < -eps || t > 1 + eps) {
+            return;
+          }
+          if (x < -eps || x > IMAGE_WIDTH + eps || y < -eps || y > IMAGE_HEIGHT + eps) {
+            return;
+          }
+          hits.push({ t: t, point: [Math.round(x), Math.round(y)] });
+        }
+
+        if (Math.abs(dx) > eps) {
+          const tLeft = (0 - x1) / dx;
+          pushHit(tLeft, 0, y1 + tLeft * dy);
+          const tRight = (IMAGE_WIDTH - x1) / dx;
+          pushHit(tRight, IMAGE_WIDTH, y1 + tRight * dy);
+        }
+
+        if (Math.abs(dy) > eps) {
+          const tTop = (0 - y1) / dy;
+          pushHit(tTop, x1 + tTop * dx, 0);
+          const tBottom = (IMAGE_HEIGHT - y1) / dy;
+          pushHit(tBottom, x1 + tBottom * dx, IMAGE_HEIGHT);
+        }
+
+        if (!hits.length) {
+          return null;
+        }
+
+        hits.sort((a, b) => b.t - a.t);
+        return hits[0].point;
+      }
+
+      function handleWheelZoom(event) {
+        event.preventDefault();
+        const stageRect = stage.getBoundingClientRect();
+        const sx = event.clientX - stageRect.left;
+        const sy = event.clientY - stageRect.top;
+
+        const view = state.viewport;
+        const factor = Math.exp(-event.deltaY * 0.0015);
+        const nextScale = Math.max(1, Math.min(8, view.scale * factor));
+        const ratio = nextScale / view.scale;
+        view.x = sx - (sx - view.x) * ratio;
+        view.y = sy - (sy - view.y) * ratio;
+        view.scale = nextScale;
+        applyViewportTransform();
+      }
+
+      function shouldStartPan(event) {
+        return event.button === 1 || event.button === 2 || (event.button === 0 && event.altKey);
+      }
+
+      function handlePanStart(event) {
+        if (!shouldStartPan(event)) {
+          return;
+        }
+        event.preventDefault();
+        state.pan.active = true;
+        state.pan.moved = false;
+        state.pan.lastX = event.clientX;
+        state.pan.lastY = event.clientY;
+        stage.classList.add("is-panning");
+      }
+
+      function handlePanMove(event) {
+        if (!state.pan.active) {
+          return;
+        }
+        event.preventDefault();
+        const dx = event.clientX - state.pan.lastX;
+        const dy = event.clientY - state.pan.lastY;
+        if (dx !== 0 || dy !== 0) {
+          state.pan.moved = true;
+        }
+        state.viewport.x += dx;
+        state.viewport.y += dy;
+        state.pan.lastX = event.clientX;
+        state.pan.lastY = event.clientY;
+        applyViewportTransform();
+      }
+
+      function handlePanEnd() {
+        if (!state.pan.active) {
+          return;
+        }
+        state.pan.active = false;
+        stage.classList.remove("is-panning");
+      }
+
+      function pointsAttr(points) {
+        return points.map((p) => `${p[0]},${p[1]}`).join(" ");
+      }
+
+      function centroid(points) {
+        let sx = 0;
+        let sy = 0;
+        points.forEach((point) => {
+          sx += point[0];
+          sy += point[1];
+        });
+        return [Math.round(sx / points.length), Math.round(sy / points.length)];
+      }
+
+      function normalizeSlug(raw) {
+        return (raw || "").trim() || "temp";
+      }
+
+      function slugToHref(slug) {
+        return slug ? `maps/${slug}.html` : "";
+      }
+
+      function hrefToSlug(href) {
+        const match = String(href || "").match(/maps\/([^/]+)\.html$/i);
+        return match ? match[1] : "";
+      }
+
+      function render() {
+        overlay.innerHTML = "";
+
+        state.hotspots.forEach((item, idx) => {
+          const poly = document.createElementNS(SVG_NS, "polygon");
+          poly.setAttribute("points", pointsAttr(item.points));
+          poly.setAttribute("class", idx === state.selectedIndex ? "hotspot selected" : "hotspot");
+          poly.addEventListener("click", (event) => {
+            event.stopPropagation();
+            state.selectedIndex = idx;
+            slugInput.value = item.slug || "";
+            render();
+          });
+          overlay.appendChild(poly);
+
+          const center = centroid(item.points);
+          const labelBg = document.createElementNS(SVG_NS, "circle");
+          labelBg.setAttribute("cx", String(center[0]));
+          labelBg.setAttribute("cy", String(center[1]));
+          labelBg.setAttribute("r", "18");
+          labelBg.setAttribute("fill", "rgba(23, 31, 13, 0.75)");
+          overlay.appendChild(labelBg);
+
+          const label = document.createElementNS(SVG_NS, "text");
+          label.setAttribute("x", String(center[0]));
+          label.setAttribute("y", String(center[1] + 6));
+          label.setAttribute("text-anchor", "middle");
+          label.setAttribute("fill", "#ffffff");
+          label.setAttribute("stroke", "rgba(0, 0, 0, 0.78)");
+          label.setAttribute("stroke-width", "3");
+          label.setAttribute("paint-order", "stroke fill");
+          label.setAttribute("font-size", "22");
+          label.setAttribute("font-weight", "700");
+          label.textContent = String(idx + 1);
+          overlay.appendChild(label);
+
+          const nameLabel = document.createElementNS(SVG_NS, "text");
+          nameLabel.setAttribute("x", String(center[0] + 26));
+          nameLabel.setAttribute("y", String(center[1] + 5));
+          nameLabel.setAttribute("text-anchor", "start");
+          nameLabel.setAttribute("fill", "#ffffff");
+          nameLabel.setAttribute("stroke", "rgba(0, 0, 0, 0.78)");
+          nameLabel.setAttribute("stroke-width", "2.5");
+          nameLabel.setAttribute("paint-order", "stroke fill");
+          nameLabel.setAttribute("font-size", "14");
+          nameLabel.setAttribute("font-weight", "600");
+          nameLabel.textContent = item.slug || item.title || "(empty)";
+          overlay.appendChild(nameLabel);
+        });
+
+        if (state.draftPoints.length > 0) {
+          const draft = document.createElementNS(SVG_NS, "polygon");
+          draft.setAttribute("points", pointsAttr(state.draftPoints));
+          draft.setAttribute("class", "draft");
+          overlay.appendChild(draft);
+
+          state.draftPoints.forEach((point) => {
+            const dot = document.createElementNS(SVG_NS, "circle");
+            dot.setAttribute("cx", String(point[0]));
+            dot.setAttribute("cy", String(point[1]));
+            dot.setAttribute("class", "vertex");
+            overlay.appendChild(dot);
+          });
+        }
+
+        totalOutput.textContent = String(state.hotspots.length);
+        jsonOutput.value = JSON.stringify(state.hotspots, null, 2);
+        renderList();
+        updateActionButtons();
+      }
+
+      function renderList() {
+        hotspotList.innerHTML = "";
+        state.hotspots.forEach((item, idx) => {
+          const li = document.createElement("li");
+          const btn = document.createElement("button");
+          const label = item.slug || item.title || "(empty)";
+          btn.textContent = `${String(idx + 1).padStart(2, "0")} - ${label}`;
+          if (idx === state.selectedIndex) {
+            btn.classList.add("active");
+          }
+          btn.addEventListener("click", () => {
+            state.selectedIndex = idx;
+            slugInput.value = item.slug || "";
+            render();
+          });
+          li.appendChild(btn);
+          hotspotList.appendChild(li);
+        });
+      }
+
+      function updateActionButtons() {
+        const hasDraft = state.draftPoints.length > 0;
+        const hasCompleteDraft = state.draftPoints.length >= 3;
+        const hasSelection = state.selectedIndex >= 0 && state.selectedIndex < state.hotspots.length;
+        const hasHotspots = state.hotspots.length > 0;
+        saveDraftButton.disabled = !hasCompleteDraft;
+        undoPointButton.disabled = !hasDraft;
+        clearDraftButton.disabled = !hasDraft;
+        deleteSelectedButton.disabled = !hasSelection;
+        saveJsonFileButton.disabled = !hasHotspots;
+        copyJsonButton.disabled = !hasHotspots;
+      }
+
+      function applyHotspots(parsed) {
+        if (!Array.isArray(parsed)) {
+          return;
+        }
+        state.hotspots = parsed
+          .filter((item) => Array.isArray(item.points) && item.points.length >= 3)
+          .map((item, index) => ({
+            id: item.id || `map_${String(index + 1).padStart(2, "0")}`,
+            slug: item.slug || item.title || hrefToSlug(item.href) || "temp",
+            href: item.href || "",
+            title: item.title || "",
+            target: item.target || "_blank",
+            points: item.points.map((p) => [Math.round(Number(p[0]) || 0), Math.round(Number(p[1]) || 0)])
+          }));
+        state.selectedIndex = -1;
+        state.draftPoints = [];
+        render();
+      }
+
+      async function urlExists(url) {
+        try {
+          const response = await fetch(url, { cache: "no-store" });
+          return response.ok;
+        } catch (error) {
+          return false;
+        }
+      }
+
+      async function discoverSourcePairs() {
+        const pairs = [];
+        for (let year = SOURCE_YEAR_START; year <= SOURCE_YEAR_END; year += 1) {
+          const base = `${SOURCE_PREFIX}${year}`;
+          const jsonPath = `../js/${base}.json`;
+          const hasJson = await urlExists(jsonPath);
+          if (!hasJson) {
+            continue;
+          }
+
+          let imagePath = "";
+          let imageExt = "";
+          for (const ext of SOURCE_IMAGE_EXTS) {
+            const candidate = `../assets/${base}.${ext}`;
+            if (await urlExists(candidate)) {
+              imagePath = candidate;
+              imageExt = ext;
+              break;
+            }
+          }
+
+          if (!imagePath) {
+            continue;
+          }
+
+          pairs.push({
+            key: base,
+            imagePath: imagePath,
+            jsonPath: jsonPath,
+            label: base
+          });
+        }
+        return pairs;
+      }
+
+      function renderSourceOptions() {
+        sourcePresetInput.innerHTML = "";
+        state.sourcePairs.forEach((pair) => {
+          const option = document.createElement("option");
+          option.value = pair.key;
+          option.textContent = pair.label;
+          sourcePresetInput.appendChild(option);
+        });
+      }
+
+      async function loadSelectedSourcePair() {
+        const selectedKey = sourcePresetInput.value;
+        const pair = state.sourcePairs.find((item) => item.key === selectedKey);
+        if (!pair) {
+          return;
+        }
+
+        bgImage.src = pair.imagePath;
+
+        try {
+          const response = await fetch(pair.jsonPath);
+          if (!response.ok) {
+            return;
+          }
+          const parsed = await response.json();
+          jsonOutput.value = JSON.stringify(parsed, null, 2);
+          applyHotspots(parsed);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      function serializeCurrentJson() {
+        syncSelectedFields();
+        const payload = JSON.stringify(state.hotspots, null, 2);
+        jsonOutput.value = payload;
+        return payload;
+      }
+
+      function getSelectedPair() {
+        const selectedKey = sourcePresetInput.value;
+        return state.sourcePairs.find((item) => item.key === selectedKey) || null;
+      }
+
+      async function saveCurrentJsonFile() {
+        const pair = getSelectedPair();
+        if (!pair) {
+          return;
+        }
+
+        const payload = serializeCurrentJson() + "\n";
+        const supportsFsAccess = typeof window.showOpenFilePicker === "function";
+
+        if (supportsFsAccess) {
+          let handle = state.fileHandlesByKey[pair.key] || null;
+          try {
+            if (!handle) {
+              const picked = await window.showOpenFilePicker({
+                multiple: false,
+                types: [
+                  {
+                    description: "JSON Files",
+                    accept: {
+                      "application/json": [".json"]
+                    }
+                  }
+                ]
+              });
+              if (!picked || !picked.length) {
+                return;
+              }
+              handle = picked[0];
+              if (handle.name !== `${pair.key}.json`) {
+                alert(`Please Select ${pair.key}.json`);
+                return;
+              }
+              state.fileHandlesByKey[pair.key] = handle;
+            }
+
+            const permission = await handle.queryPermission({ mode: "readwrite" });
+            if (permission !== "granted") {
+              const requested = await handle.requestPermission({ mode: "readwrite" });
+              if (requested !== "granted") {
+                return;
+              }
+            }
+
+            const writable = await handle.createWritable();
+            await writable.write(payload);
+            await writable.close();
+            return;
+          } catch (error) {
+            console.error(error);
+            return;
+          }
+        }
+
+        // Fallback for browsers without File System Access API.
+        const blob = new Blob([payload], { type: "application/json;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = `${pair.key}.json`;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      function syncSelectedFields() {
+        if (state.selectedIndex < 0 || state.selectedIndex >= state.hotspots.length) {
+          return;
+        }
+        const slug = normalizeSlug(slugInput.value);
+        state.hotspots[state.selectedIndex].slug = slug;
+        state.hotspots[state.selectedIndex].title = slug;
+        state.hotspots[state.selectedIndex].href = slugToHref(slug);
+        state.hotspots[state.selectedIndex].target = "_blank";
+      }
+
+      function saveDraft() {
+        if (state.draftPoints.length < 3) {
+          return;
+        }
+        const slug = normalizeSlug(slugInput.value);
+        const next = {
+          id: `map_${String(state.hotspots.length + 1).padStart(2, "0")}`,
+          slug: slug,
+          href: slugToHref(slug),
+          title: slug,
+          target: "_blank",
+          points: state.draftPoints.map((p) => [p[0], p[1]])
+        };
+        state.hotspots.push(next);
+        state.selectedIndex = state.hotspots.length - 1;
+        state.draftPoints = [];
+        render();
+      }
+
+      mapWrap.addEventListener("click", (event) => {
+        if (state.pan.moved) {
+          state.pan.moved = false;
+          return;
+        }
+        const rawPoint = toSvgPoint(event);
+        if (!rawPoint) {
+          return;
+        }
+
+        let nextPoint = rawPoint;
+        if (!isInsideImagePoint(rawPoint)) {
+          const previousPoint = state.draftPoints.length ? state.draftPoints[state.draftPoints.length - 1] : null;
+          if (previousPoint) {
+            if (isBoundaryPoint(previousPoint)) {
+              // When the current point is already on the border, project the new outside click
+              // to the border directly so consecutive outside clicks keep creating new border points.
+              nextPoint = clampPointToImage(rawPoint);
+            } else {
+              nextPoint = intersectSegmentWithImageBoundary(previousPoint, rawPoint) || clampPointToImage(rawPoint);
+            }
+          } else {
+            nextPoint = clampPointToImage(rawPoint);
+          }
+        }
+
+        const safePoint = clampPointToImage(nextPoint);
+        const lastPoint = state.draftPoints.length ? state.draftPoints[state.draftPoints.length - 1] : null;
+        if (lastPoint && lastPoint[0] === safePoint[0] && lastPoint[1] === safePoint[1]) {
+          return;
+        }
+
+        state.draftPoints.push(safePoint);
+        render();
+      });
+      stage.addEventListener("wheel", handleWheelZoom, { passive: false });
+      stage.addEventListener("mousedown", handlePanStart);
+      stage.addEventListener("mousemove", handlePanMove);
+      stage.addEventListener("mouseup", handlePanEnd);
+      stage.addEventListener("mouseleave", handlePanEnd);
+      stage.addEventListener("contextmenu", (event) => {
+        if (state.pan.active || event.button === 2) {
+          event.preventDefault();
+        }
+      });
+
+      saveDraftButton.addEventListener("click", saveDraft);
+      saveJsonFileButton.addEventListener("click", () => {
+        saveCurrentJsonFile();
+      });
+      undoPointButton.addEventListener("click", () => {
+        state.draftPoints.pop();
+        render();
+      });
+      clearDraftButton.addEventListener("click", () => {
+        state.draftPoints = [];
+        render();
+      });
+      deleteSelectedButton.addEventListener("click", () => {
+        if (state.selectedIndex < 0) {
+          return;
+        }
+        state.hotspots.splice(state.selectedIndex, 1);
+        state.selectedIndex = -1;
+        render();
+      });
+      copyJsonButton.addEventListener("click", async () => {
+        serializeCurrentJson();
+        try {
+          await navigator.clipboard.writeText(jsonOutput.value);
+        } catch (error) {
+          console.error(error);
+        }
+      });
+
+      slugInput.addEventListener("input", syncSelectedFields);
+      jsonOutput.addEventListener("input", updateActionButtons);
+
+      sourcePresetInput.addEventListener("change", () => {
+        loadSelectedSourcePair();
+      });
+
+      window.addEventListener("keydown", (event) => {
+        const tagName = event.target && event.target.tagName ? event.target.tagName.toUpperCase() : "";
+        const isTypingContext = tagName === "INPUT" || tagName === "TEXTAREA" || tagName === "SELECT";
+        if (event.key === "Enter") {
+          if (isTypingContext) {
+            return;
+          }
+          event.preventDefault();
+          saveDraft();
+        } else if (event.key === "Backspace") {
+          if (isTypingContext) {
+            return;
+          }
+          state.draftPoints.pop();
+          render();
+        }
+      });
+
+      applyViewportTransform();
+      render();
+      discoverSourcePairs().then((pairs) => {
+        state.sourcePairs = pairs;
+        renderSourceOptions();
+        if (!pairs.length) {
+          return;
+        }
+        sourcePresetInput.value = pairs[0].key;
+        loadSelectedSourcePair();
+      });
+    })();
+  </script>
+</body>
+
+</html>

@@ -258,6 +258,95 @@ section h3.section-subheading {
 	width: calc(100% - 32px);
 }
 
+.hexagon-map {
+	position: relative;
+}
+
+.hexagon-map-fallback-link {
+	display: block;
+}
+
+.hexagon-map-fallback-link img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.hexagon-map-overlay {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.hexagon-dim-layer {
+	fill: rgba(0, 0, 0, 0.46);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.18s ease;
+}
+
+.hexagon-map.is-dimmed .hexagon-dim-layer {
+	opacity: 1;
+}
+
+.hexagon-hotspot-link,
+.hexagon-hotspot {
+	pointer-events: all;
+	cursor: pointer;
+}
+
+.hexagon-hotspot {
+	fill: rgba(0, 0, 0, 0);
+	stroke: rgba(255, 255, 255, 0);
+	stroke-width: 0;
+	filter: none;
+	transition: fill 0.2s ease, stroke 0.2s ease, stroke-width 0.2s ease, filter 0.2s ease;
+}
+
+.hexagon-hotspot-link:hover .hexagon-hotspot,
+.hexagon-hotspot-link:focus .hexagon-hotspot,
+.hexagon-hotspot-link:focus-visible .hexagon-hotspot {
+	fill: rgba(0, 0, 0, 0);
+	stroke: rgba(255, 255, 255, 0.98);
+	stroke-width: 9;
+	filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.65));
+}
+
+.hexagon-map-overlay.debug {
+	pointer-events: all;
+}
+
+.hexagon-map-overlay.debug .hexagon-hotspot {
+	fill: rgba(120, 120, 120, 0.34);
+	stroke: rgba(255, 255, 255, 0.98);
+}
+
+.hexagon-hotspot-tooltip {
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: translate(-50%, calc(-100% - 12px));
+	padding: 6px 10px;
+	border-radius: 8px;
+	background: rgba(45, 45, 45, 0.82);
+	color: rgba(255, 255, 255, 0.98);
+	border: 1px solid rgba(255, 255, 255, 0.65);
+	font-size: 0.82rem;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	white-space: nowrap;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.14s ease;
+	z-index: 4;
+}
+
+.hexagon-hotspot-tooltip.is-visible {
+	opacity: 1;
+}
+
 .entrance-cta.btn-primary {
 	position: static;
 	top: auto;

@@ -4,6 +4,8 @@
 	var siteIstotope = function () {
 		var currentFilter = '*';
 		var searchQuery = '';
+		var $filters = $('#filters');
+		var $filtersLabel = $('#filters-label');
 		var $container = $('#portfolio-grid').isotope({
 			itemSelector: '.portfolio-item',
 			isFitWidth: true,
@@ -45,19 +47,23 @@
 			});
 		};
 
-		$(window).resize(function () {
-			$container.isotope({
-				columnWidth: '.col-sm-3'
-			});
+		var resizeTimer = null;
+		$(window).on('resize', function () {
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(function () {
+				$container.isotope({
+					columnWidth: '.col-sm-3'
+				});
+			}, 100);
 		});
 
 		applyFilters();
 
-		$('#filters').on('click', 'a', function (e) {
+		$filters.on('click', 'a', function (e) {
 			e.preventDefault();
 			currentFilter = $(this).attr('data-filter');
 			applyFilters();
-			$('#filters a').removeClass('active');
+			$filters.find('a').removeClass('active');
 			$(this).addClass('active');
 		});
 
@@ -69,7 +75,7 @@
 			searchQuery = $(this).val().trim().toLowerCase();
 			var hasSearch = searchQuery.length > 0;
 			$searchWrap.toggleClass('has-value', hasSearch);
-			$('#filters, #filters-label').toggleClass('is-hidden', hasSearch);
+			$filters.add($filtersLabel).toggleClass('is-hidden', hasSearch);
 			applyFilters();
 		});
 
@@ -78,10 +84,17 @@
 			$searchInput.trigger('input');
 			$searchInput.focus();
 		});
-	}
+		return $container;
+	};
 
-	$(window).on('load', function () {
-		siteIstotope();
+	$(function () {
+		var $portfolioContainer = siteIstotope();
+
+		$(window).on('load', function () {
+			if ($portfolioContainer && $portfolioContainer.data('isotope')) {
+				$portfolioContainer.isotope('layout');
+			}
+		});
 	});
 
 })(jQuery); // End of use strict

@@ -1,0 +1,184 @@
+:root {
+  --panel-bg: #f5f7f1;
+  --ink: #223119;
+  --accent: #829b3f;
+  --accent-strong: #607725;
+  --line: #c8d0b1;
+  --danger: #8b2e2e;
+  --ui-font-size: 14px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: var(--ui-font-size);
+  background: #ebefe4;
+  color: var(--ink);
+}
+.app {
+  display: grid;
+  grid-template-columns: minmax(320px, 360px) minmax(0, 1fr);
+  min-height: 100vh;
+  gap: 12px;
+  padding: 12px;
+}
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: auto;
+}
+.panel h1 {
+  margin: 0;
+  font-size: 18px;
+}
+.hint {
+  margin: 0;
+  font-size: var(--ui-font-size);
+  line-height: 1.4;
+  color: #4a5a3d;
+}
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--ui-font-size);
+  font-weight: 600;
+}
+.display-value {
+  border: 1px solid transparent;
+  padding: 8px 0;
+  background: transparent;
+  color: #1f2a15;
+  font-weight: 600;
+  font-size: var(--ui-font-size);
+}
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: var(--ui-font-size);
+  line-height: 1.3;
+  border-radius: 6px;
+  border: 1px solid #a8b48a;
+  padding: 8px;
+  background: white;
+  color: #1f2a15;
+}
+button {
+  background: var(--accent);
+  border-color: var(--accent-strong);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+button.secondary {
+  background: #dbe3c6;
+  color: #2f3d20;
+  border-color: #b7c39a;
+}
+button.danger {
+  background: #dcb5b5;
+  color: #552020;
+  border-color: var(--danger);
+}
+.button-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.group-title {
+  font-size: var(--ui-font-size);
+  font-weight: 700;
+  color: #2f3d20;
+  margin-top: 4px;
+}
+.map-wrap {
+  background: #dce3d0;
+  border: 1px solid #c3ccb0;
+  border-radius: 10px;
+  padding: 8px;
+  overflow: auto;
+}
+.stage {
+  position: relative;
+  width: min(1400px, 100%);
+  margin: 0 auto;
+  aspect-ratio: 3840 / 2160;
+  background: #eee;
+  user-select: none;
+  touch-action: none;
+  overflow: hidden;
+}
+.canvas {
+  position: absolute;
+  inset: 0;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+.canvas img, .canvas svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.canvas svg { cursor: crosshair; }
+.stage.is-panning .canvas svg { cursor: grabbing; }
+.hotspot {
+  fill: rgba(130, 155, 63, 0.16);
+  stroke: rgba(96, 119, 37, 0.95);
+  stroke-width: 5;
+}
+.hotspot.selected {
+  fill: rgba(181, 107, 57, 0.2);
+  stroke: rgba(181, 107, 57, 1);
+}
+.draft {
+  fill: rgba(53, 87, 143, 0.15);
+  stroke: rgba(53, 87, 143, 0.95);
+  stroke-width: 5;
+  stroke-dasharray: 14 8;
+}
+.vertex {
+  fill: #1b4f9a;
+  stroke: white;
+  stroke-width: 2;
+  r: 9;
+}
+.list {
+  border: 1px solid #c6cfb0;
+  border-radius: 8px;
+  background: white;
+  max-height: 220px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list button {
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid #e8eddc;
+  border-radius: 0;
+  padding: 8px 10px;
+  background: transparent;
+  color: #2a381d;
+  font-weight: 500;
+  font-size: var(--ui-font-size);
+}
+.list button.active {
+  background: #e5ebd6;
+  color: #1d2a13;
+}
+.mono { font-family: Consolas, "Courier New", monospace; }
+@media (max-width: 960px) {
+  .app { grid-template-columns: 1fr; }
+}
