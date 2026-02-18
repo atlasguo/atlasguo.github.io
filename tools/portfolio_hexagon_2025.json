@@ -1,0 +1,646 @@
+[
+  {
+    "id": "map_01",
+    "slug": "ginkgo_north_america",
+    "href": "maps/ginkgo_north_america.html",
+    "title": "Ginkgo Painting of North America",
+    "target": "_blank",
+    "points": [
+      [
+        50,
+        187
+      ],
+      [
+        399,
+        128
+      ],
+      [
+        446,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        117
+      ]
+    ]
+  },
+  {
+    "id": "map_02",
+    "slug": "shawano_railroad",
+    "href": "maps/shawano_railroad.html",
+    "title": "Historic Railroads in Menominee and Shawano Counties, WI",
+    "target": "_blank",
+    "points": [
+      [
+        607,
+        137
+      ],
+      [
+        794,
+        290
+      ],
+      [
+        1138,
+        223
+      ],
+      [
+        1228,
+        0
+      ],
+      [
+        657,
+        0
+      ]
+    ]
+  },
+  {
+    "id": "map_03",
+    "slug": "footprint",
+    "href": "maps/footprint.html",
+    "title": "Our Spatial Memories of the United States",
+    "target": "_blank",
+    "points": [
+      [
+        1519,
+        22
+      ],
+      [
+        1396,
+        338
+      ],
+      [
+        1607,
+        510
+      ],
+      [
+        1977,
+        442
+      ],
+      [
+        2101,
+        146
+      ],
+      [
+        1923,
+        0
+      ],
+      [
+        1689,
+        0
+      ]
+    ]
+  },
+  {
+    "id": "map_04",
+    "slug": "lego_map_gallery",
+    "href": "lego/lego_map_gallery.html",
+    "title": "A Mini Gallery of LEGO Style Topographic Maps",
+    "target": "_blank",
+    "points": [
+      [
+        2262,
+        162
+      ],
+      [
+        2157,
+        416
+      ],
+      [
+        2397,
+        601
+      ],
+      [
+        2736,
+        543
+      ],
+      [
+        2833,
+        300
+      ],
+      [
+        2601,
+        106
+      ]
+    ]
+  },
+  {
+    "id": "map_05",
+    "slug": "biking",
+    "href": "maps/biking.html",
+    "title": "Mapping My Biking Journey with Distance of Distinct Traveled Paths",
+    "target": "_blank",
+    "points": [
+      [
+        3059,
+        432
+      ],
+      [
+        2963,
+        661
+      ],
+      [
+        3171,
+        844
+      ],
+      [
+        3574,
+        776
+      ],
+      [
+        3652,
+        567
+      ],
+      [
+        3420,
+        377
+      ]
+    ]
+  },
+  {
+    "id": "map_06",
+    "slug": "laser_cut_wisconsin",
+    "href": "maps/laser_cut_wisconsin.html",
+    "title": "Laser Cut Wisconsin Map",
+    "target": "_blank",
+    "points": [
+      [
+        2780,
+        11
+      ],
+      [
+        3046,
+        237
+      ],
+      [
+        3374,
+        190
+      ],
+      [
+        3448,
+        0
+      ],
+      [
+        2784,
+        0
+      ]
+    ]
+  },
+  {
+    "id": "map_07",
+    "slug": "hurricane_helene",
+    "href": "maps/hurricane_helene.html",
+    "title": "Identifying Places with Power Outages after Hurricane Helene",
+    "target": "_blank",
+    "points": [
+      [
+        3601,
+        223
+      ],
+      [
+        3840,
+        408
+      ],
+      [
+        3840,
+        0
+      ],
+      [
+        3690,
+        0
+      ]
+    ]
+  },
+  {
+    "id": "map_08",
+    "slug": "multihazard_quilt",
+    "href": "maps/multihazard_quilt.html",
+    "title": "Multi-Hazard Map Quilt for NACIS 2025",
+    "target": "_blank",
+    "points": [
+      [
+        124,
+        404
+      ],
+      [
+        4,
+        684
+      ],
+      [
+        170,
+        832
+      ],
+      [
+        590,
+        750
+      ],
+      [
+        689,
+        521
+      ],
+      [
+        478,
+        344
+      ]
+    ]
+  },
+  {
+    "id": "map_09",
+    "slug": "lego_apple_maps",
+    "href": "lego/lego_apple_maps.html",
+    "title": "LEGO Apple Maps Icon",
+    "target": "_blank",
+    "points": [
+      [
+        873,
+        527
+      ],
+      [
+        1229,
+        455
+      ],
+      [
+        1455,
+        642
+      ],
+      [
+        1353,
+        894
+      ],
+      [
+        958,
+        975
+      ],
+      [
+        757,
+        808
+      ]
+    ]
+  },
+  {
+    "id": "map_10",
+    "slug": "us_blooming_risk",
+    "href": "maps/us_blooming_risk.html",
+    "title": "United States of Blooming Risks",
+    "target": "_blank",
+    "points": [
+      [
+        1745,
+        1118
+      ],
+      [
+        2108,
+        1045
+      ],
+      [
+        2216,
+        774
+      ],
+      [
+        1992,
+        585
+      ],
+      [
+        1631,
+        648
+      ],
+      [
+        1518,
+        930
+      ]
+    ]
+  },
+  {
+    "id": "map_11",
+    "slug": "yosemite",
+    "href": "maps/yosemite.html",
+    "title": "Scenic Yosemite National Park",
+    "target": "_blank",
+    "points": [
+      [
+        2436,
+        851
+      ],
+      [
+        2326,
+        1133
+      ],
+      [
+        2553,
+        1326
+      ],
+      [
+        2918,
+        1256
+      ],
+      [
+        3021,
+        975
+      ],
+      [
+        2802,
+        785
+      ]
+    ]
+  },
+  {
+    "id": "map_12",
+    "slug": "lego_arizona",
+    "href": "lego/lego_arizona.html",
+    "title": "Physical Geography of Arizona in LEGO Style",
+    "target": "_blank",
+    "points": [
+      [
+        3252,
+        1003
+      ],
+      [
+        3151,
+        1275
+      ],
+      [
+        3396,
+        1474
+      ],
+      [
+        3793,
+        1401
+      ],
+      [
+        3840,
+        1231
+      ],
+      [
+        3840,
+        1197
+      ],
+      [
+        3822,
+        1112
+      ],
+      [
+        3628,
+        940
+      ]
+    ]
+  },
+  {
+    "id": "map_13",
+    "slug": "us_rising_hazard",
+    "href": "maps/us_rising_hazard.html",
+    "title": "United States of Rising Hazards",
+    "target": "_blank",
+    "points": [
+      [
+        83,
+        1284
+      ],
+      [
+        288,
+        1469
+      ],
+      [
+        657,
+        1397
+      ],
+      [
+        780,
+        1105
+      ],
+      [
+        583,
+        926
+      ],
+      [
+        203,
+        999
+      ]
+    ]
+  },
+  {
+    "id": "map_14",
+    "slug": "israel_palestine",
+    "href": "maps/israel_palestine.html",
+    "title": "Land Flowing with Milk and Honey",
+    "target": "_blank",
+    "points": [
+      [
+        1023,
+        1180
+      ],
+      [
+        895,
+        1490
+      ],
+      [
+        1100,
+        1671
+      ],
+      [
+        1479,
+        1589
+      ],
+      [
+        1596,
+        1304
+      ],
+      [
+        1366,
+        1109
+      ]
+    ]
+  },
+  {
+    "id": "map_15",
+    "slug": "lego_election_2024",
+    "href": "lego/lego_election_2024.html",
+    "title": "LEGO Cartogram of U.S. Presidential Election 2024",
+    "target": "_blank",
+    "points": [
+      [
+        1677,
+        1636
+      ],
+      [
+        1920,
+        1841
+      ],
+      [
+        2276,
+        1767
+      ],
+      [
+        2394,
+        1454
+      ],
+      [
+        2166,
+        1260
+      ],
+      [
+        1795,
+        1336
+      ]
+    ]
+  },
+  {
+    "id": "map_16",
+    "slug": "sysu",
+    "href": "maps/sysu.html",
+    "title": "Sun Yat-sen University",
+    "target": "_blank",
+    "points": [
+      [
+        2608,
+        1489
+      ],
+      [
+        2495,
+        1795
+      ],
+      [
+        2744,
+        2005
+      ],
+      [
+        3134,
+        1920
+      ],
+      [
+        3229,
+        1632
+      ],
+      [
+        2973,
+        1418
+      ]
+    ]
+  },
+  {
+    "id": "map_17",
+    "slug": "lego_apple",
+    "href": "lego/lego_apple.html",
+    "title": "Apple-Themed Topographic Map of California",
+    "target": "_blank",
+    "points": [
+      [
+        3338,
+        2006
+      ],
+      [
+        3526,
+        2160
+      ],
+      [
+        3840,
+        2160
+      ],
+      [
+        3840,
+        1614
+      ],
+      [
+        3435,
+        1699
+      ]
+    ]
+  },
+  {
+    "id": "map_18",
+    "slug": "lego_north_america",
+    "href": "lego/lego_north_america.html",
+    "title": "LEGO Map of North America",
+    "target": "_blank",
+    "points": [
+      [
+        240,
+        2001
+      ],
+      [
+        409,
+        2160
+      ],
+      [
+        723,
+        2160
+      ],
+      [
+        848,
+        2133
+      ],
+      [
+        971,
+        1822
+      ],
+      [
+        735,
+        1614
+      ],
+      [
+        374,
+        1685
+      ]
+    ]
+  },
+  {
+    "id": "map_19",
+    "slug": "watercolor",
+    "href": "maps/watercolor.html",
+    "title": "Hand-drawn Watercolor Maps with Calligraphy",
+    "target": "_blank",
+    "points": [
+      [
+        1021,
+        2145
+      ],
+      [
+        1038,
+        2160
+      ],
+      [
+        1672,
+        2160
+      ],
+      [
+        1750,
+        1967
+      ],
+      [
+        1522,
+        1773
+      ],
+      [
+        1129,
+        1855
+      ]
+    ]
+  },
+  {
+    "id": "map_20",
+    "slug": "global_temperature",
+    "href": "maps/global_temperature.html",
+    "title": "Global Temperature Patterns",
+    "target": "_blank",
+    "points": [
+      [
+        1963,
+        2039
+      ],
+      [
+        1915,
+        2160
+      ],
+      [
+        2556,
+        2160
+      ],
+      [
+        2324,
+        1962
+      ]
+    ]
+  }
+]

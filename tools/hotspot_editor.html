@@ -412,7 +412,7 @@
         const pairs = [];
         for (let year = SOURCE_YEAR_START; year <= SOURCE_YEAR_END; year += 1) {
           const base = `${SOURCE_PREFIX}${year}`;
-          const jsonPath = `../js/${base}.json`;
+          const jsonPath = `./${base}.json`;
           const hasJson = await urlExists(jsonPath);
           if (!hasJson) {
             continue;
