@@ -750,6 +750,35 @@ header.masthead .intro-text .intro-heading {
 	z-index: 2;
 }
 
+#portfolio .portfolio-item.tag_award .portfolio-link::after {
+	content: "\f091";
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 999px;
+	background: rgba(255, 241, 206, 0.82);
+	color: #b97810;
+	border: none;
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 1;
+	text-shadow: none;
+	box-shadow: 0 2px 7px rgba(214, 140, 0, 0.3);
+	transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+	pointer-events: none;
+	z-index: 4;
+}
+
+#portfolio .portfolio-item.tag_award:hover .portfolio-link::after {
+	transform: scale(1.03);
+}
+
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
 	position: absolute;
 	top: 0;
@@ -1322,7 +1351,7 @@ ul.social-buttons li a:hover {
 	border-radius: 50%;
 	cursor: pointer;
 	z-index: 1000;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
 	transition: opacity 0.3s ease;
 	display: flex;
 	justify-content: center;
@@ -1343,6 +1372,18 @@ ul.social-buttons li a:hover {
 
 #backToTop:hover {
 	opacity: 0.9;
+	transform: translateY(-1px);
+}
+
+#backToTop:focus,
+#backToTop:active,
+#backToTop:focus-visible {
+	outline: none;
+	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+}
+
+#backToTop::-moz-focus-inner {
+	border: 0;
 }
 
 .page-side-padding {
