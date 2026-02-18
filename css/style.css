@@ -1394,3 +1394,9 @@ ul.social-buttons li a:hover {
 .icon-item span a:hover {
 	text-decoration: underline;
 }
+
+.lego-qr-image {
+	width: 100%;
+	max-width: 320px;
+	height: auto;
+}
