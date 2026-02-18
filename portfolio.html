@@ -90,50 +90,70 @@
 								type="button">X</button>
 						</div>
 						<br>
-						<br>
-						<h6 class="is-hidden" id="filters-label">Click to filter by:</h6>
-						<div class="filters" id="filters">
-							<a class="active" data-filter="*" href="#"><b>ALL (RESET FILTER)</b></a><b> &bull; </b>
-							<a data-filter=".tag_award" href="#"><b>Award-Winning</b></a>
-							<br>
-							<b>Region:</b><span class="line-break"></span>
-							<a data-filter=".tag_global" href="#">Global</a> |
-							<a data-filter=".tag_china" href="#">China</a> |
-							<a data-filter=".tag_us" href="#">U.S.</a> |
-							<a data-filter=".tag_ga" href="#">GA</a> |
-							<a data-filter=".tag_wi" href="#">WI</a> |
-							<a data-filter=".tag_madison" href="#">Madison</a><br>
-							<b>Topic:</b><span class="line-break"></span>
-							<a data-filter=".tag_disaster" href="#">Disaster</a> |
-							<a data-filter=".tag_hurr" href="#">Hurricane</a> |
-							<a data-filter=".tag_covid" href="#">Covid</a> |
-							<a data-filter=".tag_univ" href="#">University</a> |
-							<a data-filter=".tag_hist" href="#">History</a><br>
-							<b>Purpose:</b><span class="line-break"></span>
-							<a data-filter=".tag_research" href="#">Research</a> |
-							<a data-filter=".tag_course" href="#">Course</a> |
-							<a data-filter=".tag_news" href="#">News</a> |
-							<a data-filter=".tag_edu" href="#">Education</a> |
-							<a data-filter=".tag_personal" href="#">Personal</a><br>
-							<b>Design:</b><span class="line-break"></span>
-							<a data-filter=".tag_lego" href="#">LEGO</a> |
-							<a data-filter=".tag_terrain" href="#">Terrain</a> |
-							<a data-filter=".tag_traj" href="#">Trajectory</a> |
-							<a data-filter=".tag_stylized" href="#">Stylized</a> |
-							<a data-filter=".tag_proj" href="#">Special Projection</a><br>
-							<b>Collaboration:</b><span class="line-break"></span>
-							<a data-filter=".tag_cartlab" href="#">UW Cartography Lab</a> |
-							<a data-filter=".tag_team" href="#">Teamwork</a><br>
-							<b>Language:</b><span class="line-break"></span>
-							<a data-filter=".tag_en" href="#">English</a> |
-							<a data-filter=".tag_cn" href="#">Chinese</a> |
-							<a data-filter=".tag_bilingual" href="#">Bilingual</a><br>
-							<b>Format:</b><span class="line-break"></span>
-							<a data-filter=".tag_web" href="#">Web</a> |
-							<a data-filter=".tag_tangible" href="#">Tangible</a> |
-							<a data-filter=".tag_series" href="#">Series</a><br>
+						<h6 class="is-hidden" id="filters-label">Filter by tags (multi-select):</h6>
+						<div class="filters filter-toolbar" id="filters">
+							<div class="filter-group filter-group-reset">
+								<a aria-pressed="true" class="filter-tag active" data-filter="*" href="#">All /
+									Reset</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_award"
+									href="#">Award-Winning</a>
+							</div>
+							<div class="filter-group">
+								<span class="filter-group-label">Region</span>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_global" href="#">Global</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_china" href="#">China</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_us" href="#">U.S.</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_ga" href="#">GA</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_wi" href="#">WI</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_madison"
+									href="#">Madison</a>
+							</div>
+							<div class="filter-group">
+								<span class="filter-group-label">Topic</span>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_disaster"
+									href="#">Disaster</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_hurr"
+									href="#">Hurricane</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_covid" href="#">Covid</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_univ"
+									href="#">University</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_hist" href="#">History</a>
+							</div>
+							<div class="filter-group">
+								<span class="filter-group-label">Purpose</span>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_research"
+									href="#">Research</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_course" href="#">Course</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_news" href="#">News</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_edu" href="#">Education</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_personal"
+									href="#">Personal</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_team" href="#">Team</a>
+							</div>
+							<div class="filter-group">
+								<span class="filter-group-label">Design</span>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_lego" href="#">LEGO</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_terrain"
+									href="#">Terrain</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_traj"
+									href="#">Trajectory</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_stylized"
+									href="#">Stylized</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_proj" href="#">Special
+									Projection</a>
+							</div>
+							<div class="filter-group">
+								<span class="filter-group-label">Format</span>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_en" href="#">English</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_cn" href="#">Chinese</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_bilingual"
+									href="#">Bilingual</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_web" href="#">Web</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_tangible"
+									href="#">Tangible</a>
+								<a aria-pressed="false" class="filter-tag" data-filter=".tag_series" href="#">Series</a>
+							</div>
 						</div>
-						<br>
 					</div>
 				</div>
 			</div>
@@ -247,7 +267,8 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img alt="Thumbnail for Zibo" class="img-fluid round-corner portfolio-background" src="maps/zibo_thumbnail.jpg" />
+						<img alt="Thumbnail for Zibo" class="img-fluid round-corner portfolio-background"
+							src="maps/zibo_thumbnail.jpg" />
 					</a>
 					<div class="portfolio-caption round-corner">
 						<h4><a href="maps/zibo.html" target="_blank">Zibo Map of Culture<br>and Tourism</a></h4>
@@ -423,7 +444,8 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img alt="Thumbnail for Active Hurricane Tracker" class="img-fluid round-corner portfolio-background"
+						<img alt="Thumbnail for Active Hurricane Tracker"
+							class="img-fluid round-corner portfolio-background"
 							src="maps/active_hurricane_tracker_thumbnail.jpg" />
 					</a>
 					<div class="portfolio-caption round-corner">
@@ -484,7 +506,8 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img alt="Thumbnail for Historical Hurricanes" class="img-fluid round-corner portfolio-background"
+						<img alt="Thumbnail for Historical Hurricanes"
+							class="img-fluid round-corner portfolio-background"
 							src="maps/historical_hurricanes_thumbnail.jpg" />
 					</a>
 					<div class="portfolio-caption round-corner">
@@ -505,7 +528,8 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img alt="Thumbnail for Revealing Hurricane Harvey" class="img-fluid round-corner portfolio-background"
+						<img alt="Thumbnail for Revealing Hurricane Harvey"
+							class="img-fluid round-corner portfolio-background"
 							src="maps/revealing_hurricane_harvey_thumbnail.jpg" />
 					</a>
 					<div class="portfolio-caption round-corner">
@@ -572,7 +596,8 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img alt="Thumbnail for Wssi" class="img-fluid round-corner portfolio-background" src="maps/wssi_thumbnail.jpg" />
+						<img alt="Thumbnail for Wssi" class="img-fluid round-corner portfolio-background"
+							src="maps/wssi_thumbnail.jpg" />
 					</a>
 					<div class="portfolio-caption round-corner">
 						<h4><a href="maps/wssi.html" target="_blank">Visualizations on<br>U.S. Winter Storm</a></h4>
@@ -666,14 +691,6 @@
 
 				<div class="col-lg-12 text-center portfolio-item portfolio-category">
 					<h5 class="category" id="category-lego">&mdash;&mdash; LEGO Map &mdash;&mdash;</h5>
-				</div>
-				<div class="col-lg-12 text-center portfolio-item tag_lego lego-note-row" data-search="lego lego maps">
-					<p class="text-muted lego-note-small" id="lego-note" style="margin-bottom: 20px;"><i><img
-								src="assets/logo_lego.png" alt="LEGO icon"
-								style="font-size: 10px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom:3px" />Interested
-							in seeing more LEGO maps? Check out this <a href="lego.html"
-								style="color: inherit; text-decoration: underline;">LEGO-dedicated
-								page</a>.</i></p>
 				</div>
 
 				<!-- Modal: lego_map_gallery -->
@@ -798,6 +815,14 @@
 						</p>
 					</div>
 				</div>
+				<div class="col-lg-12 text-center portfolio-item tag_lego lego-note-row" data-search="lego lego maps">
+					<p class="text-muted lego-note-small" id="lego-note" style="margin-bottom: 20px;"><i><img
+								src="assets/logo_lego.png" alt="LEGO icon"
+								style="font-size: 10px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom:3px" />Interested
+							in seeing more LEGO maps? Check out this <a href="lego.html"
+								style="color: inherit; text-decoration: underline;">LEGO-dedicated
+								page</a>.</i></p>
+				</div>
 
 				<div class="col-lg-12 text-center portfolio-item portfolio-category">
 					<h5 class="category" id="category-historical">&mdash;&mdash; Historical Map &mdash;&mdash;</h5>
@@ -811,7 +836,8 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img alt="Thumbnail for Sysu" class="img-fluid round-corner portfolio-background" src="maps/sysu_thumbnail.jpg" />
+						<img alt="Thumbnail for Sysu" class="img-fluid round-corner portfolio-background"
+							src="maps/sysu_thumbnail.jpg" />
 					</a>
 					<div class="portfolio-caption round-corner">
 						<h4><a href="maps/sysu.html" target="_blank">Sun Yat-sen University<br>(SYSU)
@@ -895,7 +921,8 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img alt="Thumbnail for Early Chinese Badgers" class="img-fluid round-corner portfolio-background"
+						<img alt="Thumbnail for Early Chinese Badgers"
+							class="img-fluid round-corner portfolio-background"
 							src="maps/early_chinese_badgers_thumbnail.jpg" />
 					</a>
 					<div class="portfolio-caption round-corner">
@@ -915,7 +942,8 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img alt="Thumbnail for Grandfather Memorial" class="img-fluid round-corner portfolio-background"
+						<img alt="Thumbnail for Grandfather Memorial"
+							class="img-fluid round-corner portfolio-background"
 							src="maps/grandfather_memorial_thumbnail.jpg" />
 					</a>
 					<div class="portfolio-caption round-corner">
@@ -1063,7 +1091,8 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img alt="Thumbnail for Twitter Sentiment Covid" class="img-fluid round-corner portfolio-background"
+						<img alt="Thumbnail for Twitter Sentiment Covid"
+							class="img-fluid round-corner portfolio-background"
 							src="maps/twitter_sentiment_covid_thumbnail.jpg" />
 					</a>
 					<div class="portfolio-caption round-corner">
@@ -1341,7 +1370,8 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img alt="Thumbnail for Ilsr" class="img-fluid round-corner portfolio-background" src="maps/ilsr_thumbnail.jpg" />
+						<img alt="Thumbnail for Ilsr" class="img-fluid round-corner portfolio-background"
+							src="maps/ilsr_thumbnail.jpg" />
 					</a>
 					<div class="portfolio-caption round-corner">
 						<h4><a href="maps/ilsr.html" target="_blank">Map Products<br>during Internship<br>at
@@ -1422,7 +1452,8 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img alt="Thumbnail for Chicago Christmas 2024" class="img-fluid round-corner portfolio-background"
+						<img alt="Thumbnail for Chicago Christmas 2024"
+							class="img-fluid round-corner portfolio-background"
 							src="maps/chicago_christmas_2024_thumbnail.jpg" />
 					</a>
 					<div class="portfolio-caption round-corner">
@@ -1593,7 +1624,8 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid round-corner" src="maps/us_low_poly_thumbnail.jpg" alt="Thumbnail for US LOW Poly" />
+						<img class="img-fluid round-corner" src="maps/us_low_poly_thumbnail.jpg"
+							alt="Thumbnail for US LOW Poly" />
 					</a>
 					<div class="portfolio-caption round-corner">
 						<h4><a href="maps/us_low_poly.html" target="_blank">Low-Poly Style<br>Graphic Design of<br>Lower
@@ -1740,7 +1772,8 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img alt="Thumbnail for Ginkgo North America" class="img-fluid round-corner portfolio-background"
+						<img alt="Thumbnail for Ginkgo North America"
+							class="img-fluid round-corner portfolio-background"
 							src="maps/ginkgo_north_america_thumbnail.jpg" />
 					</a>
 					<div class="portfolio-caption round-corner">
