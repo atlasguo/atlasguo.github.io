@@ -17,7 +17,8 @@
       return $(this).find('.portfolio-link').length > 0;
     });
     var resizeTimer = null;
-    var currentFilter = '*';
+    var mapTypeFilter = '*';
+    var mediumFilter = '*';
 
 
     var syncCardShellWidths = function () {
@@ -52,7 +53,9 @@
     };
 
     var matchesFilter = function ($item) {
-      return currentFilter === '*' ? true : $item.is(currentFilter);
+      var matchMapType = mapTypeFilter === '*' ? true : $item.is(mapTypeFilter);
+      var matchMedium = mediumFilter === '*' ? true : $item.is(mediumFilter);
+      return matchMapType && matchMedium;
     };
 
     var syncFilterState = function () {
@@ -60,7 +63,16 @@
         return;
       }
       $filters.find('a[data-filter]').removeClass('active').attr('aria-pressed', 'false');
-      $filters.find('a[data-filter="' + currentFilter + '"]').addClass('active').attr('aria-pressed', 'true');
+
+      var isResetActive = mapTypeFilter === '*' && mediumFilter === '*';
+      $filters.find('a[data-group="reset"]').toggleClass('active', isResetActive).attr('aria-pressed', isResetActive ? 'true' : 'false');
+
+      if (mapTypeFilter !== '*') {
+        $filters.find('a[data-group="map_type"][data-filter="' + mapTypeFilter + '"]').addClass('active').attr('aria-pressed', 'true');
+      }
+      if (mediumFilter !== '*') {
+        $filters.find('a[data-group="medium"][data-filter="' + mediumFilter + '"]').addClass('active').attr('aria-pressed', 'true');
+      }
     };
 
     var applyView = function () {
@@ -91,7 +103,21 @@
 
     $filters.on('click', 'a[data-filter]', function (e) {
       e.preventDefault();
-      currentFilter = $(this).attr('data-filter') || '*';
+      var $clicked = $(this);
+      var group = $clicked.attr('data-group') || '';
+      var nextFilter = $clicked.attr('data-filter') || '*';
+
+      if (group === 'reset') {
+        mapTypeFilter = '*';
+        mediumFilter = '*';
+      } else if (group === 'map_type') {
+        mapTypeFilter = nextFilter;
+      } else if (group === 'medium') {
+        mediumFilter = nextFilter;
+      } else {
+        mapTypeFilter = nextFilter;
+      }
+
       syncFilterState();
       applyView();
     });
