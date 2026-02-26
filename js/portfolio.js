@@ -179,8 +179,8 @@
 			scheduleRowHeightSync();
 		});
 
-		applyFilters();
 		syncFilterState();
+		applyFilters();
 		scheduleRowHeightSync();
 
 		$filters.on('click', 'a', function (e) {
@@ -201,8 +201,8 @@
 				}
 			}
 
-			applyFilters();
 			syncFilterState();
+			applyFilters();
 		});
 
 		$('#portfolio-grid').on('click', '.portfolio-category-toggle', function () {

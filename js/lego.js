@@ -111,11 +111,11 @@
         mapTypeFilter = '*';
         mediumFilter = '*';
       } else if (group === 'map_type') {
-        mapTypeFilter = nextFilter;
+        mapTypeFilter = mapTypeFilter === nextFilter ? '*' : nextFilter;
       } else if (group === 'medium') {
-        mediumFilter = nextFilter;
+        mediumFilter = mediumFilter === nextFilter ? '*' : nextFilter;
       } else {
-        mapTypeFilter = nextFilter;
+        mapTypeFilter = mapTypeFilter === nextFilter ? '*' : nextFilter;
       }
 
       syncFilterState();
