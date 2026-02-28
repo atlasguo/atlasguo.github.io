@@ -109,16 +109,11 @@
               <p>
                 Using FEMA’s
                 <a href="https://hazards.fema.gov/nri/" target="_blank">National Risk Index (NRI)</a>
-                dataset, this interactive map aggregates the county-level scores of 18 natural hazards, to 1K-SQ-MI
-                hexagon units, and builds an innovative multivariate visualization with
-                functionalities of layer toggling and spatial query by clicking or searching.
+                dataset, this interactive map aggregates the county-level scores of 18 natural hazards, to 1K-SQ-MI hexagon units, and builds an innovative multivariate visualization with functionalities of layer toggling and spatial query by clicking or searching.
               </p>
 
               <p>
-                One of the key design objectives of this map is to explore how, when faced with a large number of
-                attributes, a map can simultaneously present both the overall spatial pattern and
-                the ability to retrieve individual attribute details. I have already begun exploring this concept and
-                gained experience while designing these two static maps:
+                One of the key design objectives of this map is to explore how, when faced with a large number of attributes, a map can simultaneously present both the overall spatial pattern and the ability to retrieve individual attribute details. I have already begun exploring this concept and gained experience while designing these two static maps:
                 <a href="https://cartoguophy.com/maps/us_natural_disaster.html" target="_blank">United States of Natural
                   Disasters</a>, and
                 <a href="https://cartoguophy.com/maps/us_blooming_risk.html" target="_blank">United States of Blooming
@@ -126,61 +121,33 @@
               </p>
               <img class="img-fluid d-block mx-auto" src="us_rising_hazard_1.png" alt="US Rising Hazard 1 image" />
               <p>
-                The aggregation units for the main map and all inset maps are 1,000-sq-mi hexagons, generated under the
-                Albers equal area conic projection. A specially designed illustrative scale
-                graphic is included as a collapsible legend, in the bottom-right corner of the web map interface.
+                The aggregation units for the main map and all inset maps are 1,000-sq-mi hexagons, generated under the Albers equal area conic projection. A specially designed illustrative scale graphic is included as a collapsible legend, in the bottom-right corner of the web map interface.
               </p>
               <p>
-                The values for each hexagon are calculated as the weighted average of the original NRI risk scores at
-                the county level, with weights determined by the proportion of the area each
-                hexagon intersects with the counties. According to FEMA, the risk for a specific hazard is proportional
-                to the Expected Annual Loss from that hazard, adjusted by a community risk
-                factor. This factor increases with high Social Vulnerability and decreases with high Community
-                Resilience. Notably, this visualization method (static map version) has been revised
-                under the guidance of FEMA personnel.
+                The values for each hexagon are calculated as the weighted average of the original NRI risk scores at the county level, with weights determined by the proportion of the area each hexagon intersects with the counties. According to FEMA, the risk for a specific hazard is proportional to the Expected Annual Loss from that hazard, adjusted by a community risk factor. This factor increases with high Social Vulnerability and decreases with high Community Resilience. Notably, this visualization method (static map version) has been revised under the guidance of FEMA personnel.
               </p>
               <p>
-                FEMA does not provide hierarchical structures or categories of the 18 hazards – they are sorted
-                alphabetically. In this symbol, all 18 hazard types are arranged along a color
-                spectrum broadly based on their mechanisms. Similar hazards are placed closer together and assigned
-                similar colors that correspond to their categories (e.g., hot/cold meteorological,
-                climatological, hydrological, geophysical), visually revealing potential spatial patterns. Specifically,
-                ChatGPT is used to generate detailed qualitative descriptions for each of the
-                18 hazards under a consistent standard. These descriptions were then used to create a similarity matrix
-                (18x18), which informed the further sequence construction. The final
-                arrangement of the color spectrum was fine-tuned manually based on my knowledge and expertise, ensuring
-                accurate and logical progression.
+                FEMA does not provide hierarchical structures or categories of the 18 hazards – they are sorted alphabetically. In this symbol, all 18 hazard types are arranged along a color spectrum broadly based on their mechanisms. Similar hazards are placed closer together and assigned similar colors that correspond to their categories (e.g., hot/cold meteorological, climatological, hydrological, geophysical), visually revealing potential spatial patterns. Specifically, ChatGPT is used to generate detailed qualitative descriptions for each of the 18 hazards under a consistent standard. These descriptions were then used to create a similarity matrix (18x18), which informed the further sequence construction. The final arrangement of the color spectrum was fine-tuned manually based on my knowledge and expertise, ensuring accurate and logical progression.
               </p>
-              <img class="img-fluid d-block mx-auto" src="us_rising_hazard_legend.png" alt="US Rising Hazard Legend image" />
+              <img class="img-fluid d-block mx-auto" src="us_rising_hazard_legend.png"
+                alt="US Rising Hazard Legend image" />
               <p>
-                The multivariate thematic symbol design uses color (transparency) to represent attributes: opaque/bright
-                colors indicate higher risks for specific natural hazards. Particularly, the
-                circular 18-color sequence is not a standard RGB color wheel. The segment between red and yellow is
-                intentionally expanded to leverage the human eye’s heightened ability to
-                distinguish orange-like hues. The Hex codes for these 18 colors were generated with the assistance of
-                ChatGPT.
+                The multivariate thematic symbol design uses color (transparency) to represent attributes: opaque/bright colors indicate higher risks for specific natural hazards. Particularly, the circular 18-color sequence is not a standard RGB color wheel. The segment between red and yellow is intentionally expanded to leverage the human eye’s heightened ability to distinguish orange-like hues. The Hex codes for these 18 colors were generated with the assistance of ChatGPT.
               </p>
               <p>
-                Additionally, functionalities of layer toggling, attribute information retrieving (pop-up) and
-                place/address searching (search bar) are provided, allowing users to further explore
-                their areas of interest with more details, i.e. scores of 18 individual hazards with color-coded risk
-                levels.
+                Additionally, functionalities of layer toggling, attribute information retrieving (pop-up) and place/address searching (search bar) are provided, allowing users to further explore their areas of interest with more details, i.e. scores of 18 individual hazards with color-coded risk levels.
               </p>
               <img class="img-fluid d-block mx-auto" src="us_rising_hazard_2.png" alt="US Rising Hazard 2 image" />
               <p>
-                To sum up, beyond successfully balancing the presentation of overall spatial patterns and individual
-                attribute retrieval, this map intricately combines science (color theory) and art
-                (innovative symbol design), theory (multivariate thematic mapping) and application (natural hazard risk
-                assessment), as well as traditional cartography (thematic mapping) and
-                automation (AI-assisted designing processes). It offers both professionals in related fields and the
-                general public inspiring insights from diverse perspectives.
+                To sum up, beyond successfully balancing the presentation of overall spatial patterns and individual attribute retrieval, this map intricately combines science (color theory) and art (innovative symbol design), theory (multivariate thematic mapping) and application (natural hazard risk assessment), as well as traditional cartography (thematic mapping) and automation (AI-assisted designing processes). It offers both professionals in related fields and the general public inspiring insights from diverse perspectives.
               </p>
               <p>(Data Source: FEMA National Risk Index)</p>
 
-              <img class="img-fluid d-block mx-auto" src="us_rising_hazard_cagis.png" alt="US Rising Hazard Cagis image" />
+              <img class="img-fluid d-block mx-auto" src="us_rising_hazard_cagis.png"
+                alt="US Rising Hazard Cagis image" />
               <p>This map won the <a
                   href="https://cartogis.org/docs/map_competition/CaGIS_Map_Design_Competition_Results_2024.pdf"
-                  target="_blank">Honorable Mention</a> of David Woodward Digital Map Award in 52th <a
+                  target="_blank">Honorable Mention</a> of David Woodward Digital Map Award in 52nd <a
                   href="https://cartogis.org/awards/map-competition/" target="_blank">CaGIS Map Design
                   Competition</a> (2025).</p>
 
@@ -200,10 +167,10 @@
                 of Avenza Award for Electronic Mapping by
                 <a href="https://www.cartography.org.uk/" target="_blank">British Cartographic Society</a> (2025).
               </p>
-              <img class="img-fluid d-block mx-auto" style="width:200px" src="../assets/logo_nacis_2025.png" alt="Logo Nacis 2025 image" />
+              <img class="img-fluid d-block mx-auto" style="width:200px" src="../assets/logo_nacis_2025.png"
+                alt="Logo Nacis 2025 image" />
               <p>
-                This map was displayed in the map gallery (dynamic map) of North American Cartographic Information
-                Society
+                This map was displayed in the map gallery (dynamic map) of North American Cartographic Information Society
                 (NACIS) <a href="https://nacis.org/annual-meeting/current-meeting/" target="_blank">2025 annual
                   meeting</a> at
                 Louisiville, KY (Oct 15-17), and is the winner of Individual Category in <a
@@ -211,7 +178,8 @@
                   Competition</a>. Check out <a href="../web/nacis2025.html" target="_blank">my other
                   entries</a> in the map gallery!
               </p>
-              <img class="img-fluid d-block mx-auto" src="us_rising_hazard_nacis.jpg" alt="US Rising Hazard Nacis image" />
+              <img class="img-fluid d-block mx-auto" src="us_rising_hazard_nacis.jpg"
+                alt="US Rising Hazard Nacis image" />
             </div>
           </div>
         </div>
