@@ -153,6 +153,11 @@
 			});
 		};
 
+		var expandAllCategoryGroups = function () {
+			$grid.find('.portfolio-category-toggle').attr('aria-expanded', 'true');
+			$grid.find('.category-group-item.is-category-collapsed').removeClass('is-category-collapsed');
+		};
+
 		var syncFilterState = function () {
 			$filters.find('a[data-filter]').not($resetFilter).each(function () {
 				var filterValue = $(this).attr('data-filter');
@@ -201,6 +206,7 @@
 				}
 			}
 
+			expandAllCategoryGroups();
 			syncFilterState();
 			applyFilters();
 		});
