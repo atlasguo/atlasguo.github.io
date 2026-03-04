@@ -1,20 +1,28 @@
 (function () {
   var mapEl = document.getElementById("vision-journey-map");
   if (!mapEl || typeof L === "undefined") return;
+  var worldBounds = L.latLngBounds(
+    L.latLng(-85.05112878, -180),
+    L.latLng(85.05112878, 180)
+  );
 
   var map = L.map("vision-journey-map", {
     zoomControl: true,
     scrollWheelZoom: true,
     dragging: true,
+    tap: false,
+    maxBounds: worldBounds,
+    maxBoundsViscosity: 1.0,
     zoomAnimation: false,
     zoomDelta: 1,
     zoomSnap: 1,
     wheelPxPerZoomLevel: 160
   });
 
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
+  L.tileLayer("https://a.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
     maxZoom: 19,
-    subdomains: "abcd",
+    updateWhenIdle: true,
+    noWrap: true,
     attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
   }).addTo(map);
 
@@ -75,7 +83,7 @@
       lng: -83.3576,
       popup: {
         title: "Athens",
-        lines: ["2015-2017, 2020-2023, 2025-2026", "University of Georgia"]
+        lines: ["2015-2017, occasionally afterwards", "University of Georgia"]
       }
     },
     {
@@ -84,7 +92,7 @@
       lng: -89.4012,
       popup: {
         title: "Madison",
-        lines: ["2017-2020, 2023-2025", "University of Wisconsin-Madison"]
+        lines: ["2017-2026, occasionally absent", "University of Wisconsin-Madison"]
       }
     },
     {
@@ -93,11 +101,15 @@
       lng: -122.0322,
       popup: {
         title: "Cupertino",
-        lines: ["2025", "Apple Inc.<br>(Internship)"]
+        lines: ["2025", "Apple Inc. (Internship)"]
       }
     }
   ];
-  var topLabelCities = new Set(["Madison", "Zibo", "Guangzhou"]);
+  var topLabelCities = {
+    Madison: true,
+    Zibo: true,
+    Guangzhou: true
+  };
   var labelCandidates = [
     { direction: "top", dx: 0, dy: -6 },
     { direction: "right", dx: 8, dy: 0 },
@@ -143,20 +155,32 @@
     pointRecords.push({
       place: p,
       marker: marker,
-      priority: topLabelCities.has(p.name) ? 1 : 0
+      priority: topLabelCities[p.name] ? 1 : 0
     });
   });
 
   group.addTo(map);
   var focusBounds = group.getBounds().pad(0.35);
-  map.fitBounds(focusBounds);
-  map.setMaxBounds(focusBounds);
-  map.options.maxBoundsViscosity = 1.0;
-  var baseZoom = map.getZoom();
-  var initialZoom = Math.min(19, baseZoom + 1);
-  map.setMinZoom(initialZoom);
-  map.setMaxZoom(Math.min(19, initialZoom + 4));
-  map.setZoom(initialZoom);
+  var MAX_ZOOM = 5;
+  var userInteracted = false;
+
+  function applyInitialViewport() {
+    map.fitBounds(focusBounds, { animate: false, maxZoom: MAX_ZOOM });
+    var fitZoom = map.getZoom();
+    map.setMinZoom(fitZoom);
+    map.setMaxZoom(MAX_ZOOM);
+    var boostedZoom = Math.min(MAX_ZOOM, map.getZoom() + 1);
+    map.setZoom(boostedZoom, { animate: false });
+  }
+
+  function syncMapSize() {
+    map.invalidateSize({ pan: false, animate: false });
+    if (!userInteracted) {
+      applyInitialViewport();
+    }
+  }
+
+  applyInitialViewport();
 
   function overlapArea(a, b) {
     var w = Math.max(0, Math.min(a.right, b.right) - Math.max(a.left, b.left));
@@ -256,4 +280,17 @@
 
   layoutLabels();
   map.on("zoomend moveend", layoutLabels);
+  map.on("movestart zoomstart", function () {
+    userInteracted = true;
+  });
+
+  window.addEventListener("load", function () {
+    setTimeout(syncMapSize, 120);
+    setTimeout(syncMapSize, 320);
+  });
+
+  window.addEventListener("resize", syncMapSize);
+  window.addEventListener("orientationchange", function () {
+    setTimeout(syncMapSize, 180);
+  });
 })();

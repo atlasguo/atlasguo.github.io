@@ -9,7 +9,7 @@
     <meta property="og:image" content="https://cartoguophy.com/assets/cartoguophy_og.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="675" />
-    <title>404 - You've Reached Null Island | CartoGuophy</title>
+    <title>CartoGuophy | 404 - Null Island</title>
     <!-- Bootstrap -->
     <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
 
@@ -110,7 +110,7 @@
                             <br>
                             <br>
                             <p class="text-muted">
-                                <b>What is Null Island?</b>
+                                <b>What is Null Island? 🏝️</b>
                                 <br>
                                 Null Island is a fictional place at (0°, 0°), where the Prime Meridian
                                 meets the Equator.
@@ -119,7 +119,7 @@
                             </p>
                             <div style="width: 100%; margin: -10px auto 24px;">
                                 <div id="null-island-map"
-                                    style="height: 260px; width: 100%; border: 1px solid #d7dce0; border-radius: 8px;">
+                                    style="height: 280px; width: 100%; border: 1px solid #d7dce0; border-radius: 8px;">
                                 </div>
                             </div>
 
@@ -246,16 +246,25 @@
         (function () {
             var mapEl = document.getElementById("null-island-map");
             if (!mapEl || typeof L === "undefined") return;
+            var worldBounds = L.latLngBounds(
+                L.latLng(-85.05112878, -180),
+                L.latLng(85.05112878, 180)
+            );
+            var initialCenter = L.latLng(0, 0);
+            var initialZoom = 1;
 
             var map = L.map("null-island-map", {
                 zoomControl: true,
                 scrollWheelZoom: true,
-                dragging: true
-            }).setView([0, 0], 1);
+                dragging: true,
+                maxBounds: worldBounds,
+                maxBoundsViscosity: 1.0
+            }).setView([initialCenter.lat, initialCenter.lng], initialZoom);
 
             L.tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
                 maxZoom: 19,
                 subdomains: "abcd",
+                noWrap: true,
                 attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
             }).addTo(map);
 
@@ -266,6 +275,68 @@
                 fillOpacity: 1,
                 weight: 2
             }).addTo(map).bindPopup("Null Island (0, 0)").openPopup();
+
+            var ResetControl = L.Control.extend({
+                options: { position: "bottomleft" },
+                onAdd: function () {
+                    var container = L.DomUtil.create("div", "leaflet-control null-island-reset-control");
+                    var btn = L.DomUtil.create("button", "", container);
+                    btn.type = "button";
+                    btn.textContent = "Reset";
+                    btn.style.margin = "0";
+                    btn.style.padding = "5px 10px";
+                    btn.style.background = "#ffffff";
+                    btn.style.border = "1px solid #8e8e8e";
+                    btn.style.borderRadius = "4px";
+                    btn.style.color = "#333333";
+                    btn.style.font = "12px/1.2 \"Helvetica Neue\", Arial, Helvetica, sans-serif";
+                    btn.style.cursor = "pointer";
+                    btn.style.boxShadow = "0 1px 4px rgba(0, 0, 0, 0.2)";
+                    btn.style.fontWeight = "600";
+                    btn.style.letterSpacing = "0.1px";
+                    L.DomEvent.disableClickPropagation(container);
+                    L.DomEvent.on(btn, "click", function () {
+                        map.setView([0, 0], 1, { animate: true });
+                    });
+                    L.DomEvent.on(btn, "mouseover", function () {
+                        btn.style.background = "#f2f2f2";
+                    });
+                    L.DomEvent.on(btn, "mouseout", function () {
+                        btn.style.background = "#ffffff";
+                    });
+                    container._resetBtn = btn;
+                    return container;
+                }
+            });
+            var resetControl = new ResetControl();
+            map.addControl(resetControl);
+            var resetContainer = resetControl.getContainer();
+            var resetAnchor = resetContainer && resetContainer.parentElement;
+            if (resetAnchor) {
+                resetAnchor.style.left = "0";
+                resetAnchor.style.right = "0";
+                resetAnchor.style.width = "100%";
+            }
+            if (resetContainer) {
+                resetContainer.style.position = "absolute";
+                resetContainer.style.left = "50%";
+                resetContainer.style.bottom = "22px";
+                resetContainer.style.transform = "translateX(-50%)";
+                resetContainer.style.margin = "0";
+                resetContainer.style.float = "none";
+                resetContainer.style.clear = "none";
+            }
+
+            function updateResetVisibility() {
+                var btn = resetControl.getContainer() && resetControl.getContainer()._resetBtn;
+                if (!btn) return;
+                var center = map.getCenter();
+                var movedFromInitial = center.distanceTo(initialCenter) > 0.01 || map.getZoom() !== initialZoom;
+                btn.style.display = movedFromInitial ? "inline-block" : "none";
+            }
+
+            map.on("moveend zoomend", updateResetVisibility);
+            updateResetVisibility();
         })();
     </script>
     <script src="/js/main.js"></script>
