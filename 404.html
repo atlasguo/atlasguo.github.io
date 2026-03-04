@@ -27,6 +27,7 @@
 
     <!-- Custom styles -->
     <link href="/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="shortcut icon" href="/assets/icon.png" />
 </head>
 
@@ -84,45 +85,81 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <div class="modal-body">
-                            <h2 class="text-uppercase">404 — Null Island</h2>
-                            <h5 class="text-muted">(0.0°, 0.0°) — The Land of Lost Pages</h5>
+                            <h2 class="text-uppercase">404 - Null Island</h2>
+                            <h5 class="text-muted">Your Current Geographic Coordinates: (0°, 0°)</h5>
                             <br>
 
-                            <p>
-                                This page doesn't exist—it's not on any map! Your
-                                coordinates seem to have gotten lost in the data void.
-                                But don't worry, we can help you navigate back to civilization.
+                            <p class="text-muted">
+                                The page you requested cannot be found. Its coordinates may have drifted
+                                into the data void. You can use one of the common routes below to get back
+                                on track.
                             </p>
 
                             <br>
                             <div class="entrance-cta-wrap">
-                                <a class="btn btn-primary btn-xl entrance-cta" style="border-radius: 10px"
-                                    href="/portfolio.html">View My Maps</a>
-                                <a class="btn btn-primary btn-xl entrance-cta" style="border-radius: 10px"
-                                    href="/lego.html">View My LEGOs</a>
+                                <a class="btn btn-primary btn-xl entrance-cta" href="/portfolio.html" target="_blank">
+                                    <img class="entrance-cta-logo" src="/assets/map_emoji.png" alt="Map icon" />
+                                    View My Maps
+                                </a>
+                                <a class="btn btn-primary btn-xl entrance-cta" href="/lego.html" target="_blank">
+                                    <img class="entrance-cta-logo" src="/assets/logo_lego.png" alt="LEGO logo" />
+                                    View My LEGOs
+                                </a>
                             </div>
 
                             <br>
                             <br>
-                            <p>
-                                <b>What is Null Island? 🏝️</b>
+                            <p class="text-muted">
+                                <b>What is Null Island?</b>
                                 <br>
-                                Null Island is a fictional island located at coordinates (0°, 0°) where the Prime
-                                Meridian meets the Equator.
-                                In cartography and data visualization, it's where invalid geographic data often gets
-                                pinned—a fun Easter egg for map nerds!
-                                Your missing page found itself in good company here.
+                                Null Island is a fictional place at (0°, 0°), where the Prime Meridian
+                                meets the Equator.
+                                In geospatial communities, it is where invalid geographic data often gets
+                                pinned - a classic map nerd Easter egg.
                             </p>
+                            <div style="width: 100%; margin: -10px auto 24px;">
+                                <div id="null-island-map"
+                                    style="height: 260px; width: 100%; border: 1px solid #d7dce0; border-radius: 8px;">
+                                </div>
+                            </div>
 
-                            <p>
+                            <p class="text-muted">
                                 Still lost? No problem! Use the navigation menu above to explore or
                                 <a href="/connect.html">connect me on social media platforms</a>!
                             </p>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="image-container bg-light text-center feedback-section" style="padding: 50px">
+        <h4>MESSAGE ME</h4>
+        <div class="text-muted"><i>Feedback on my maps is greatly appreciated!</i></div>
+        <br>
+
+        <form action="https://formspree.io/f/mgeggzyk" method="POST">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="name" name="name" class="form-control" placeholder="Name" required />
+                    </div>
+                    <div class="col">
+                        <input type="email" name="email" class="form-control" placeholder="Email" required />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Message" class="form-control" name="message" rows="4" required
+                    onfocus="document.querySelector('input[name=fileName]').value = window.location.href.split('/').pop();"></textarea>
+            </div>
+            <div class="form-group">
+                <input style="display: none" type="fileName" name="fileName" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-xl btn-dark btn-block">SEND</button>
+        </form>
     </div>
 
     <!-- Footer -->
@@ -132,49 +169,49 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                     <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-              <a href="mailto:cartoguophy@gmail.com" target="_blank">
-                <i class="fa fa-envelope"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/atlasguo" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://x.com/cartoguophy" target="_blank">
-                <i class="fab fa-x-twitter"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://bsky.app/profile/cartoguophy.bsky.social" target="_blank">
-                <i class="fab fa-bluesky"></i>
-              </a>
-            </li>
-            <span class="line-break"></span>
-            <li class="list-inline-item">
-              <a href="https://www.instagram.com/cartoguophy/" target="_blank">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.facebook.com/guo.atlas" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.youtube.com/channel/UCXy9x6kvG_qn66JcPJfCSFA" target="_blank">
-                <i class="fab fa-youtube"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://space.bilibili.com/1404682551" target="_blank">
-                <i class="fab fa-bilibili"></i>
-              </a>
-            </li>
-            <p></p>
-          </ul>
+                        <li class="list-inline-item">
+                            <a href="mailto:cartoguophy@gmail.com" target="_blank">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/in/atlasguo" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://x.com/cartoguophy" target="_blank">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://bsky.app/profile/cartoguophy.bsky.social" target="_blank">
+                                <i class="fab fa-bluesky"></i>
+                            </a>
+                        </li>
+                        <span class="line-break"></span>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/cartoguophy/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/guo.atlas" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.youtube.com/channel/UCXy9x6kvG_qn66JcPJfCSFA" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://space.bilibili.com/1404682551" target="_blank">
+                                <i class="fab fa-bilibili"></i>
+                            </a>
+                        </li>
+                        <p></p>
+                    </ul>
                 </div>
                 <div class="col-md-2"></div>
             </div>
@@ -203,8 +240,34 @@
     <script src="/libs/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="/libs/bootstrap/jquery.easing.min.js"></script>
     <script src="/libs/bootstrap/jqBootstrapValidation.min.js"></script>
-
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <!-- Custom scripts for this template -->
+    <script>
+        (function () {
+            var mapEl = document.getElementById("null-island-map");
+            if (!mapEl || typeof L === "undefined") return;
+
+            var map = L.map("null-island-map", {
+                zoomControl: true,
+                scrollWheelZoom: true,
+                dragging: true
+            }).setView([0, 0], 1);
+
+            L.tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
+                maxZoom: 19,
+                subdomains: "abcd",
+                attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
+            }).addTo(map);
+
+            L.circleMarker([0, 0], {
+                radius: 6,
+                color: "#4f6321",
+                fillColor: "#829b3f",
+                fillOpacity: 1,
+                weight: 2
+            }).addTo(map).bindPopup("Null Island (0, 0)").openPopup();
+        })();
+    </script>
     <script src="/js/main.js"></script>
 </body>
 
