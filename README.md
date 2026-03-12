@@ -1,10 +1,10 @@
 # CartoGuophy
 
-CartoGuophy is the personal map portfolio and professional website of Atlas (Chenxiao) Guo.
+CartoGuophy is the personal website and map portfolio of Atlas (Chenxiao) Guo.
 
 URL: https://cartoguophy.com/
 
-## Overall Structure
+## Content
 
 - Resume: background, experience, and achievements
 - Portfolio: main cartographic projects
