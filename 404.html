@@ -254,12 +254,14 @@
             var initialZoom = 1;
 
             var map = L.map("null-island-map", {
+                attributionControl: false,
                 zoomControl: true,
                 scrollWheelZoom: true,
                 dragging: true,
                 maxBounds: worldBounds,
                 maxBoundsViscosity: 1.0
             }).setView([initialCenter.lat, initialCenter.lng], initialZoom);
+            L.control.attribution({ prefix: false }).addTo(map);
 
             L.tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
                 maxZoom: 19,

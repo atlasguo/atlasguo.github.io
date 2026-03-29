@@ -7,6 +7,7 @@
   );
 
   var map = L.map("vision-journey-map", {
+    attributionControl: false,
     zoomControl: true,
     scrollWheelZoom: true,
     dragging: true,
@@ -18,6 +19,7 @@
     zoomSnap: 1,
     wheelPxPerZoomLevel: 160
   });
+  L.control.attribution({ prefix: false }).addTo(map);
 
   L.tileLayer("https://a.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
     maxZoom: 19,

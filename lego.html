@@ -28,6 +28,7 @@
 
   <!-- Custom styles -->
   <link href=".//css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="shortcut icon" href=".//assets/icon.png" />
 </head>
 
@@ -1201,6 +1202,93 @@
             </p>
           </div>
         </div>
+        <!-- Modal: lego_wlia_icon -->
+        <div
+          class="col-md-4 col-sm-6 portfolio-item tag_physical tag_simple tag_lego tag_tangible tag_wi tag_stylized tag_edu">
+          <a class="portfolio-link" href="lego/lego_wlia_icon.html" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img alt="Thumbnail for LEGO WLIA Icon" class="img-fluid round-corner portfolio-background"
+              src="lego/lego_wlia_icon_thumbnail.jpg" />
+          </a>
+          <div class="portfolio-caption round-corner">
+            <h4>
+              <a href="lego/lego_wlia_icon.html" target="_blank">
+                Framed LEGO Icon<br>of Wisconsin Land<br>Information<br>Association
+              </a>
+            </h4>
+            <p class="text-muted">
+              Tribute to WLIA
+
+              featuring<br>a folded Wisconsin map
+            </p>
+          </div>
+        </div>
+        <!-- Modal: lego_st_patricks -->
+        <div
+          class="col-md-4 col-sm-6 portfolio-item tag_physical tag_thematic tag_lego tag_global tag_tangible tag_ireland tag_stylized">
+          <a class="portfolio-link" href="lego/lego_st_patricks.html" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img alt="Thumbnail for LEGO St. Patrick's" class="img-fluid round-corner portfolio-background"
+              src="lego/lego_st_patricks_thumbnail.jpg" />
+          </a>
+          <div class="portfolio-caption round-corner">
+            <h4>
+              <a href="lego/lego_st_patricks.html" target="_blank">
+                LEGO Ireland Map
+                <br>
+                in Theme of
+                <br>
+                St. Patrick's Day
+              </a>
+            </h4>
+            <p class="text-muted">
+              Vertical mosaic celebrating
+              <br>
+              Irish geography, culture,
+              <br>
+              and St. Patrick's Day
+            </p>
+          </div>
+        </div>
+        <!-- Modal: lego_savannah -->
+        <div
+          class="col-md-4 col-sm-6 portfolio-item tag_physical tag_thematic tag_lego tag_tangible tag_us tag_urban tag_stylized">
+          <a class="portfolio-link" href="lego/lego_savannah.html" target="_blank">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img alt="Thumbnail for LEGO Map of Savannah Historic District"
+              class="img-fluid round-corner portfolio-background" src="lego/lego_savannah_thumbnail.jpg" />
+          </a>
+          <div class="portfolio-caption round-corner">
+            <h4>
+              <a href="lego/lego_savannah.html" target="_blank">
+                LEGO Map of
+                <br>
+                Savannah Historic
+                <br>
+                District
+              </a>
+            </h4>
+            <p class="text-muted">
+              Tribute to Savannah's
+              <br>
+              ward-and-square urban form
+              <br>
+              through LEGO structure
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1246,7 +1334,14 @@
               <br>
               <img class="img-fluid round-corner lego-qr-image" style="margin-bottom: 6px;" src="/lego/lego_qr_code.jpg"
                 alt="Lego QR Code image" />
-              <p class="text-muted text-center" style="margin-top: 0; margin-bottom: 0;">A LEGO QR code of my website</p>
+              <p class="text-muted text-center" style="margin-top: 0; margin-bottom: 0;">A LEGO QR code of my website
+              </p>
+              <br>
+              <div style="width: 100%; margin: 18px auto 0;">
+                <div id="lego-journey-map"
+                  style="height: 380px; width: 100%; border: 1px solid #d7dce0; border-radius: 8px;"></div>
+              </div>
+              <p class="text-muted text-center" style="margin-top: 10px; margin-bottom: 0;">Places in my LEGO maps</p>
             </div>
           </div>
         </div>
@@ -1363,6 +1458,7 @@
   <script src=".//libs/bootstrap/bootstrap.bundle.min.js"></script>
   <script src=".//libs/bootstrap/jquery.easing.min.js"></script>
   <script src=".//libs/bootstrap/jqBootstrapValidation.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src=".//js/main.js"></script>

@@ -633,45 +633,142 @@ section h3.section-subheading {
 	background-color: #f6f7f8 !important;
 }
 
-/* Keep Leaflet tiles in Vision map from inheriting .team-member img styles. */
-.team-member #vision-journey-map img {
+/* Keep Leaflet tiles in custom maps from inheriting page image styles. */
+.team-member #vision-journey-map img,
+#lego-journey-map img {
 	border: 0 !important;
 	max-width: none !important;
 }
 
-#vision-journey-map .leaflet-tile {
+#vision-journey-map .leaflet-tile,
+#lego-journey-map .leaflet-tile {
 	width: 256px !important;
 	height: 256px !important;
+	outline: 1px solid transparent;
+	background-clip: padding-box;
 }
 
-#vision-journey-map .leaflet-tooltip {
+#vision-journey-map .leaflet-tooltip,
+#lego-journey-map .leaflet-tooltip {
 	padding-top: 1px;
 	padding-bottom: 1px;
 	line-height: 1.05;
 	font-size: 12px;
 }
 
+#lego-journey-map .leaflet-tooltip.map-label {
+	background: transparent;
+	border: 0;
+	box-shadow: none;
+	padding: 0;
+	color: #2f3b13;
+	font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+	font-size: 12px !important;
+	line-height: 1.05 !important;
+	font-weight: 600;
+	border-radius: 0;
+	text-shadow:
+		-1px -1px 0 rgba(255, 255, 255, 0.96),
+		0 -1px 0 rgba(255, 255, 255, 0.96),
+		1px -1px 0 rgba(255, 255, 255, 0.96),
+		-1px 0 0 rgba(255, 255, 255, 0.96),
+		1px 0 0 rgba(255, 255, 255, 0.96),
+		-1px 1px 0 rgba(255, 255, 255, 0.96),
+		0 1px 0 rgba(255, 255, 255, 0.96),
+		1px 1px 0 rgba(255, 255, 255, 0.96);
+}
+
+#lego-journey-map .leaflet-tooltip.map-label::before {
+	display: none;
+}
+
+#lego-journey-map .lego-map-marker {
+	background: transparent;
+	border: 0;
+}
+
+#lego-journey-map .leaflet-marker-icon.lego-map-marker {
+	filter:
+		drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.78))
+		drop-shadow(1px 0 0 rgba(255, 255, 255, 0.78))
+		drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.78))
+		drop-shadow(0 1px 0 rgba(255, 255, 255, 0.78));
+}
+
+#lego-journey-map .lego-map-marker .lego-brick {
+	position: relative;
+	width: 18px;
+	height: 14px;
+	border-radius: 2px;
+	background: linear-gradient(180deg, #8fb245 0%, #7d9c35 52%, #657d24 100%);
+	border: 1px solid #445815;
+	box-shadow:
+		0 1px 0 rgba(255, 255, 255, 0.26) inset,
+		0 -1px 0 rgba(42, 52, 14, 0.2) inset,
+		0 2px 4px rgba(49, 62, 18, 0.24);
+}
+
+#lego-journey-map .lego-map-marker .lego-brick::before,
+#lego-journey-map .lego-map-marker .lego-brick::after {
+	content: "";
+	position: absolute;
+	top: -4px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: radial-gradient(circle at 35% 30%, #c4dc7f 0%, #a8c85a 38%, #8cac43 68%, #6d8428 100%);
+	border: 1px solid #445815;
+	box-shadow:
+		0 1px 0 rgba(255, 255, 255, 0.28) inset,
+		0 -1px 0 rgba(42, 52, 14, 0.18) inset;
+}
+
+#lego-journey-map .lego-map-marker .lego-brick::before {
+	left: 2px;
+}
+
+#lego-journey-map .lego-map-marker .lego-brick::after {
+	right: 2px;
+}
+
+#lego-journey-map .lego-map-marker .lego-brick .lego-top {
+	position: absolute;
+	left: 1px;
+	right: 1px;
+	top: 1px;
+	height: 5px;
+	border-radius: 1px 1px 3px 3px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.06) 100%);
+}
+
 #vision-journey-map .leaflet-popup-content-wrapper,
 #vision-journey-map .leaflet-popup-content,
-#vision-journey-map .leaflet-tooltip {
+#vision-journey-map .leaflet-tooltip,
+#lego-journey-map .leaflet-popup-content-wrapper,
+#lego-journey-map .leaflet-popup-content,
+#lego-journey-map .leaflet-tooltip {
 	font-family: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-#vision-journey-map .leaflet-popup-content {
+#vision-journey-map .leaflet-popup-content,
+#lego-journey-map .leaflet-popup-content {
 	font-size: 14px;
 	line-height: 1.3;
 }
 
-#vision-journey-map .leaflet-popup-content strong {
+#vision-journey-map .leaflet-popup-content strong,
+#lego-journey-map .leaflet-popup-content strong {
 	font-size: 16px;
 	font-weight: 700;
 }
 
-#vision-journey-map .leaflet-popup-content-wrapper {
+#vision-journey-map .leaflet-popup-content-wrapper,
+#lego-journey-map .leaflet-popup-content-wrapper {
 	border-radius: 10px;
 }
 
-#vision-journey-map .leaflet-tooltip {
+#vision-journey-map .leaflet-tooltip,
+#lego-journey-map .leaflet-tooltip {
 	border-radius: 8px;
 }
 
