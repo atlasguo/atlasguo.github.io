@@ -330,6 +330,12 @@ section h3.section-subheading {
 	border-radius: 20px;
 }
 
+/* Keep content images consistently rounded without affecting circular avatars. */
+section img.img-fluid:not(.rounded-circle):not(.entrance-cta-logo),
+.portfolio-modal .modal-content img:not(.rounded-circle):not(.entrance-cta-logo) {
+	border-radius: 10px;
+}
+
 .btn {
 	font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 	font-weight: 700;
