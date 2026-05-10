@@ -1,0 +1,5 @@
+# Local AI agent instructions and private skills
+AGENTS.local.md
+CLAUDE.local.md
+.codexignore
+skills.local/
